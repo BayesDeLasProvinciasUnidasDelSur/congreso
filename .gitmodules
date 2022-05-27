@@ -1,0 +1,3 @@
+[submodule "aux/tex"]
+	path = aux/tex
+	url = git@github.com:glandfried/tex.git

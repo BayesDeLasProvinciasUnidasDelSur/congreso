@@ -1,0 +1,112 @@
+\documentclass{article}
+\input{../aux/tex/encabezado.tex}
+\input{../aux/tex/tikzlibrarybayesnet.code.tex}
+
+\newcommand{\congresoNombre}{Congreso Sudamericano de Análisis Bayesiano}
+\newcommand{\congresoSigla}{CSAB}
+
+\title{\congresoNombre \, (\congresoSigla) \\ y Taller Argentino de Computación Científica (TACC)}
+
+\author{Bayes de la Provincias Unidas del Sur}
+\affil[]{\small Correspondencia: \texttt{bayesdelsur, aloctavodia, gustavolandfried @ gmail.com}}
+
+
+\begin{document}
+  
+\maketitle
+
+\begin{abstract}
+Las ciencias empíricas, a diferencia de las ciencias formales, deben validar sus proposiciones dentro de sistemas abiertos que contienen incertidumbre.
+%
+Si bien la teoría de la probabilidad (Bayesiana) preserva los acuerdos intersubjetivos en contextos de incertidumbre, fundamento de las verdades empíricas, su adopción se vio históricamente limitada a pesar de ser conceptualmente sencilla.
+%
+La organización del primer \congresoNombre \,  (\congresoSigla) junto al Taller Argentino de Computación Científica (TACC) tiene por objetivo reunir a personas que transitan diferentes etapas de formación, aplicación, desarrollo, e innovación, de modo de producir un círculo virtuoso entre ellas.
+%
+El calendario de actividades se propone producir la interacción entre las partes a través de la implementación de: cursos, hackatón, experiencias y reflexión.
+\end{abstract}
+
+\begin{figure}[ht!]
+ \centering
+\tikz{
+    \node[accion] (n0) {} ;
+    \node[const, left=of n0] (nn0) {$n_0$} ;
+    \node[accion, yshift=-0.33cm, xshift=0.33cm] (n1) {} ;
+    \node[const, below=of n1] (nn1) {$n_1$} ;
+    
+    \node[accion, yshift=-0.33cm, xshift=3.33cm] (n2) {} ;
+    \node[accion, xshift=3.66cm] (n3) {} ;
+    \node[const, below=of n2] (nn2) {$n_2$} ;
+    \node[const, right=of n3] (nn3) {$n_3$} ;
+    
+    \node[accion, yshift=2.49444cm , xshift=2.1cm] (n4) {} ;
+    \node[accion, yshift=2.49444cm , xshift=1.6333cm] (n5) {} ;
+    \node[const, right=of n4] (nn4) {$n_4$} ;
+    \node[const, left=of n5] (nn5) {$n_5$} ;
+    
+    
+    %\edge {n1} {n2}
+    \path[draw, ->, fill=black!50,sloped] (n1) edge[draw=black!50] node[midway,below,color=black!75] {\scriptsize  Hakatón} (n2);
+    
+    \path[draw, ->, fill=black!50,sloped] (n5) edge[draw=black!50] node[midway,above,color=black!75] {\scriptsize  Curso} (n0);
+    
+    \path[draw, ->, fill=black!50,sloped] (n3) edge[draw=black!50] node[midway,above,color=black!75] {\scriptsize  Experiencias} (n4);
+    
+    \path[draw, ->, fill=black!50,sloped] (n4) edge[bend right, in=-90, out=-90, looseness=3, draw=black!50] node[midway,above,color=black!75] {\scriptsize  Reflexión} (n5);
+    
+    %\node[const, yshift=-0.51cm, xshift=-0.33cm] (na) {\rotatebox[origin=tr]{-45}{}} ;
+
+    }
+    \caption{}
+\end{figure}
+
+El TACC está compuesto por Cursos y Hackatón.
+
+El \congresoSigla \ está compuesto por Expriencias y Reflexiones
+
+\vspace{0.3cm} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Las personas que participan:
+%
+\begin{itemize}\setlength\itemsep{-0.1cm}
+\item[$n_0:$] No conocen la metodología bayesiana (estudiantes, investigadores de otras áreas) 
+\item[$n_1:$] Quieren usar la metodología bayesiana (estudiantes, programadores, doctorandos) 
+\item[$n_2:$] Tienen para resolver problemas concretos (investigadores, empresas) 
+\item[$n_3:$] Resolvieron problemas usando PPLs (investigadores, empresas, doctorandos) 
+\item[$n_4:$] Desarrollan los PPLs (developers, investigadores) 
+\item[$n_5:$] Implementan o investigan algoritmos en detalle (developers, investigadores) 
+\end{itemize}
+%
+Las personas pueden identificarse en más de una de las categorías mencionadas.
+Las actividades simultaneas que realiza el \congresoSigla \ y el TACC son:
+
+\begin{itemize}\setlength\itemsep{-0.1cm}
+\item \textbf{Curso - Experiencia}. 
+En estos momentos solo se ven obligados a dividirse los $n_4$ de los $n_5$.
+Los $n_1$ están libres para participar del curso.
+Y los $n_2$ están libres para participar de las experiencias.
+O para descansar.
+
+\item \textbf{Hackaton - Reflexión}
+En estos momentos no hay divisiones por grupos.
+Los $n_0$ y $n_3$ están libres para participar del hakatón, o para descansar.
+
+\item \textbf{Plenarios (o fiestas)}
+Participan todas.
+
+\end{itemize}
+
+
+
+
+\end{document}
+
+% A diferencia de las ciencias formales, las ciencias empíricas deben validar sus proposiciones dentro de sistemas abiertos, lo que impone siempre un grado de incertidumbre asociada.
+% %
+% La teoría de la probabilidad (Bayesiana) permite validar verdades empíricas gracias a que garantiza la preservación de los acuerdos intersubjetivos dada la evidencia empírica y formal (datos y modelos causales).
+% %
+% Aunque sea conceptualmente sencilla, su adopción en las ciencias empíricas se vio históricamente limitada debido a que su aplicación suele presentar desafíos matemáticos y computacionales importantes.
+% %
+% Con la masificación del poder de cómputo el enfoque Bayesiano comenzó a aplicarse para resolver cada vez más problemas hasta ser considerado, en la era de la inteligencia artificial, el marco teórico de referencia.
+% %
+% Si bien todavía existen desafíos no resueltos, los métodos existentes en la actualidad permiten implementar 
+% 
