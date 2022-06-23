@@ -1,3 +1,6 @@
 [submodule "aux/tex"]
 	path = aux/tex
 	url = git@github.com:glandfried/tex.git
+[submodule "aux/biblio"]
+	path = aux/biblio
+	url = git@github.com:BayesDeLasProvinciasUnidasDelSur/biblio.git
