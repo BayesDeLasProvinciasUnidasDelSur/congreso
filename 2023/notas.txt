@@ -1,0 +1,32 @@
+CONGRESO ARGENTINO DE ESTADÍSTICA BAYESIANA
+Construcción de acuerdos intersubjetivos en contextos de incertidumbre
+
+Los días viernes 4 y sábado 5 de agosto de 2023 tendrá lugar el primer Congreso Argentino de Estadística Bayesiano (CAEB) junto al Taller Argentino de Computación Científica (TACC) a realizarse en el nodo tecnológico de Santiago del Estero. El evento conjunto tiene por objetivo reunir a estudiantes, docentes, investigadores, practicantes y expertos que utilicen como herramienta principal la programación científica (taller) o que utilizan, desarrollan o implementan métodos bayesianos (congreso) en el ámbito científico-técnico, en cualquiera de sus múltiples sub-disciplinas. 
+
+Se invita a todas las personas a enviar resúmenes hasta el 31 de Marzo de 2023. Las actividades se encuentran organizada en torno a cuatro ejes fundamentales: cursos, talleres, experiencias y reflexiones sobre uso de lenguajes de programación abiertos (ej Python, Julia y R), modelado probabilístico, métodos computacionales, lenguajes de programación probabilística (PyMC3, Stan, Turing), flujo de trabajo Bayesiano, aplicaciones de la probabilidad Bayesiana.
+
+Fechas importantes
+Cierre de envío de propuestas para cursos y tutoriales (1-2hs): 31 Marzo de 2023
+Cierre de envío de propuestas para charlas de 20 y 5 minutos: 31 Marzo de 2023
+Notificación aceptación de propuestas: 15 de Mayo de 2023
+Posters abierto hasta el 31 de marzo de 2023 
+Contactos:
+Mails: bayesdelasprovinciasunidas@gmail.com, bayesdelsur@gmail.com
+Web: BayesDeLasProvinciasUnidasDelSur.github.io, https://tallerargentinocc.github.io/
+Redes: https://twitter.com/BayesDelSur 
+
+Bayes de la Provincias
+
+
+A diferencia de las ciencias formales, que validan sus proposiciones en sistemas axiomáticos cerrados, las ciencias empíricas deben validar sus proposiciones en sistemas abiertos que siempre contienen incertidumbre. La aplicación estricta de la teoría de la probabilidad (inferencia Bayesiana) garantiza los acuerdos intersubjetivos en contextos de incertidumbre, fundamento de las verdades empíricas. Sin embargo, su adopción se vio históricamente limitada debido al alto costo computacional asociado, pues a diferencia del enfoque frecuentista de la probabilidad, la inferencia Bayesiana actualiza las creencias de todas las hipótesis de forma óptima (maximizando la incertidumbre) dada la evidencia empírica y formal (datos y modelos). El Taller-Congreso de Inferencia Bayesiana (TCIB) tiene por objetivo promover la adopción de la inferencia Bayesiana como método general para la construcción de acuerdos intersubjetivos en todas las ciencias empíricas y la industria.
+
+
+La organización del primer Congreso Argentino de Estadística Bayesiano
+(CAEB) junto al Taller Argentino de Computación Cientı́fica (TACC) tiene por objetivo reunir a personas que transitan diferentes etapas de formación, aplicación, desarrollo, e innovación, e modo de producir un cı́rculo virtuoso entre ellas.
+
+El énfasis estará puesto en aplicaciones del modelado Bayesiano, estimación de variables ocultas, evaluación de modelos causales, modelado probabilístico, flujo de trabajo Bayesiano, métodos computacionales, desarrollo de algoritmos, implementación de algoritmos existentes, teoría de la probabilidad Bayesiana.
+
+ La participación estará sujeta a la presentación de un trabajo original de autoría propia, que deberá ser aprobado previamente por un comité de personas expertas. La presentación tiene por objetivo comunicar lo más claramente posible los aspectos de la investigación relacionados con la inferencia Bayesiana.
+
+Se espera lograr el intercambio de información, conocimientos y experiencias, generando un espacio de encuentro, discusión y colaboración entre personas que desarrollan sus trabajos bajo el marco del modelado Bayesiano.
+
