@@ -4,3 +4,6 @@
 [submodule "aux/biblio"]
 	path = aux/biblio
 	url = git@github.com:BayesDeLasProvinciasUnidasDelSur/biblio.git
+[submodule "aux/static"]
+	path = aux/static
+	url = git@github.com:BayesDeLasProvinciasUnidasDelSur/static.git

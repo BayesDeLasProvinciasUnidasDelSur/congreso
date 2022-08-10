@@ -1,0 +1,160 @@
+\documentclass[shownotes,aspectratio=169]{beamer}
+
+\input{../../aux/tex/diapo_encabezado.tex}
+\input{../../aux/tex/tikzlibrarybayesnet.code.tex}
+ \mode<presentation>
+ {
+ %   \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
+ %   \usecolortheme{default} % or try albatross, beaver, crane, ...
+ %   \usefonttheme{serif}  % or try serif, structurebold, ...
+  \usetheme{Antibes}
+  \setbeamertemplate{navigation symbols}{}
+ }
+
+\usepackage{todonotes}
+\setbeameroption{show notes}
+
+
+\estrue
+
+
+
+
+%\title[Bayes del Sur]{}
+
+\begin{document}
+
+\color{black!85}
+\large
+
+\begin{frame}[plain,noframenumbering]
+
+
+\begin{textblock}{160}(0,0)
+\includegraphics[width=1\textwidth]{../../aux/static/deforestacion}
+\end{textblock}
+
+\begin{textblock}{80}(18,9)
+\textcolor{black!15}{\fontsize{44}{55}\selectfont Verdades}
+\end{textblock}
+
+\begin{textblock}{47}(85,70)
+\centering \textcolor{black!15}{{\fontsize{52}{65}\selectfont Empíricas}}
+\end{textblock}
+
+\begin{textblock}{80}(100,28)
+\LARGE  \textcolor{black!15}{\rotatebox[origin=tr]{-3}{\scalebox{9}{\scalebox{1}[-1]{$p$}}}}
+\end{textblock}
+
+
+\begin{textblock}{80}(66,43)
+\LARGE  \textcolor{black!15}{\scalebox{6}{$=$}}
+\end{textblock}
+
+\begin{textblock}{80}(36,29)
+\LARGE  \textcolor{black!15}{\scalebox{9}{$p$}}
+\end{textblock}
+
+\vspace{2cm}
+\maketitle
+
+
+
+\begin{textblock}{160}(01,67)
+\normalsize \textcolor{black!5}{\textbf{Acuerdos inte$\dots \ \ \ \ \ \ \ \ \ \ \ \   \dots$umbre}}
+\end{textblock}
+
+% Lugar
+\begin{textblock}{160}(01,73)
+\scriptsize \textcolor{black!5}{Seminario LIAA, 12hs Viernes 6 de Mayo 2022 \\
+Laboratorio de Inteligencia Artificial Aplicada \\
+Sala 1508, Pabellón \texttt{(0+Inf)} ``de Kirchner'' \\
+Facultad de Ciencias Exactas y Naturales \\
+Universidad de Buenos Aires, Argentina}
+\end{textblock}
+
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\begin{textblock}{170}(-9,0)
+\rotatebox[origin=tr]{90}{\includegraphics[width=0.53\textwidth]{../../aux/static/egipto3.jpeg}}
+\end{textblock}
+
+%  VERSION 1
+% \begin{textblock}{160}(22,6)
+% \LARGE \textcolor{black!15}{\fontsize{30}{0}\selectfont \textbf{Principios}}
+% \end{textblock}
+% \begin{textblock}{160}(54,22)
+% \LARGE \textcolor{black!15}{\fontsize{30}{0}\selectfont \textbf{interculturales}}
+% \end{textblock}
+% \begin{textblock}{160}(78,39)
+% \LARGE \textcolor{black!15}{\fontsize{30}{0}\selectfont \textbf{de}}
+% \end{textblock}
+% \begin{textblock}{160}(66,55)
+% \LARGE \textcolor{black!15}{\fontsize{30}{0}\selectfont \textbf{acuerdos}}
+% \end{textblock}
+% \begin{textblock}{160}(77,72)
+% \LARGE \textcolor{black!15}{\fontsize{30}{0}\selectfont \textbf{intersubjetivos}}
+% \end{textblock}
+
+% VERSION 2
+\begin{textblock}{160}(16,9)
+\LARGE \textcolor{black!15}{\fontsize{22}{0}\selectfont \textbf{Principios interculturales}}
+\end{textblock}
+\begin{textblock}{160}(22,18)
+\LARGE \textcolor{black!15}{\fontsize{22}{0}\selectfont \textbf{de acuerdos intersubjetivos}}
+\end{textblock}
+
+\end{frame}
+
+\begin{frame}[plain,noframenumbering]
+
+% \begin{textblock}{160}(0,0)
+% \includegraphics[width=1.18\textwidth]{../../aux/static/fotosintesis}
+% \end{textblock}
+\begin{textblock}{160}(0,-15)
+\includegraphics[width=1\textwidth]{../../aux/static/tsimane}
+\end{textblock}
+
+
+% VERSION 2
+\begin{textblock}{160}(6,36)
+\LARGE \rotatebox[origin=tr]{18}{\textcolor{black!95}{\fontsize{22}{0}\selectfont \textbf{La función}}}
+\end{textblock}
+\begin{textblock}{160}(41,32)
+\LARGE \rotatebox[origin=tr]{23}{\textcolor{black!95}{\fontsize{22}{0}\selectfont \textbf{de}}}
+\end{textblock}
+\begin{textblock}{160}(50.5,23)
+\LARGE \rotatebox[origin=tr]{28}{\textcolor{black!95}{\fontsize{22}{0}\selectfont \textbf{costo}}}
+\end{textblock}
+\begin{textblock}{160}(68,5.3)
+\LARGE \rotatebox[origin=tr]{26}{\textcolor{black!95}{\fontsize{22}{0}\selectfont \textbf{epistémico}}}
+\end{textblock}
+\begin{textblock}{160}(104,5.5)
+\LARGE \rotatebox[origin=tr]{8}{\textcolor{black!95}{\fontsize{22}{0}\selectfont \textbf{-}}}
+\end{textblock}
+\begin{textblock}{160}(110,3)
+\LARGE \rotatebox[origin=tr]{-14}{\textcolor{black!95}{\fontsize{22}{0}\selectfont \textbf{evolutiva}}}
+\end{textblock}
+
+\end{frame}
+
+\begin{frame}[plain,noframenumbering]
+
+\begin{textblock}{160}(0,0)
+\includegraphics[width=1\textwidth]{../../aux/static/peligro_predador}
+\end{textblock}
+
+\begin{textblock}{160}(4,6)
+\LARGE \textcolor{black!75}{\fontsize{22}{0}\selectfont \textbf{Comunicación}}
+\end{textblock}
+\begin{textblock}{160}(22,14)
+\LARGE \textcolor{black!75}{\fontsize{22}{0}\selectfont \textbf{con la realidad}}
+\end{textblock}
+
+
+\end{frame}
+
+
+\end{document}
