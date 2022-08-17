@@ -11,14 +11,13 @@
   \setbeamertemplate{navigation symbols}{}
  }
 
+\usepackage{rotating}
+
 \usepackage{todonotes}
 \setbeameroption{show notes}
 
 
 \estrue
-
-
-
 
 %\title[Bayes del Sur]{}
 
@@ -66,11 +65,13 @@
 
 % Lugar
 \begin{textblock}{160}(01,73)
-\scriptsize \textcolor{black!5}{Seminario LIAA, 12hs Viernes 6 de Mayo 2022 \\
-Laboratorio de Inteligencia Artificial Aplicada \\
-Sala 1508, Pabellón \texttt{(0+Inf)} ``de Kirchner'' \\
-Facultad de Ciencias Exactas y Naturales \\
-Universidad de Buenos Aires, Argentina}
+\scriptsize \textcolor{black!5}{
+Curso ``Metodologías del conocimiento empírico''\\
+Congreso Bayesiano de las Provincias Unidas\\
+Taller Argentino de Computación Científica \\
+Encuentro anual del 4 al 7 de agosto 2023 \\
+La Banda, Santiago del Estero, Argentina
+}
 \end{textblock}
 
 \end{frame}
@@ -86,6 +87,19 @@ Universidad de Buenos Aires, Argentina}
 \end{textblock}
 \begin{textblock}{160}(22,18)
 \LARGE \textcolor{black!5}{\fontsize{22}{0}\selectfont \textbf{de acuerdos intersubjetivos}}
+\end{textblock}
+
+
+\begin{textblock}{55}(71,38)
+\begin{turn}{30}
+\parbox{6cm}{
+\textcolor{black!5}{\hspace{-0.3cm}Capítulo 1} \\
+\small\textcolor{black!5}{\hspace{-0.1cm}Principio de razón suficiente, de}\\
+\small\textcolor{black!5}{integridad, de indiferencia y de} \\
+\small\textcolor{black!5}{\hspace{0.1cm}coherencia. Las reglas de razo-} \\ \small\textcolor{black!5}{\hspace{0.2cm}namiento bajo incertidumbre.} \\
+\small\textcolor{black!5}{\hspace{0.3cm}Evaluación de creencias.} \\
+}
+\end{turn}
 \end{textblock}
 
 \end{frame}
@@ -120,6 +134,19 @@ Universidad de Buenos Aires, Argentina}
 \LARGE \rotatebox[origin=tr]{-14}{\textcolor{black!95}{\fontsize{22}{0}\selectfont \textbf{evolutiva}}}
 \end{textblock}
 
+
+\begin{textblock}{55}[0,0](130,25)
+\begin{turn}{-90}
+\parbox{7cm}{\sloppy\setlength\parfillskip{0pt}
+\textcolor{black!0}{\ \ \ \ \ Capítulo 2} \\
+\small\textcolor{black!5}{\ \ \ \ Ventajas a favor de la:} \\
+\small\textcolor{black!5}{ \ \ Diversificación (propiedad epistémica)\\ Cooperación (propiedad evolutiva mayor)}\\
+\small\textcolor{black!5}{ \hspace{-0.15cm}Especialización (propiedad meta-epistémica)} \\
+\small\textcolor{black!5}{\hspace{-0.45cm} Coexistencia (propiedad ecológica).\\ }}
+\end{turn}
+\end{textblock}
+
+
 \end{frame}
 
 \begin{frame}[plain,noframenumbering]
@@ -137,9 +164,24 @@ Universidad de Buenos Aires, Argentina}
 \begin{textblock}{160}(4,42)
 \LARGE \textcolor{black!5}{\fontsize{22}{0}\selectfont \textbf{con la realidad}}
 \end{textblock}
-\begin{textblock}{160}(3,82)
-\LARGE \textcolor{black!15}{\fontsize{22}{0}\selectfont \textbf{3}}
+% \begin{textblock}{160}(3,82)
+% \LARGE \textcolor{black!15}{\fontsize{22}{0}\selectfont \textbf{3}}
+% \end{textblock}
+
+
+
+\begin{textblock}{55}[0,0](88,25)
+\begin{turn}{0}
+\parbox{7cm}{\sloppy\setlength\parfillskip{0pt}
+\textcolor{black!0}{Capítulo 3} \\
+\small\textcolor{black!5}{\hspace{0.05cm}La estructura invariante del dato empírico:} \\
+\small\textcolor{black!5}{\hspace{0.1cm}fuente, realidad causal, señal, canal,} \\ \small\textcolor{black!5}{\hspace{0.05cm}percepción, modelo causal, estimación.} \\
+\small\textcolor{black!5}{\hspace{-0.15cm}Base empírica y datos teóricos. Máxima} \\
+\small\textcolor{black!5}{\hspace{-0.35cm}incertidumbre y mínima sorpresa. Información.} \\
+}
+\end{turn}
 \end{textblock}
+
 
 \end{frame}
 
@@ -148,18 +190,24 @@ Universidad de Buenos Aires, Argentina}
 \includegraphics[width=1\textwidth]{../../aux/static/modelosGraficos}
 \end{textblock}
 
-\begin{textblock}{160}(146,3.5)
-\LARGE \textcolor{black!85}{\scalebox{1.3}{$4$}}
-\end{textblock}
-
-
-
 
 \begin{textblock}{160}(4,8)
-\LARGE \textcolor{black!90}{\fontsize{22}{0}\selectfont \textbf{Modelos gráficos y}}
+\LARGE \textcolor{black!85}{\fontsize{22}{0}\selectfont \textbf{Modelos gráficos y}}
 \end{textblock}
 \begin{textblock}{160}(4,16)
-\LARGE \textcolor{black!90}{\fontsize{22}{0}\selectfont \textbf{algoritmo suma-producto}}
+\LARGE \textcolor{black!85}{\fontsize{22}{0}\selectfont \textbf{algoritmo suma-producto}}
+\end{textblock}
+
+
+\begin{textblock}{55}[0,0](70,27)
+\begin{turn}{0}
+\parbox{10cm}{\sloppy\setlength\parfillskip{0pt}
+\textcolor{black!85}{Capítulo 4} \\
+\small\textcolor{black!85}{Métodos gráficos de especificación de modelos causales.} \\
+\small\textcolor{black!85}{Cómputo descentralizado de la inferencia y la predicción:} \\
+\small\textcolor{black!85}{pasaje de mensajes entre los nodos de las redes causales}\\
+}
+\end{turn}
 \end{textblock}
 
 \end{frame}
@@ -172,12 +220,23 @@ Universidad de Buenos Aires, Argentina}
 
 
 \begin{textblock}{160}(99,68)
-\LARGE \textcolor{black!85}{\rotatebox[origin=tr]{10}{\fontsize{22}{0}\selectfont \textbf{Flujos de}}}
+\LARGE \textcolor{black!95}{\rotatebox[origin=tr]{10}{\fontsize{22}{0}\selectfont \textbf{Flujos de}}}
 \end{textblock}
 
 \begin{textblock}{160}(103,76)
-\LARGE \textcolor{black!85}{\rotatebox[origin=tr]{12}{\fontsize{22}{0}\selectfont \textbf{inferencia}}}
+\LARGE \textcolor{black!95}{\rotatebox[origin=tr]{12}{\fontsize{22}{0}\selectfont \textbf{inferencia}}}
 \end{textblock}
+
+
+
+\begin{textblock}{55}(48,20)
+\begin{turn}{0}
+\parbox{15cm}{\textcolor{black!5}{\hspace{0.3cm} Capítulo 5} \\
+\small \textcolor{black!5}{\hspace{0.7cm} Flujos de \hspace{0.6cm} inferencia} \\
+\small \textcolor{black!5}{\hspace{0.3cm} en modelos \hspace{0.7cm} causales.} \\}
+\end{turn}
+\end{textblock}
+
 
 
 \end{frame}
@@ -189,64 +248,118 @@ Universidad de Buenos Aires, Argentina}
 \includegraphics[width=1\textwidth]{../../aux/static/peligro_predador}
 \end{textblock}
 
-\begin{textblock}{160}(4,8)
-\LARGE \textcolor{black!75}{\fontsize{22}{0}\selectfont \textbf{Inferencia causal}}
+\begin{textblock}{160}(127,67)
+\LARGE \textcolor{black!5}{\fontsize{22}{0}\selectfont \textbf{Inferencia  \\[-0.1cm] \hspace{0.5cm} causal}}
 \end{textblock}
+
+\begin{textblock}{55}(2,3)
+\begin{turn}{0}
+\parbox{15cm}{\small \textcolor{black!95}{Conclusiones causales a partir de datos observacionales. El} \\
+\textcolor{black!95}{efecto de las intervenciones sobre los modelos gráficos. Los} \\
+\textcolor{black!95}{criterios de puerta trasera y delantera. Contrafácticos.} \\
+\normalsize\textcolor{black!95}{Capítulo 6} \\
+}
+\end{turn}
+\end{textblock}
+
 
 \end{frame}
 
 
 \begin{frame}[plain,noframenumbering]
-\begin{textblock}{160}(0,-80)  \centering
-\includegraphics[width=1\textwidth]{../../aux/static/galton_box}
+% \begin{textblock}{160}(0,-80)  \centering
+% \includegraphics[width=1\textwidth]{../../aux/static/galton_box}
+% \end{textblock}
+
+\begin{textblock}{160}(0,11)  \centering
+\includegraphics[width=0.42\textwidth]{../../aux/static/treeOfLife}
 \end{textblock}
 
-\begin{textblock}{160}(28,7)
-\LARGE \textcolor{black!5}{\rotatebox[origin=tr]{19}{\fontsize{22}{0}\selectfont \textbf{Distribuciones}}}
+\begin{textblock}{160}(0,3) \centering
+\LARGE \textcolor{black!85}{\rotatebox[origin=tr]{0}{\fontsize{22}{0}\selectfont \textbf{Distribuciones de creencias}}}
 \end{textblock}
 
-\begin{textblock}{160}(76.7,7)
-\LARGE \textcolor{black!95}{\rotatebox[origin=tr]{0}{\fontsize{22}{0}\selectfont \textbf{de}}}
+\begin{textblock}{55}(3,82)
+\textcolor{black!85}{Capítulo 7}
 \end{textblock}
 
-\begin{textblock}{160}(86,7.5)
-\LARGE \textcolor{black!5}{\rotatebox[origin=tr]{-19}{\fontsize{22}{0}\selectfont \textbf{creencias}}}
-\end{textblock}
-
-\end{frame}
-
-\begin{frame}[plain,noframenumbering]
-\begin{textblock}{160}(0,12)
-\includegraphics[width=1\textwidth]{../../aux/static/biomass}
-\end{textblock}
-
-\begin{textblock}{160}(36,3)
-\LARGE \textcolor{black!75}{\fontsize{22}{0}\selectfont \textbf{Evaluación de modelos}}
-\end{textblock}
-
-\begin{textblock}{160}(0,78) \centering
-\Large \textcolor{black!75}{Biomasa de la vida}
+\begin{textblock}{55}(23,80)
+\begin{turn}{0}
+\parbox{15cm}{\small \textcolor{black!85}{Máxima entropía. Gases. Distribución de la riqueza. Procesos irreversibles. Polya Urn.   \\
+La familia exponencial: Bernoulli, Binomial, Beta, Multinomial, Dirichlet, Guasiana.} \\
+}
+\end{turn}
 \end{textblock}
 
 \end{frame}
 
 \begin{frame}[plain,noframenumbering]
-\begin{textblock}{160}[0,1](0,80)
-\includegraphics[width=0.19\textwidth]{../../aux/static/aproximacion1}
-\hspace{-0.1cm}
-\includegraphics[width=0.19\textwidth]{../../aux/static/aproximacion2}
-\hspace{-0.1cm}
-\includegraphics[width=0.19\textwidth]{../../aux/static/aproximacion3}
-\hspace{-0.1cm}
-\includegraphics[width=0.19\textwidth]{../../aux/static/aproximacion4}
-\hspace{-0.1cm}
-\includegraphics[width=0.19\textwidth]{../../aux/static/aproximacion5}
+\begin{textblock}{160}(0,14) \centering
+\includegraphics[width=0.8\textwidth]{../../aux/static/biomass.jpg}
 \end{textblock}
 
-\begin{textblock}{160}[0,1](0,87) \centering
-\LARGE \textcolor{black!65}{\fontsize{22}{0}\selectfont \textbf{Aproximaciones analíticas}}
+\begin{textblock}{160}(0,3) \centering
+\LARGE \textcolor{black!90}{\fontsize{22}{0}\selectfont \textbf{Evaluación de modelos}}
 \end{textblock}
+
+\begin{textblock}{160}(33,23)
+\large \textcolor{black!95}{Biomasa de la vida}
+\end{textblock}
+
+\begin{textblock}{160}(16,14)
+\LARGE \textcolor{black!0}{\fontsize{1200}{1200}\selectfont $\bm{\bullet}$ }
+\end{textblock}
+\begin{textblock}{160}(16,16)
+\LARGE \textcolor{black!0}{\fontsize{1200}{1200}\selectfont $\bm{\bullet}$ }
+\end{textblock}
+
+
+\begin{textblock}{160}(0,70) \centering
+\textcolor{black!95}{Capítulo 8 \\ \small
+No todo da lo mismo: la forma correcta de evaluar modelo. \\[0.05cm]
+La emergencia del sobreajuste (\emph{overfitting}) en los enfoques seleccionan hipótesis optimizan . \\
+El balance natural de la evaluación de modelo por integración del espacio de hipótesis (evidencia).
+}
+\end{textblock}
+
+
 \end{frame}
+
+\begin{frame}[plain,noframenumbering]
+
+\begin{textblock}{160}[0,0](0,-47.5)
+\includegraphics[width=1\textwidth]{../../aux/static/raices}
+\end{textblock}
+
+% \begin{textblock}{160}[0,1](0,80)
+% \includegraphics[width=0.19\textwidth]{../../aux/static/aproximacion1}
+% \hspace{-0.1cm}
+% \includegraphics[width=0.19\textwidth]{../../aux/static/aproximacion2}
+% \hspace{-0.1cm}
+% \includegraphics[width=0.19\textwidth]{../../aux/static/aproximacion3}
+% \hspace{-0.1cm}
+% \includegraphics[width=0.19\textwidth]{../../aux/static/aproximacion4}
+% \hspace{-0.1cm}
+% \includegraphics[width=0.19\textwidth]{../../aux/static/aproximacion5}
+% \end{textblock}
+
+\begin{textblock}{160}(107,3)
+\LARGE \textcolor{black!65}{\fontsize{22}{0}\selectfont \textbf{Aproximaciones \\ analíticas}}
+\end{textblock}
+
+
+
+\begin{textblock}{160}(2,2)
+\textcolor{black!80}{Capítulo 9 \\ \small
+Métodos eficientes de aproximación: \\
+expectation propagation y variational \\
+inference. Ejemplo: estimación de habi-\\ \hspace{0.8cm} lidad en la industria del video juego. \\
+}
+\end{textblock}
+
+\end{frame}
+
+
 
 \begin{frame}[plain,noframenumbering]
 \begin{textblock}{160}(0,-4.3) \centering
@@ -255,6 +368,17 @@ Universidad de Buenos Aires, Argentina}
 \begin{textblock}{160}(45,70) \centering
 \LARGE \textcolor{black!16}{\fontsize{22}{0}\selectfont \textbf{Series de tiempo}}
 \end{textblock}
+
+
+\begin{textblock}{160}(20,58)
+\textcolor{black!5}{Capítulo 10 \\[0.1cm] \small
+El problema de usar el posterior como \\
+prior del siguiente evento. La mutua dependencia \\
+de las hipótesis en modelos de historia completa.  \\
+Ejemplo: estimación de habilidad estado-del-arte. \\
+}
+\end{textblock}
+
 
 \end{frame}
 
@@ -267,6 +391,16 @@ Universidad de Buenos Aires, Argentina}
 \end{textblock}
 \begin{textblock}{160}(14,27)
 \LARGE \textcolor{black!6}{\fontsize{22}{0}\selectfont \textbf{por exploración}}
+\end{textblock}
+
+
+\begin{textblock}{160}(100,38)
+\textcolor{black!5}{Capítulo 11 \\ \small
+El problema de usar el posterior como \\
+prior del siguiente evento. Modelos de \\
+historia completa. Mutua dependencia de las hipótesis \\
+y algoritmo de convergencia. Modelo estado-del-arte de estimación de habilidad. \\
+}
 \end{textblock}
 
 
