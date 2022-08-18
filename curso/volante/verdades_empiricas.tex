@@ -10,7 +10,7 @@
   \usetheme{Antibes}
   \setbeamertemplate{navigation symbols}{}
  }
-
+\usetikzlibrary{decorations.text}
 \usepackage{rotating}
 
 \usepackage{todonotes}
@@ -25,6 +25,44 @@
 
 \color{black!85}
 \large
+
+\begin{frame}[plain,noframenumbering]
+
+\begin{textblock}{160}(0,24) \centering
+\LARGE \textcolor{black!85}{\fontsize{22}{0}\selectfont \textbf{Congreso Bayesiano del Sur}}
+\end{textblock}
+\begin{textblock}{160}(0,6) \centering
+\LARGE  \textcolor{black!85}{\rotatebox[origin=tr]{0}{\scalebox{4}{\scalebox{1}[-1]{$p$}}}}
+\end{textblock}
+\begin{textblock}{160}(0,6) \centering
+\LARGE \textcolor{black!85}{\scalebox{4}{$p$}}
+\end{textblock}
+\begin{textblock}{160}(0,6) \centering
+\LARGE \textcolor{black!85}{\scalebox{3.7}{C} \hspace{2.4cm} }
+\end{textblock}
+\begin{textblock}{160}(0,6) \centering
+\LARGE \textcolor{black!85}{ \hspace{2.5cm} \scalebox{3.7}{S} }
+\end{textblock}
+
+\begin{textblock}{160}(0,40)\centering
+\hspace{3.6cm} \LARGE  \textcolor{black!85}{\rotatebox[origin=tr]{-3}{\scalebox{6}{\scalebox{1}[-1]{$p$}}}}
+\end{textblock}
+
+\begin{textblock}{160}(0,49) \centering
+\LARGE  \textcolor{black!85}{\scalebox{4}{$=$}}
+\end{textblock}
+
+\begin{textblock}{160}(0,40)\centering
+\hspace{-3.8cm} \LARGE  \textcolor{black!85}{\scalebox{6}{$p$}}
+\end{textblock}
+
+\begin{textblock}{160}(0,75) \centering \Large \textcolor{black!75}{\textbf{
+Del 4 al 7 de agosto 2023 \\
+La Banda, Santiago del Estero, Argentina \\}}
+\end{textblock}
+
+\end{frame}
+
 
 \begin{frame}[plain,noframenumbering]
 
@@ -45,7 +83,6 @@
 \LARGE  \textcolor{black!15}{\rotatebox[origin=tr]{-3}{\scalebox{9}{\scalebox{1}[-1]{$p$}}}}
 \end{textblock}
 
-
 \begin{textblock}{80}(66,43)
 \LARGE  \textcolor{black!15}{\scalebox{6}{$=$}}
 \end{textblock}
@@ -59,22 +96,14 @@
 
 
 
-\begin{textblock}{160}(01,67)
-\normalsize \textcolor{black!5}{\textbf{Acuerdos inte$\dots \ \ \ \ \ \ \ \ \ \ \ \   \dots$umbre}}
-\end{textblock}
-
-% Lugar
-\begin{textblock}{160}(01,73)
-\scriptsize \textcolor{black!5}{
-Curso ``Metodologías del conocimiento empírico''\\
-Congreso Bayesiano de las Provincias Unidas\\
-Taller Argentino de Computación Científica \\
-Encuentro anual del 4 al 7 de agosto 2023 \\
-La Banda, Santiago del Estero, Argentina
-}
+\begin{textblock}{160}(01,70)
+\textcolor{black!5}{\textbf{\Large Curso 2022 - 2023 \\
+\normalsize Metodologías del conocimiento\\
+empírico. Acuerdos inte$\dots$umbre \\}}
 \end{textblock}
 
 \end{frame}
+
 
 
 \begin{frame}[plain,noframenumbering]
@@ -91,13 +120,13 @@ La Banda, Santiago del Estero, Argentina
 
 
 \begin{textblock}{55}(71,38)
-\begin{turn}{30}
+\begin{turn}{33}
 \parbox{6cm}{
 \textcolor{black!5}{\hspace{-0.3cm}Capítulo 1} \\
 \small\textcolor{black!5}{\hspace{-0.1cm}Principio de razón suficiente, de}\\
 \small\textcolor{black!5}{integridad, de indiferencia y de} \\
 \small\textcolor{black!5}{\hspace{0.1cm}coherencia. Las reglas de razo-} \\ \small\textcolor{black!5}{\hspace{0.2cm}namiento bajo incertidumbre.} \\
-\small\textcolor{black!5}{\hspace{0.3cm}Evaluación de creencias.} \\
+\small\textcolor{black!5}{\hspace{0.36cm}Evaluación de creencias.} \\
 }
 \end{turn}
 \end{textblock}
@@ -135,14 +164,15 @@ La Banda, Santiago del Estero, Argentina
 \end{textblock}
 
 
-\begin{textblock}{55}[0,0](130,25)
-\begin{turn}{-90}
+\begin{textblock}{55}[0,0](120,22)
+\begin{turn}{-57}
 \parbox{7cm}{\sloppy\setlength\parfillskip{0pt}
 \textcolor{black!0}{\ \ \ \ \ Capítulo 2} \\
-\small\textcolor{black!5}{\ \ \ \ Ventajas a favor de la:} \\
-\small\textcolor{black!5}{ \ \ Diversificación (propiedad epistémica)\\ Cooperación (propiedad evolutiva mayor)}\\
-\small\textcolor{black!5}{ \hspace{-0.15cm}Especialización (propiedad meta-epistémica)} \\
-\small\textcolor{black!5}{\hspace{-0.45cm} Coexistencia (propiedad ecológica).\\ }}
+\small\textcolor{black!5}{\hspace{-0.15cm} Ventajas a favor de la:} \\
+\small\textcolor{black!5}{\hspace{-1.45cm} Diversificación (propiedad epistémica)}\\
+\small\textcolor{black!5}{\hspace{-1.7cm} Cooperación (propiedad evolutiva mayor)}\\
+\small\textcolor{black!5}{ \hspace{-1.75cm}Especialización (propiedad meta-epistémica)} \\
+\small\textcolor{black!5}{\hspace{-2cm} Coexistencia (propiedad ecológica).\\ }}
 \end{turn}
 \end{textblock}
 
@@ -278,6 +308,29 @@ La Banda, Santiago del Estero, Argentina
 \begin{textblock}{160}(0,3) \centering
 \LARGE \textcolor{black!85}{\rotatebox[origin=tr]{0}{\fontsize{22}{0}\selectfont \textbf{Distribuciones de creencias}}}
 \end{textblock}
+% % <
+% \begin{textblock}{160}(0,3) \centering
+% \begin{tikzpicture}
+%   \node (Start) at (2.8,0) {};
+%   \node (End) at (-2.8,0) {};
+%   \draw [decorate,decoration={text along path,text align=center,text={sssssssssssssssssssssssssssssssssss|\bf\fontsize{22}{22}\selectfont|Distribuciones de creencias},text color=black!85 }] (End) to [bend left=45] (Start);
+% \end{tikzpicture}
+% \end{textblock}
+
+%  \begin{textblock}{160}(0,3) \centering
+% \tikz{
+% \node[factor, xshift=-3cm, opacity=0] (a) {} ;
+% \node[factor, xshift=3cm, opacity=0] (b) {} ;
+% \path[draw, -, fill=black!50,sloped,draw opacity=0] (a) edge[bend left=45,draw=black!50] node[color=black!75] {\scriptsize  \texttt{lhood\_lose\_tb}} (b);
+% }
+% \end{textblock}
+
+
+\begin{textblock}{55}(75,40)
+\textcolor{black!85}{\small El árbol de la vida \\
+\fontsize{2}{0}\selectfont Synthesis of phylogeny and taxonomy into a comprehensive tree of life \\}
+\end{textblock}
+
 
 \begin{textblock}{55}(3,82)
 \textcolor{black!85}{Capítulo 7}
@@ -286,7 +339,7 @@ La Banda, Santiago del Estero, Argentina
 \begin{textblock}{55}(23,80)
 \begin{turn}{0}
 \parbox{15cm}{\small \textcolor{black!85}{Máxima entropía. Gases. Distribución de la riqueza. Procesos irreversibles. Polya Urn.   \\
-La familia exponencial: Bernoulli, Binomial, Beta, Multinomial, Dirichlet, Guasiana.} \\
+La familia exponencial: Bernoulli, Binomial, Beta, Multinomial, Dirichlet, Guassiana.} \\
 }
 \end{turn}
 \end{textblock}
@@ -302,8 +355,9 @@ La familia exponencial: Bernoulli, Binomial, Beta, Multinomial, Dirichlet, Guasi
 \LARGE \textcolor{black!90}{\fontsize{22}{0}\selectfont \textbf{Evaluación de modelos}}
 \end{textblock}
 
-\begin{textblock}{160}(33,23)
-\large \textcolor{black!95}{Biomasa de la vida}
+\begin{textblock}{160}(35,23)
+\textcolor{black!95}{\small Biomasa de la vida \\
+\fontsize{2}{0}\selectfont \hspace{0.05cm} Bar-on et al. The biomass distribution on Earth (2018) \\}
 \end{textblock}
 
 \begin{textblock}{160}(16,14)
@@ -316,9 +370,9 @@ La familia exponencial: Bernoulli, Binomial, Beta, Multinomial, Dirichlet, Guasi
 
 \begin{textblock}{160}(0,70) \centering
 \textcolor{black!95}{Capítulo 8 \\ \small
-No todo da lo mismo: la forma correcta de evaluar modelo. \\[0.05cm]
-La emergencia del sobreajuste (\emph{overfitting}) en los enfoques seleccionan hipótesis optimizan . \\
-El balance natural de la evaluación de modelo por integración del espacio de hipótesis (evidencia).
+La emergencia del sobreajuste (\emph{overfitting}) en los enfoques que seleccionan una única hipótesis. \\
+El balance natural de la evaluación de modelo por integración del espacio de hipótesis (evidencia). \\
+La forma correcta de evaluar modelo. Ejemplo: regresión líneal bayesiana.\\
 }
 \end{textblock}
 
@@ -394,12 +448,11 @@ Ejemplo: estimación de habilidad estado-del-arte. \\
 \end{textblock}
 
 
-\begin{textblock}{160}(100,38)
+\begin{textblock}{160}(90,44)
 \textcolor{black!5}{Capítulo 11 \\ \small
-El problema de usar el posterior como \\
-prior del siguiente evento. Modelos de \\
-historia completa. Mutua dependencia de las hipótesis \\
-y algoritmo de convergencia. Modelo estado-del-arte de estimación de habilidad. \\
+\hspace{0.4cm} Métodos para modelos causales intratables: \\
+\hspace{1.2cm} Monte Markov chain Monte Carlo. \\
+\hspace{1.8cm} Metrópolis-Hasting y Hamiltonian. \\
 }
 \end{textblock}
 
@@ -408,14 +461,37 @@ y algoritmo de convergencia. Modelo estado-del-arte de estimación de habilidad.
 
 \begin{frame}[plain,noframenumbering]
 \begin{textblock}{160}(0,0) \centering
-\includegraphics[width=1.02\textwidth]{../../aux/static/ppls_stan}
+\includegraphics[width=1.2\textwidth]{../../aux/static/ppls}
 \end{textblock}
-\begin{textblock}{160}(62,8)
-\LARGE \textcolor{black!25}{\fontsize{22}{0}\selectfont \textbf{Programación probabilistica}}
+\begin{textblock}{160}(2,8)
+\LARGE \textcolor{black!15}{\fontsize{22}{0}\selectfont \textbf{Programación \\ probabilistica \\}}
 \end{textblock}
 % \begin{textblock}{160}(94,23)
 % \LARGE \textcolor{black!16}{\fontsize{22}{0}\selectfont \textbf{probabilistica}}
 % \end{textblock}
+
+\begin{textblock}{160}(70,30)
+\normalsize
+\textcolor{black!25}{
+\tikz{
+\node[det, fill=black!60,draw=black!25] (k) {\textcolor{black!5}{$k_i$}} ;
+\node[latent, fill opacity=0, draw=black!25, text opacity=1, above=of k, xshift=-1cm] (p) {\textcolor{black!5}{$p$}};
+\node[det, fill opacity=0, draw=black!25, text opacity=1, above=of k, xshift=1cm] (n) {\textcolor{black!5}{$n$}};
+\edge {p,n} {k};
+\plate[inner sep=0.3cm, xshift=0cm, yshift=0.12cm] {intentos} {(k)} {$i$}
+\node[const, right=of n, xshift=0.3cm] (np) {$p \sim \text{Beta}(1,1)$};
+\node[const, right=of n, xshift=0.3cm, yshift=-1cm] (np) {$n \sim \text{Categorical}(N_\text{max})$};
+\node[const, right=of n, xshift=0.3cm, yshift=-2cm] (np) {$k_i \sim \text{Binomial}(p,n)$};
+}
+}
+\end{textblock}
+
+\begin{textblock}{160}(20,74)
+\textcolor{black!15}{Capítulo 12 \\ \small
+Implementación de modelos usando lenguajes de programación probabilística. \\
+Verificación visual de buen funcionamiento de las aproximaciones.  \\
+}
+\end{textblock}
 
 
 \end{frame}
