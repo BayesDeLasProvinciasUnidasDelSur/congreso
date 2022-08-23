@@ -7,7 +7,7 @@ final: verdades_empiricas.png
 	git submodule update --init ../../aux/static/
 
 verdades_empiricas.png: verdades_empiricas.pdf
-	convert -density 300 verdades_empiricas.pdf -resize 100% verdades_empiricas.png
+	convert -density 300 verdades_empiricas.pdf -resize 100% png/verdades_empiricas.png
 
 verdades_empiricas.pdf: ../../aux/static/.git
 	pdflatex -interaction=nonstopmode verdades_empiricas.tex
