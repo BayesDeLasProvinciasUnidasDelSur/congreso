@@ -4,9 +4,7 @@
 
 ---
 
-Los códigos de conducta en general se parecen al Artículo 12 de la Constitución Nacional de Colombia: *Nadie será sometido a desaparición forzada, a torturas ni a tratos o penas crueles, inhumanas o degradantes*.
-
-Cuando el pueblo originario, que vivió 500 de colonialismo en Colombia, tradujo este artículo escribieron: **Nadie podrá llevar por encima de su corazón a nadie ni hacerle mal en su persona aunque piense y diga diferente**.
+Los códigos de conducta en general se parecen al Artículo 12 de la Constitución Nacional de Colombia: *Nadie será sometido a desaparición forzada, a torturas ni a tratos o penas crueles, inhumanas o degradantes*. Cuando el pueblo originario Wayúu, que vivió 500 años de colonialismo en Colombia, tradujo este artículo escribieron: **Nadie podrá llevar por encima de su corazón a nadie ni hacerle mal en su persona aunque piense y diga diferente**.
 
 La experiencia acumulada por las más diversas comunidades del mundo condujo, de forma independiente, a la aparición de tecnologías de sociabilidad que cumplen la función de garantizar la salud de los vínculos interprersonales: los ritos festivos y los ritos coercitivos. Ambos están orientados a re-activar los vínculos a través del flujo de intercambios entre las partes: dar, recibir e intercambiar.
 
@@ -14,7 +12,7 @@ El Congreso es en sí mismo un rito festivo que tiene por objetivo iniciar y act
 
 Para preservar la salud de los vínculos, los sistemas coercitivos comunitarios primero activan los tres tipos de relaciones posibles: (-->) los gestos, actos u obsequios que la parte acusada ofrece a la parte afectada; (<--) la ayuda que se le ofrece a la parte acusada para modificar el comportamiento que dio origen al conflicto; (<-->) y el intercambio que renuecven entendimiento. Solo en última instancia, en caso de que la persona persista en una actitud que afecta la salud de los vínculos comunitarios, la persona acusada podrá ser expulsada.
 
-Como dice el último principio 13 del Buen Vivir (en Aymara): Suma Churaña, Suma Katukaña. La vida es la unión de muchos seres y fuerzas. Por eso hay que saber dar y recibir con dicha y agradecimiento.
+Como dice el último principio del Buen Vivir (en Aymara): *Suma Churaña, Suma Katukaña*. Hay que saber dar y recibir con dicha y agradecimiento porque la vida es la unión de muchos seres y fuerzas. Nos vemos en la próxima fiesta para alimentar nuestros vínculos.
 
 ## Contacto
 
