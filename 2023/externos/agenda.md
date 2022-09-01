@@ -32,6 +32,9 @@ Pedido de subsidio
 
 ### AGENDA (Historia)
 
+01.09.2022
+    - Carta para apoyos académicos
+
 25.08.2022
 
 - Objetivo:
