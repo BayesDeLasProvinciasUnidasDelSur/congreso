@@ -2,6 +2,7 @@ from lxml import html
 import requests
 import csv
 
+
 existe = 0
 for i in range(64080,100000):#i=19500
     identificador = i
