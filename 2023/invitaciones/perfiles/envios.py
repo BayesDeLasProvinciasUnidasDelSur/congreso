@@ -9,7 +9,7 @@ import os
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
-from selenium.webdriver.common.action´_chains import ActionChains
+from selenium.webdriver.common.action_chains import ActionChains
 
 import time
 from selenium.webdriver.common.by import By
@@ -18,11 +18,13 @@ from unidecode import unidecode
 
 data = pd.read_csv("detalles_mas.csv", sep="|")
 
+data[data["bayes"]>0.0].iloc[0,:]
+
 driver = webdriver.Firefox()
 i = 0
 for index, persona in data[data["bayes"]>0.0].iterrows():#index=0
     i +=1
-    if i > 56:
+    if i in [124]:
         numero = data["Numero"][index]
         nombre = data["Nombre"][index]
         apellido = "-".join(nombre.split("\xa0")[0].split(" "))
@@ -60,5 +62,6 @@ for index, persona in data[data["bayes"]>0.0].iterrows():#index=0
         enviar.click()
 
         time.sleep(2)
-
-        os.system("echo {}|{}|{}|{} >> envios.log".format(print(index, apellido, numero,driver.find_element(By.XPATH, "//div[@id='main']").text)
+        text = driver.find_element(By.XPATH, "//div[@id='main']").text
+        print(text)
+        os.system("echo '{}|{}|{}|{}' >> envios.log".format(index, apellido, numero,text))
