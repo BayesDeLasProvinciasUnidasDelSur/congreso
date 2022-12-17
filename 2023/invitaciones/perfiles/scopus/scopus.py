@@ -39,10 +39,72 @@ link_papers = tree.xpath('//a[@class="ddmDocTitle"]/@href')
 len(nombre_papers)
 len(link_papers )
 
+# Levanto la página del paper.
 driver_paper.get(link_papers[0] )
 tree_paper = html.fromstring(driver_paper.page_source)
 
+## Busco las personas, abro la ventana y busco link
+
+links_elements_en_paper = driver_paper.find_elements(by=By.TAG_NAME, value= 'a')
+
+info_personas = driver_paper.find_elements(by=By.TAG_NAME, value= 'els-button')
+nombre_personas = [e.text for e in info_personas ]
+xpath_personas = [e.getroottree().getpath(e) for e in tree_paper.xpath('//els-button') ]
+
+mails = [driver_paper.find_elements(By.XPATH, xpath_personas[i].split("/els-button")[0]+"/a" ) for i in range(len(info_personas))]
+mails = [ None if len(m)==0 else m[0].get_attribute("href") for m in mails]
+
+affil = [driver_paper.find_elements(By.XPATH, xpath_personas[i].split("/els-button")[0]+"/span" )[0].text for i in range(len(info_personas))]
+
+
+# for i in range(len(info_personas)):
+i=0
+
+ActionChains(driver_paper).move_to_element(info_personas[i]).click(info_personas[i]).perform()
+info_personas[i].click()
+
+tab_persona = driver_paper.find_element(By.XPATH, xpath_personas[i].split("/els-button")[0]+"/div/" )
+
+# Hasta aca funciona
+##############################################################
+
+
+links_elements_en_paper2 = driver_paper.find_elements(by=By.TAG_NAME, value= 'a')
+new_link = list(set(links_elements_en_paper2 ) - set(links_elements_en_paper))[0]
+new_link.get_attribute('href')
+
+info_personas2 = driver_paper.find_elements(by=By.TAG_NAME, value= 'els-button')
+len(info_personas2 )
+href2 = [info_personas2[i].get_attribute('href') for i in range(len(info_personas2))]
+[h for h in href2 if (not (h==None)) and ("authid/detail." in h)]
+[e.text for e in info_personas2 ]
+
+links_elements_autores = [e for e in links_elements_en_paper  if not (e.get_attribute('href') == None) and "authorId" in e.get_attribute('href') ]
+links_autores = [e.get_attribute('href') for e in links_elements_en_paper  if not (e.get_attribute('href') == None) and "authorId" in e.get_attribute('href')
+[ l.split("authorId=")[1] for l in links_autores ]
+
+
+links_elements_en_paper = driver_paper.find_elements(by=By.TAG_NAME, value= 'a')
+
+
 autores_nombres = tree_paper.xpath('//els-button/text()')
+
+autores_elements = autores_nombres = tree_paper.xpath('//els-button/text()')
+('//els-button/text()')
+
+
+
+
+mail = tree_paper.xpath('//div[@data-testid="author-list"]//a/@href')
+
+autor_links = [ l for l in tree_paper.xpath('//a/@href')]
+autor_link_elements =  [ x for x, l in zip(tree_paper.xpath('//a'), tree_paper.xpath('//a/@href')) if "authorId" in l ]
+
+for e in autor_link_elements:
+    print(e.get_attribute('xpath'))
+
+
+
 
 
 # Necesitamos identiificar a los links de los autores, y sus pertenencias.
@@ -50,9 +112,6 @@ autores_nombres = tree_paper.xpath('//els-button/text()')
 ###############################################################
 
 # Abro la pestaña escondida del primer autor
-info_personas = driver_paper.find_elements(by=By.TAG_NAME, value= 'els-button')
-ActionChains(driver_paper).move_to_element(info_personas[0]).click(info_personas[0]).perform()
-info_personas[0].click()
 
 ##len(info_personas[0].find_elements(By.XPATH, "//a[@href]"))
 ##driver_paper.find_elements(By.XPATH, ".//a[@href]")
