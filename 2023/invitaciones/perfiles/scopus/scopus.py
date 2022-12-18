@@ -40,8 +40,9 @@ len(nombre_papers)
 len(link_papers )
 
 # Levanto la página del paper.
-driver_paper.get(link_papers[0] )
+driver_paper.get(link_papers[3] )
 tree_paper = html.fromstring(driver_paper.page_source)
+
 
 ## Busco las personas, abro la ventana y busco link
 
@@ -56,14 +57,30 @@ mails = [ None if len(m)==0 else m[0].get_attribute("href") for m in mails]
 
 affil = [driver_paper.find_elements(By.XPATH, xpath_personas[i].split("/els-button")[0]+"/span" )[0].text for i in range(len(info_personas))]
 
+affil_links = []
+autor_links = []
 
-# for i in range(len(info_personas)):
-i=0
+#driver.execute_script("arguments[0].scrollIntoView(true);", info_personas[i]);
 
-ActionChains(driver_paper).move_to_element(info_personas[i]).click(info_personas[i]).perform()
-info_personas[i].click()
+for i in range(len(info_personas)):#i=0
+    # iks
+    print(1)
+    ActionChains(driver_paper).move_to_element(info_personas[i]).click(info_personas[i]).perform()#info_personas[i].click()
+    #
+    print(2)
+    affil_element = driver_paper.find_elements(By.XPATH, xpath_personas[i].split("/els-button")[0]+"/div/div/div/div/div/els-stack/els-stack[1]/els-stack//a" )
+    list_affil = [e.get_attribute('href') for e in affil_element ]
+    affil_links.append(list_affil)
+    #
+    print(3)
+    autor_link_element = driver_paper.find_element(By.XPATH, xpath_personas[i].split("/els-button")[0]+"/div/div/div/div/div/els-stack/els-stack[1]/div/els-stack/els-button" )
+    autor_links.append("https://www.scopus.com/"+autor_link_element.get_attribute('href'))
+    #
+    print(4)
+    ActionChains(driver_paper).move_to_element(info_personas[i]).click(info_personas[i]).perform()
+    print(5)
 
-tab_persona = driver_paper.find_element(By.XPATH, xpath_personas[i].split("/els-button")[0]+"/div/" )
+
 
 # Hasta aca funciona
 ##############################################################
