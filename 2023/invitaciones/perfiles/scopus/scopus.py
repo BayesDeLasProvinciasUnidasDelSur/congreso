@@ -40,7 +40,7 @@ len(nombre_papers)
 len(link_papers )
 
 # Levanto la página del paper.
-driver_paper.get(link_papers[3] )
+driver_paper.get(link_papers[6] )
 tree_paper = html.fromstring(driver_paper.page_source)
 
 
@@ -51,6 +51,21 @@ links_elements_en_paper = driver_paper.find_elements(by=By.TAG_NAME, value= 'a')
 info_personas = driver_paper.find_elements(by=By.TAG_NAME, value= 'els-button')
 nombre_personas = [e.text for e in info_personas ]
 xpath_personas = [e.getroottree().getpath(e) for e in tree_paper.xpath('//els-button') ]
+
+
+# REVISAR XPATH cuando no hay más autores (capaz el primer botton es otro )
+mas_personas = driver_paper.find_elements(by=By.XPATH, value= '//article/div[2]/section/div[2]/div[1]/div[1]/button')
+mas_mails = []
+if mas_personas[0].text == "Show additional authors":
+    ActionChains(driver_paper).move_to_element(mas_personas[0]).click(mas_personas[0]).perform()#
+
+    info_personas = driver_paper.find_elements(by=By.XPATH, value= '//article/div[2]/section/div[2]/div[1]/div[2]//li/els-button')
+    tree_paper = html.fromstring(driver_paper.page_source)
+    xpath_personas = [e.getroottree().getpath(e) for e in tree_paper.xpath('//article/div[2]/section/div[2]/div[1]/div[2]//li/els-button') ]
+
+    # Cierro
+    x_elemento = driver_paper.find_element(by=By.XPATH, value= '//article/div[2]/section/div[2]/div[1]/div[2]//header/div[1]/els-button[1]')
+    ActionChains(driver_paper).move_to_element(x_elemento).click(x_elemento).perform()
 
 mails = [driver_paper.find_elements(By.XPATH, xpath_personas[i].split("/els-button")[0]+"/a" ) for i in range(len(info_personas))]
 mails = [ None if len(m)==0 else m[0].get_attribute("href") for m in mails]
@@ -73,13 +88,13 @@ for i in range(len(info_personas)):#i=0
     affil_links.append(list_affil)
     #
     print(3)
-    autor_link_element = driver_paper.find_element(By.XPATH, xpath_personas[i].split("/els-button")[0]+"/div/div/div/div/div/els-stack/els-stack[1]/div/els-stack/els-button" )
+    autor_link_element = driver_paper.find_element(By.XPATH, xpath_personas[i].split("/els-button")[0]+"/div/div/div/div/div/els-stack/els-stack[1]/div//a" )
     autor_links.append("https://www.scopus.com/"+autor_link_element.get_attribute('href'))
     #
     print(4)
-    ActionChains(driver_paper).move_to_element(info_personas[i]).click(info_personas[i]).perform()
+    x_elemento = driver_paper.find_element(by=By.XPATH, value= '//article/div[2]/section/div[2]/div[1]/div[2]//header/div[1]/els-button[1]')
+    ActionChains(driver_paper).move_to_element(x_elemento).click(x_elemento).perform()
     print(5)
-
 
 
 # Hasta aca funciona
