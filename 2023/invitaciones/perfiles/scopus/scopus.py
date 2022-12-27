@@ -105,7 +105,7 @@ total = int(tree.xpath('//span[@class="resultsCount"]')[0].text.replace('\n','')
 
 driver_paper.get(link_papers[0])
 
-n_paper = 400
+n_paper = 817
 autores_datos = dict()
 with open('autores_datos.pickle', 'rb') as handle:
     autores_datos = pickle.load(handle)
