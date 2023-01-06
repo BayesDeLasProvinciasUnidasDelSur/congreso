@@ -21,11 +21,14 @@ with open('papers_datos.pickle', 'rb') as handle:
 set([q for k in datos for q in datos[k]])
 set([q for k in papers for q in papers[k]])
 
-datos_para_csv = pd.DataFrame([(int(k), datos[k]["nombre"], "; ".join(datos[k]["paises"]), " | ".join(datos[k]["affil"]) ) for k in datos ], columns = ["id_persona", "nombre", "paises", "afiliaciones"])
+datos_para_csv = pd.DataFrame([(int(k), datos[k]["nombre"], "; ".join(datos[k]["paises"]), " | ".join(datos[k]["affil"]), len(datos[k]["papers"]) ) for k in datos ], columns = ["id_persona", "nombre", "paises", "afiliaciones", "papers"])
 datos_para_csv.to_csv("personas.csv", sep=",")
 
-personasXpapers_para_csv = pd.DataFrame([ (k[0]+"::"+k[1], int(a)) for k in papers for a in papers[k]["autores"] ], columns = ["id_paper", "id_persona"])
+personasXpapers_para_csv = pd.DataFrame([ (k[0]+"::"+k[1], int(a), [p[0] for p in datos[a]["papers"] if p[1] == k[1]][0] ) for k in papers for a in papers[k]["autores"] ], columns = ["id_paper", "id_persona", "posicion"])
 personasXpapers_para_csv.to_csv("papersXpersonas.csv")
+
+
+
 
 papers_para_csv = pd.DataFrame([ (k[0]+"::"+k[1],  "".join(papers[k]["DOI"]) , "".join(papers[k]["ISSN"]) , papers[k]["abstract"],  ";".join(papers[k]["palabras"])) for k in papers for a in papers[k]["autores"] ], columns = ["id_paper", "doi", "issn", "abstract", "palabras"])
 papers_para_csv.to_csv("papers.csv")
