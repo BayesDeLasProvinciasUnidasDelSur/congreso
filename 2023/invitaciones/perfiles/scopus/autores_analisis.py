@@ -18,6 +18,8 @@ with open('autores_datos.pickle', 'rb') as handle:
 with open('papers_datos.pickle', 'rb') as handle:
     papers = pickle.load(handle)
 
+#Counter(papers.keys()).most_common(10)
+
 set([q for k in datos for q in datos[k]])
 set([q for k in papers for q in papers[k]])
 
@@ -30,7 +32,7 @@ personasXpapers_para_csv.to_csv("papersXpersonas.csv")
 
 
 
-papers_para_csv = pd.DataFrame([ (k[0]+"::"+k[1],  "".join(papers[k]["DOI"]) , "".join(papers[k]["ISSN"]) , papers[k]["abstract"],  ";".join(papers[k]["palabras"])) for k in papers for a in papers[k]["autores"] ], columns = ["id_paper", "doi", "issn", "abstract", "palabras"])
+papers_para_csv = pd.DataFrame([ (k[0]+"::"+k[1],  "".join(papers[k]["DOI"]) , "".join(papers[k]["ISSN"]) , papers[k]["abstract"],  ";".join(papers[k]["palabras"])) for k in papers ], columns = ["id_paper", "doi", "issn", "abstract", "palabras"])
 papers_para_csv.to_csv("papers.csv")
 
 
@@ -41,9 +43,7 @@ papers_para_csv.to_csv("papers.csv")
 #len([ (datos[k]["nombre"],a) for k in datos for a in datos[k]["affil"] if "Argentina" in datos[k]["paises"] and "Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires" in a ])
 
 
-len([datos[k] for k in datos if "Argentina" in datos[k]["paises"] and "Salgado" in datos[k]["nombre"]])
 
-"; ".join(set(["hola", "chau"]))
 
 k_ejemplo_paper = ('56389488100', 'Organization, evolution and transcriptional profile of hexamerin genes of the parasitic wasp Nasonia vitripennis (Hymenoptera: Pteromalidae)')
 
