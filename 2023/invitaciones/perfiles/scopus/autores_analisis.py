@@ -18,23 +18,37 @@ with open('autores_datos.pickle', 'rb') as handle:
 with open('papers_datos.pickle', 'rb') as handle:
     papers = pickle.load(handle)
 
+len(datos)
+len(papers)
+
+
+#for k in datos:
+    #del datos[k]['mails']
+
+
+#with open('autores_sin_contacto.pickle', 'wb') as handle:
+    #pickle.dump(datos, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
 #Counter(papers.keys()).most_common(10)
+
+key_osvaldo_martin = "30567452100"
+key_rodrigo_diaz = "24502677100"
+key_pregliasco = "57211037695"
+
+
 
 set([q for k in datos for q in datos[k]])
 set([q for k in papers for q in papers[k]])
 
-datos_para_csv = pd.DataFrame([(int(k), datos[k]["nombre"], "; ".join(datos[k]["paises"]), " | ".join(datos[k]["affil"]), len(datos[k]["papers"]) ) for k in datos ], columns = ["id_persona", "nombre", "paises", "afiliaciones", "papers"])
-datos_para_csv.to_csv("personas.csv", sep=",")
+datos_para_csv = pd.DataFrame([(int(k), datos[k]["nombre"], "; ".join(datos[k]["paises"]), " | ".join(datos[k]["affil"]), len(datos[k]["papers"]), len(datos[k]["mails"])>0 ) for k in datos ], columns = ["id_persona", "nombre", "paises", "afiliaciones", "papers", "contacto"])
+datos_para_csv.to_csv("csv/personas.csv", sep=",")
 
 personasXpapers_para_csv = pd.DataFrame([ (k[0]+"::"+k[1], int(a), [p[0] for p in datos[a]["papers"] if p[1] == k[1]][0] ) for k in papers for a in papers[k]["autores"] ], columns = ["id_paper", "id_persona", "posicion"])
-personasXpapers_para_csv.to_csv("papersXpersonas.csv")
+personasXpapers_para_csv.to_csv("csv/papersXpersonas.csv")
 
 
-
-
-papers_para_csv = pd.DataFrame([ (k[0]+"::"+k[1],  "".join(papers[k]["DOI"]) , "".join(papers[k]["ISSN"]) , papers[k]["abstract"],  ";".join(papers[k]["palabras"])) for k in papers ], columns = ["id_paper", "doi", "issn", "abstract", "palabras"])
-papers_para_csv.to_csv("papers.csv")
-
+papers_para_csv = pd.DataFrame([ (k[0]+"::"+k[1],  "".join(papers[k]["DOI"]) , "".join(papers[k]["ISSN"]) , papers[k]["abstract"],  ";".join(papers[k]["palabras"]), papers[k]["publication_date"], papers[k]["document_type"],  papers[k]["source_type"],  papers[k]["journal"],   papers[k]["cited_by"]  ) for k in papers ], columns = ["id_paper", "doi", "issn", "abstract", "palabras", "Año", "documento", "fuente", "revista", "citas"])
+papers_para_csv.to_csv("csv/papers.csv")
 
 #Counter([ a for k in datos for a in datos[k]["affil"] if "Argentina" in datos[k]["paises"] ])
 
@@ -75,12 +89,9 @@ for p in paises:
     plt.close()
 
 
-
-
 componentes = { p:[len(c)/len(G) for c in sorted(nx.connected_components(G), key=len, reverse=True)][0:2] for G,p in zip(Gs, paises) if len(G) > 20 }
 
 sorted(componentes.items(), key=lambda x:x[1], reverse=True)
-
 
 set([q for k in papers for q in papers[k]])
 set([q for k in datos for q in datos [k]])

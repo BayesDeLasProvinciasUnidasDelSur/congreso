@@ -15,6 +15,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions
+from datetime import date
 
 import numpy as np
 from scipy.io.wavfile import write
@@ -87,30 +88,29 @@ profile.set_preference("network.proxy.type", 1)
 profile.set_preference("network.proxy.socks", "localhost")
 profile.set_preference("network.proxy.socks_port", 2000)
 
-#driver = webdriver.Firefox(firefox_profile=profile)
+driver = webdriver.Firefox(firefox_profile=profile)
 driver_paper = webdriver.Firefox(firefox_profile=profile)
+
+#("bayes" OR "bayesian" OR "causal inference" OR "state space model" OR "hidden markov model" OR "probabilistic programing" OR "markov chain monte carlo" OR "hamiltonian monte carlo" OR "hybrid monte carlo" OR "sequential monte carlo" OR "expectation propagation" OR "belief propagation" OR "variational inference" OR "MaxEnt" OR "sum-product algorithm") AND NOT ("naive bayes" OR "bayes syndrome")
+
+
 
 url= "https://www.scopus.com/results/results.uri?sort=plf-f&src=s&st1=%28bayes+AND+NOT+%28%22naive+bayes%22%29%29+OR+%28%22causal+inference%22+AND+NOT+%28%22naive+bayes%22%29%29&st2=argentina+OR+chile+OR+uruguay+OR+paraguay+OR+bolivia+OR+per%c3%ba+OR+colombia+OR+venezuela+OR+brazil+OR+m%c3%a9xico+OR+cuba+OR+ecuador&sid=a83350921ff83885ce535de899e04f09&sot=b&sdt=b&sl=239&s=%28TITLE-ABS-KEY%28%28bayes+AND+NOT+%28%22naive+bayes%22%29%29+OR+%28%22causal+inference%22+AND+NOT+%28%22naive+bayes%22%29%29%29+AND+AFFILCOUNTRY%28argentina+OR+chile+OR+uruguay+OR+paraguay+OR+bolivia+OR+per%c3%ba+OR+colombia+OR+venezuela+OR+brazil+OR+m%c3%a9xico+OR+cuba+OR+ecuador%29%29&origin=searchbasic&editSaveSearch=&yearFrom=Before+1960&yearTo=2022"
 
 url = "https://www.scopus.com/results/results.uri?sort=plf-f&src=s&st1=%28bayes+AND+NOT+%28%22naive+bayes%22%29%29+OR+%28%22causal+inference%22+AND+NOT+%28%22naive+bayes%22%29%29&st2=argentina+OR+chile+OR+uruguay+OR+paraguay+OR+bolivia+OR+per%c3%ba+OR+colombia+OR+venezuela+OR+brazil+OR+m%c3%a9xico+OR+cuba+OR+ecuador&sid=107c6cee5bce6d66a1a9e09145f25c0b&sot=b&sdt=b&sl=239&s=%28TITLE-ABS-KEY%28%28bayes+AND+NOT+%28%22naive+bayes%22%29%29+OR+%28%22causal+inference%22+AND+NOT+%28%22naive+bayes%22%29%29%29+AND+AFFILCOUNTRY%28argentina+OR+chile+OR+uruguay+OR+paraguay+OR+bolivia+OR+per%c3%ba+OR+colombia+OR+venezuela+OR+brazil+OR+m%c3%a9xico+OR+cuba+OR+ecuador%29%29&origin=searchbasic&editSaveSearch=&yearFrom=Before+1960&yearTo=2010"
 
-#driver.get(url)
-#tree = html.fromstring(driver.page_source)
+url="https://www.scopus.com/results/results.uri?sort=plf-f&src=s&st1=%28%22bayes%22+OR+%22bayesian%22+OR+%22causal+inference%22+OR+%22state+space+model%22+OR+%22hidden+markov+model%22+OR+%22probabilistic+programing%22+OR+%22markov+chain+monte+carlo%22+OR+%22hamiltonian+monte+carlo%22+OR+%22hybrid+monte+carlo%22+OR+%22sequential+monte+carlo%22+OR+%22expectation+propagation%22+OR+%22belief+propagation%22+OR+%22variational+inference%22+OR+%22MaxEnt%22+OR+%22sum-product+algorithm%22%29+AND+NOT+%28%22naive+bayes%22+OR+%22bayes+syndrome%22%29&st2=argentina+OR+chile+OR+uruguay+OR+paraguay+OR+bolivia+OR+per%c3%ba+OR+colombia+OR+venezuela+OR+brazil+OR+m%c3%a9xico+OR+cuba+OR+ecuador+OR+nicaragua+OR+honduras+OR+guatemala+OR+panama&sid=8db734657e64a857c84ca7dfff7fc60e&sot=b&sdt=b&sl=605&s=%28TITLE-ABS-KEY%28%28%22bayes%22+OR+%22bayesian%22+OR+%22causal+inference%22+OR+%22state+space+model%22+OR+%22hidden+markov+model%22+OR+%22probabilistic+programing%22+OR+%22markov+chain+monte+carlo%22+OR+%22hamiltonian+monte+carlo%22+OR+%22hybrid+monte+carlo%22+OR+%22sequential+monte+carlo%22+OR+%22expectation+propagation%22+OR+%22belief+propagation%22+OR+%22variational+inference%22+OR+%22MaxEnt%22+OR+%22sum-product+algorithm%22%29+AND+NOT+%28%22naive+bayes%22+OR+%22bayes+syndrome%22%29%29+AND+AFFILCOUNTRY%28argentina+OR+chile+OR+uruguay+OR+paraguay+OR+bolivia+OR+per%c3%ba+OR+colombia+OR+venezuela+OR+brazil+OR+m%c3%a9xico+OR+cuba+OR+ecuador+OR+nicaragua+OR+honduras+OR+guatemala+OR+panama%29%29&origin=searchbasic&editSaveSearch=&yearFrom=1960&yearTo=2003"
+
+driver.get(url)
+tree = html.fromstring(driver.page_source)
 
 #nombre_papers = tree.xpath('//a[@class="ddmDocTitle"]/text()')
-#link_papers = tree.xpath('//a[@class="ddmDocTitle"]/@href')
 
 #len(nombre_papers)
 #len(link_papers )
 
-#total = int(tree.xpath('//span[@class="resultsCount"]')[0].text.replace('\n','').replace(',',''))
+#
 
-
-driver_paper.get("https://www.scopus.com/record/display.uri?eid=2-s2.0-77950358311&origin=resultslist&sort=plf-f&src=s&st1=%28bayes+AND+NOT+%28%22naive+bayes%22%29%29+OR+%28%22causal+inference%22+AND+NOT+%28%22naive+bayes%22%29%29&st2=argentina+OR+chile+OR+uruguay+OR+paraguay+OR+bolivia+OR+per%c3%ba+OR+colombia+OR+venezuela+OR+brazil+OR+m%c3%a9xico+OR+cuba+OR+ecuador&nlo=&nlr=&nls=&sid=107c6cee5bce6d66a1a9e09145f25c0b&sot=b&sdt=b&sl=258&s=%28TITLE-ABS-KEY%28%28bayes+AND+NOT+%28%22naive+bayes%22%29%29+OR+%28%22causal+inference%22+AND+NOT+%28%22naive+bayes%22%29%29%29+AND+AFFILCOUNTRY%28argentina+OR+chile+OR+uruguay+OR+paraguay+OR+bolivia+OR+per%c3%ba+OR+colombia+OR+venezuela+OR+brazil+OR+m%c3%a9xico+OR+cuba+OR+ecuador%29%29+AND+PUBYEAR+%3c+2011&relpos=106&citeCnt=38&searchTerm=")
-
-
-
-n_paper = 890
 autores_datos = dict()
 papers_datos = dict()
 
@@ -123,12 +123,20 @@ with open('papers_datos.pickle', 'rb') as handle:
 len(papers_datos)
 len(autores_datos)
 
-total = 2000
+n_paper_old = 0
 
-t=0; r=0
+total = int(tree.xpath('//span[@class="resultsCount"]')[0].text.replace('\n','').replace(',',''))
+
+#
+
+link_papers = tree.xpath('//a[@class="ddmDocTitle"]/@href')
+driver_paper.get(link_papers[n_paper_old])
+
+
+t=0; r=0; p=0
 while t < 5:
     try:
-        while n_paper < total:
+        while p < 5 and (n_paper_old < total):
             # Levanto la página del paper.
             tree_paper = html.fromstring(driver_paper.page_source)
             next_link_xpath = [e.getroottree().getpath(e) for e in tree_paper.xpath('//section/nav/ul/li[@class="nextLink"]') ][0]
@@ -137,6 +145,11 @@ while t < 5:
             current_number_of_paper = driver_paper.find_element(By.XPATH, record_page_count_xpath).text.split("of")
             n_paper = int(current_number_of_paper[0].replace(',',''))
             print("paper: ", n_paper )
+            if n_paper != n_paper_old:
+                p=0
+            else:
+                p+=1
+            n_paper_old = n_paper
             #
             personas_path = [e.getroottree().getpath(e) for e in tree_paper.xpath('//div[@data-testid="author-list"]')][0]
             info_personas = driver_paper.find_elements(By.XPATH, personas_path+'/div[1]/ul/li/els-button')
@@ -186,13 +199,17 @@ while t < 5:
                 except:
                     journal_link = ""
                 try:
-                    journal_name = driver_paper.find_element(By.XPATH, "//article/div/div/div/a").text
+                    journal_name = tree_paper.xpath('//div[@id="doc-details-page-container"]/div[@class="hidden"]/div[@id="publicationTitle"]/text()')[0]
                 except:
-                    journal_name = ""
+                    journal_name = "empty"
                 try:
-                    publication_date = int(driver_paper.find_element(By.XPATH, "//article/div/div/div").text.split(" ")[-1])
+                    publication_date = tree_paper.xpath('//div[@id="doc-details-page-container"]/div[@class="hidden"]/div[@id="publicationYear"]/text()')[0]
                 except:
                     publication_date = 0
+                try:
+                    cited_by = int(tree_paper.xpath('//section[@id="documentLinks"]/div[@id="recordPageBoxes"]/div/div/h3/text()')[0].split("Cited by")[1].split(" documents")[0])
+                except:
+                    cited_by = -1
                 paper_name = driver_paper.find_element(By.XPATH, "//section/div/div/h2").text
                 doc_type = [e.text.split("\n")[1] for e in driver_paper.find_elements(By.XPATH, "//article/div[2]/aside/div[1]/div[1]/div[1]/dl") if "Document type\n" in e.text]
                 source_type = [e.text.split("\n")[1] for e in driver_paper.find_elements(By.XPATH, "//article/div[2]/aside/div[1]/div[1]/div[1]/dl") if "Source type\n" in e.text]
@@ -209,8 +226,9 @@ while t < 5:
                     key_words = []
                 autor_id = [a.split("authorId=")[1].split("&")[0] for a in autor_links]
                 key_paper = (autor_id[0], paper_name)
+                hoy = date.today()
                 if not (key_paper in papers_datos):
-                    papers_datos[key_paper] = {"titulo": paper_name, "abstract": abstract, "palabras": key_words, "ISSN": issn, "DOI": doi, "autores": autor_id, "journal": journal_name, "source_type": source_type, "document_type": doc_type, "publication_date": publication_date  }
+                    papers_datos[key_paper] = {"titulo": paper_name, "abstract": abstract, "palabras": key_words, "ISSN": issn, "DOI": doi, "autores": autor_id, "journal": journal_name, "source_type": source_type, "document_type": doc_type, "publication_date": publication_date, "cited_by": cited_by, "descarga": "{}/{}/{}".format(hoy.day, hoy.month, hoy.year)  }
                 #
                 n_personas = len(nombre_personas)
                 #
@@ -229,7 +247,7 @@ while t < 5:
                             paises[-1].append(pycountry.countries.search_fuzzy(a.split(",")[-1])[0].name)
                         except:
                             paises[-1].append("desconocido")
-                    latino.append([c for c in paises[-1] if c in ['Argentina', 'Uruguay', 'Chile', 'Paraguay', 'Bolivia, Plurinational State of', 'Peru', 'Colombia', 'Ecuador', 'Venezuela, Bolivarian Republic of', 'Cuba',  'Mexico', 'Brazil', 'Nicaragua', 'Honduras', 'Guatemala'] ])
+                    latino.append([c for c in paises[-1] if c in ['Argentina', 'Uruguay', 'Chile', 'Paraguay', 'Bolivia, Plurinational State of', 'Peru', 'Colombia', 'Ecuador', 'Venezuela, Bolivarian Republic of', 'Cuba',  'Mexico', 'Brazil', 'Nicaragua', 'Honduras', 'Guatemala', 'Panama'] ])
                 for a in range(n_personas):
                     if not (autor_id[a] in autores_datos):
                         autores_datos[autor_id[a]] = {"nombre": nombre_personas[a], "paises": set(paises[a]), "latinos": set(latino[a]), "mails": set() if mails[a] is None else set([mails[a]]), "affil": set(affil_texts[a]), "papers": set([(autor_posicion[a], paper_name)]) }
@@ -265,7 +283,16 @@ while t < 5:
                     sound.play()
     except:
         t+=1
-        time.sleep(1)
+        time.sleep(t)
+
+
+with open('autores_datos.pickle', 'wb') as handle:
+    pickle.dump(autores_datos, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+with open('papers_datos.pickle', 'wb') as handle:
+    pickle.dump(papers_datos, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
 
 sound.play()
 sound.play()
@@ -274,5 +301,5 @@ sound.play()
 
 
 
-driver_paper.close()
+driver.close()
 

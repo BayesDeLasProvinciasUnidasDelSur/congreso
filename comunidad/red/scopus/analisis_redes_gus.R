@@ -2,6 +2,10 @@ library(igraph)
 library(tidygraph)
 library(tidyverse)
 library(ggraph)
+library(visNetwork)
+library(htmlwidgets)
+
+#setwd("~/meta/membership/bayes/congreso/comunidad/red/scopus")
 
 # Cargamos datasets originales
 Per <- read.csv('datos/personas.csv')
@@ -55,55 +59,44 @@ gArg %>%
   theme_graph() +
   scale_fill_discrete(name = 'Color')
 
-gArgPer <- gArg %>%
-  bipartite.projection(which=TRUE) %>%
-  as_tbl_graph()
+visIgraph(gArg)
+saveWidget(visIgraph(gArg), file="red.html") # selfconteiner
 
-gArgPer %>%
-  mutate(fuerza = strength(gArgPer)) %>% 
+cArg <- components(gArg, mode = c("weak", "strong"))
+
+g_i = induced_subgraph(gArg, cArg$membership==which.max(cArg$csize))
+
+
+
+g_i %>%
+  as_tbl_graph() %>%
+  activate(nodes) %>%
+  mutate(type = ifelse(type,'Autor','Paper')) %>%
   ggraph() +
   geom_edge_link() +
-  geom_node_circle(aes(fill=fuerza,r=.25)) +
+  geom_node_label(aes(label=nombre,fill=type,r=.25)) +
   theme_graph() +
-  scale_fill_gradient(name = '#Papers',low = 'blue',high='red') +
-  ggtitle('Red Autores')
-
-gArgPer %>%
-  mutate(fuerza = strength(gArgPer)) %>% 
-  as.data.frame() %>%
-  ggplot(aes(x=fuerza)) +
-  geom_histogram(binwidth = 1, fill='white',color='black') +
-  scale_x_continuous(name='#Papers',breaks = seq(0,80,5)) +
-  scale_y_continuous(name='Cantidad de autores',breaks = seq(0,150,10)) +
-  geom_vline(aes(xintercept=mean(fuerza)),lwd=1.25,lty='dashed') +
-  theme_light() +
-  ggtitle('Autores de Argentina')
-  
-# Algun resumencito de los autores
-gArgPer %>%
-  mutate(fuerza = strength(gArgPer)) %>% 
-  as.data.frame() %>%
-  select(fuerza) %>% 
-  summary()
-  
-gArgPer %>%
-  mutate(grupo = clusters(gArgPer)$membership) %>%
-  as.data.frame() %>%
-  group_by(grupo) %>%
-  summarize(n = n()) %>%
-  ggplot(aes(x=n)) +
-  geom_histogram(binwidth = 1) +
-  scale_x_continuous(name='Cantidad de autores',breaks = seq(0,80,5)) +
-  scale_y_continuous(name='Cantidad de grupos',breaks = seq(0,150,10)) +
-  geom_vline(aes(xintercept=mean(n)),lwd=1.25,lty='dashed') +
-  theme_light() +
-  ggtitle('Autores de Argentina')
+  scale_fill_discrete(name = 'Color')
 
 
-gArgPer %>%
-  mutate(grupo = clusters(gArgPer)$membership) %>%
-  as.data.frame() %>%
-  group_by(grupo) %>%
-  summarize(n = n()) %>%
-  select(n) %>%
-  summary()
+g_i %>%
+  as_tbl_graph() %>%
+  activate(nodes) %>%
+  mutate(type = ifelse(type,'Autor','Paper')) %>%
+  ggraph() +
+  geom_edge_link() +
+  geom_node_label(aes(label=nombre,fill=type,r=.25)) +
+  theme_graph() +
+  scale_fill_discrete(name = 'Color')
+
+g_i %>%
+  as_tbl_graph() %>%
+  activate(nodes) %>%
+  mutate(type = ifelse(type,'Autor','Paper')) %>%
+  ggraph() +
+  geom_edge_link() +
+  geom_node_circle(aes(fill=type,r=.25)) +
+  theme_graph() +
+  scale_fill_discrete(name = 'Color')
+
+
