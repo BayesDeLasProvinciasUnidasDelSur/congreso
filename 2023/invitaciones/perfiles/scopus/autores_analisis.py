@@ -12,6 +12,15 @@ from collections import Counter
 # DOI metadata
 # https://search.crossref.org/
 
+
+#for k in datos:
+    #del datos[k]['mails']
+#with open('autores_sin_contacto.pickle', 'wb') as handle:
+    #pickle.dump(datos, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+#Counter(papers.keys()).most_common(10)
+
+
 with open('autores_datos.pickle', 'rb') as handle:
     datos = pickle.load(handle)
 
@@ -22,19 +31,51 @@ len(datos)
 len(papers)
 
 
-#for k in datos:
-    #del datos[k]['mails']
+
+def ranking_autores_por_papers(top=10,order=2):
+    autores_por_papers = [ (datos[k]["nombre"],len(datos[k]["papers"]),sum([1  for p in datos[k]["papers"] if p[0] == 0]),k) for k in datos if "Argentina" in datos[k]["latinos"] ]
+    return sorted(autores_por_papers, key=lambda x:x[order], reverse=True)[0:top]
+
+def papers_de(k):
+    return [(p, papers[p]["publication_date"]) for p in papers if k in papers[p]["autores"]]
 
 
-#with open('autores_sin_contacto.pickle', 'wb') as handle:
-    #pickle.dump(datos, handle, protocol=pickle.HIGHEST_PROTOCOL)
+ranking_autores_por_papers(top=10,order=2)
 
-#Counter(papers.keys()).most_common(10)
 
-key_osvaldo_martin = "30567452100"
-key_rodrigo_diaz = "24502677100"
-key_pregliasco = "57211037695"
+osvaldo_martin = "30567452100"
+rodrigo_diaz = "24502677100"
+pregliasco = "57211037695"
+plastino = "26538012200" # Presidente UNLP 1986-1992
+cernuschi_frias = "7003558300" # Fallecido 2021, Decano FIUBA
+ciapponi = "24773469000" # Argentino en FIND
+# Mujeres del top 20
+cuyckens_erica = "55695616600" # 5 (9) Jujuy Estudios Ambientales y Social
+carrizo_garcia_carolina = "56178341700" # 4 (5) Cordoba BioVeg
+quiroga_paula = "15843952300" # 4 (5) Bariloche
+torres_carolina = "57042629400" # 2 (10) BsAs Bacteriología y Virología (IBAVIM)
+barboza_gloria = "6701525125" # 0 (10) Cordoba BioVeg
 
+
+papers_de("6701525125")
+
+
+Cristian Rodriguez Rivero
+
+autores_por_papers = [ (datos[k]["nombre"],len(datos[k]["papers"]),sum([1  for p in datos[k]["papers"] if p[0] == 0]),k) for k in datos if "Argentina" in datos[k]["latinos"] ]
+
+sorted(autores_por_papers, key=lambda x:x[2], reverse=True)[0:10]
+
+[(p[0]==plastino,p[1], papers[p]["publication_date"]) for p in papers if plastino in papers[p]["autores"]]
+
+[ (p, papers[p]["publication_date"], k) for p in papers for k in papers[p]["autores"] if "Argentina" in datos[k]["latinos"] ][0:-4]
+
+papers[('7101739132', 'MAPAG: a computer program to construct 2- and 3-dimensional antigenic maps')]
+
+
+[k for k in datos if "Ciapponi" in datos[k]["nombre"]]
+kp = [k for k in papers if "24773469000" in papers[k]["autores"]][0]
+papers[kp]
 
 
 set([q for k in datos for q in datos[k]])
@@ -113,6 +154,12 @@ for k in datos:
 i
 j
 af
+
+mails = {}
+for p in paises:
+    mails[p] = sum([len(datos[k]["mails"])>0 for k in datos  if (p in datos[k]["latinos"]) ])
+
+
 
 sum([len(datos[k]["papers"])>1 for k in datos])
 
