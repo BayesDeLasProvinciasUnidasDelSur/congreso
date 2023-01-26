@@ -30,37 +30,83 @@ with open('papers_datos.pickle', 'rb') as handle:
 len(datos)
 len(papers)
 
+set([q for k in datos for q in datos[k]])
+set([q for k in papers for q in papers[k]])
+
+
+def citas_de(k):
+    return sum([papers[p]["cited_by"] for p in papers if k in papers[p]["autores"]])
+
+def citas_primer_autor(k):
+    return sum([papers[p]["cited_by"] for p in papers if k == p[0] ])
+
+for k in datos:
+    if "Argentina" in datos[k]["latinos"]:
+        datos[k]["citas_primer"] = citas_primer_autor(k)
+        datos[k]["citas"] = citas_de(k)
 
 
 def ranking_autores_por_papers(top=10,order=2):
-    autores_por_papers = [ (datos[k]["nombre"],len(datos[k]["papers"]),sum([1  for p in datos[k]["papers"] if p[0] == 0]),k) for k in datos if "Argentina" in datos[k]["latinos"] ]
+    autores_por_papers = [ (datos[k]["nombre"],len(datos[k]["papers"]),sum([1  for p in datos[k]["papers"] if p[0] == 0]), datos[k]["citas_primer"], datos[k]["citas"], k) for k in datos if "Argentina" in datos[k]["latinos"] ]
     return sorted(autores_por_papers, key=lambda x:x[order], reverse=True)[0:top]
 
-def papers_de(k):
-    return [(p, papers[p]["publication_date"]) for p in papers if k in papers[p]["autores"]]
+def papers_de(k, full=False):
+    return [(p, papers[p]["publication_date"], papers[p]["cited_by"], papers[p]["abstract"]) if full else (p, papers[p]["publication_date"], papers[p]["cited_by"])  for p in papers if k in papers[p]["autores"]]
 
+def por_nombre(nom):
+    return [(datos[k]["nombre"],k, len(papers_de(k)) ) for k in datos if nom in datos[k]["nombre"]]
 
-ranking_autores_por_papers(top=10,order=2)
+def por_affil(nom):
+    return [(datos[k]["nombre"],k, len(papers_de(k)) ) for k in datos for a in datos[k]["affil"] if nom in a]
 
+def papers_por_affil(nom):
+    return [(datos[k]["nombre"],k, papers_de(k)) for k in datos for a in datos[k]["affil"] if nom in a]
+
+def paper_pon_titulo(t):
+    return [(p,papers[p])  for p in papers if t in p[1]]
 
 osvaldo_martin = "30567452100"
 rodrigo_diaz = "24502677100"
 pregliasco = "57211037695"
 plastino = "26538012200" # Presidente UNLP 1986-1992
+milone_diego = "6505923044"
 cernuschi_frias = "7003558300" # Fallecido 2021, Decano FIUBA
 ciapponi = "24773469000" # Argentino en FIND
 # Mujeres del top 20
+morando_mariana = "7006395520" # 2 (15)
 cuyckens_erica = "55695616600" # 5 (9) Jujuy Estudios Ambientales y Social
-carrizo_garcia_carolina = "56178341700" # 4 (5) Cordoba BioVeg
 quiroga_paula = "15843952300" # 4 (5) Bariloche
 torres_carolina = "57042629400" # 2 (10) BsAs Bacteriología y Virología (IBAVIM)
+carrizo_garcia_carolina = "56178341700" # 4 (5) Cordoba BioVeg
 barboza_gloria = "6701525125" # 0 (10) Cordoba BioVeg
+# Citas
+huygens_dries = "9336550600" # 2 (3) 164 241 Cordoba BioVeg
+goloboff_pablo = "6602691082" # 3 (4) 249 251 Tucuman Bio Fundación Miguel Lillo
+calvino_carolina = "21933409000" # 4 (7) 208 237 Bio Comahue
+garcia_patricio = "16315729500" # 2 (4) 340 550 Tandil Comp Globant
+schiaffino_silvia = "7005815424" # 2 4 250 500 Tandil Comp
+gonzalez_carman_victoria = "46661856500" # 3 3 153 153 MarDelPlata Bio
+carbanne_gustavo = "14034983000" # 2 10 145 321 Misiones Pájaros
+robins_james = "35392741100" # 1 6 142 289 Harvard Epidemio Causal
+#
+morales_juan = "24822265100" #
+cantet_rodolfo = "6603356992"
+perez_andres = "7402509981"
+martinez_ernesto = "7401467369"
+salles_alejo = "55369008100"
+holik_federico = "16646023300"
 
+ranking_autores_por_papers(top=20,order=2)[10:20]
 
-papers_de("6701525125")
+por_nombre("Martinez, J")
 
+datos["36651361400" ]
+papers_de("55262988600")
 
-Cristian Rodriguez Rivero
+papers_de("6701680418",True )
+
+sorted(set(por_affil("Tierra del Fuego")), key=lambda x :x[-1])
+
 
 autores_por_papers = [ (datos[k]["nombre"],len(datos[k]["papers"]),sum([1  for p in datos[k]["papers"] if p[0] == 0]),k) for k in datos if "Argentina" in datos[k]["latinos"] ]
 
@@ -77,9 +123,6 @@ papers[('7101739132', 'MAPAG: a computer program to construct 2- and 3-dimension
 kp = [k for k in papers if "24773469000" in papers[k]["autores"]][0]
 papers[kp]
 
-
-set([q for k in datos for q in datos[k]])
-set([q for k in papers for q in papers[k]])
 
 datos_para_csv = pd.DataFrame([(int(k), datos[k]["nombre"], "; ".join(datos[k]["paises"]), " | ".join(datos[k]["affil"]), len(datos[k]["papers"]), len(datos[k]["mails"])>0 ) for k in datos ], columns = ["id_persona", "nombre", "paises", "afiliaciones", "papers", "contacto"])
 datos_para_csv.to_csv("csv/personas.csv", sep=",")
