@@ -37,10 +37,9 @@ Pap <- read.csv('datos/papers.csv') %>%
   mutate(paper_name = str_remove(id,".*::")) %>% #Nombre del paper
   mutate(label = paste(sub("^(\\S*\\s+\\S+\\s+\\S+\\s+\\S+).*", "\\1",paper_name),'...',sep='')) %>% # Label es nombre acortado del paper
   mutate(title = paste(
-    paste('<em>',paper_name,'</em>',sep=''),
+    paste('<b>',paper_name,'</b>',sep=''),
     abstract,
     sep='<br><br>')) %>%# titulo es lo que aparece al hacer hover sobre el nodo. Es titulo + abstract
-  mutate(title = paste('<style> .bluediv{word-wrap: normal} ',title,'</style>')) %>%
   mutate(shape = 'triangle', # Parámetros gráficos
          color = 'orange')
 
@@ -62,23 +61,53 @@ rm(list = setdiff(ls(),c('edges','nodes')))
 # Armamos grafo
 g <- graph_from_data_frame(edges,FALSE,nodes) %>% as_tbl_graph()
 
-# Retenemos sólo nodos de personas de Argentina, y borramos lo que quede suelto
+# Retenemos sólo nodos de personas de un país, y borramos lo que quede suelto
+paises_latinoamerica <- c('Argentina',
+                          'Brazil',
+                          'Peru',
+                          'Bolivia',
+                          'Mexico',
+                          'Chile',
+                          'Uruguay',
+                          'Paraguay',
+                          'Venezuela',
+                          'Ecuador',
+                          'Belize',
+                          'Costa Rica',
+                          'Cuba',
+                          'Colombia',
+                          'Dominican Republic',
+                          'El Salvador',
+                          'Guatemala',
+                          'Honduras',
+                          'Jamaica',
+                          'Nicaragua')
 
-gArg <- g %>% 
-  delete_vertices(v = !grepl('Argentina',V(g)$paises) & V(g)$type) 
-gArg <- gArg %>% 
-  delete_vertices(degree(gArg) == 0) %>%
-  as_tbl_graph()
-
-# Visualizaciones de red de personas en formato HTML
-
-# Usamos layour de ggraph
-
-gArg$layout <- as.matrix(create_layout(gArg,'stress')[,1:2])
-V(gArg)$x <- gArg$layout[,1]
-V(gArg)$y <- -gArg$layout[,2]
-
-# Generamos la red
-visg <- visIgraph(gArg,idToLabel = FALSE, width = "500px", height = "100px") 
-
-saveWidget(widget = visg,'redArg.html',selfcontained = FALSE)
+dir.create('redes_por_pais')
+for(pais in paises_latinoamerica){
+  print(paste('Comenzando:',pais))
+  gP <- g %>% 
+    delete_vertices(v = !grepl(pais,V(g)$paises) & V(g)$type) 
+  gP <- gP %>% 
+    delete_vertices(degree(gP) == 0) %>%
+    as_tbl_graph()
+  
+  # Visualizaciones de red de personas en formato HTML
+  
+  # Usamos layour de ggraph
+  
+  gP$layout <- as.matrix(create_layout(gP,'stress')[,1:2])
+  V(gP)$x <- gP$layout[,1]
+  V(gP)$y <- -gP$layout[,2]
+  print('Red preparada')
+  # Generamos la red
+  
+  visgP <- visIgraph(gP)
+  visgP$x$main <- list('text'=pais,style="font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;")
+  visgP$sizingPolicy$browser$fill <- TRUE
+  print('Visgraph preparado, guardando...')
+  
+  saveWidget(widget = visgP,sub('XXX',pais,'redes_por_pais/redXXX.html'),selfcontained = FALSE)
+  print('Guardado')
+  print('--------------------------')
+}
