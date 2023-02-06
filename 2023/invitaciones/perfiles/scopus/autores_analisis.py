@@ -40,11 +40,6 @@ def citas_de(k):
 def citas_primer_autor(k):
     return sum([papers[p]["cited_by"] for p in papers if k == p[0] ])
 
-for k in datos:
-    if "Argentina" in datos[k]["latinos"]:
-        datos[k]["citas_primer"] = citas_primer_autor(k)
-        datos[k]["citas"] = citas_de(k)
-
 
 def ranking_autores_por_papers(top=10,order=2):
     autores_por_papers = [ (datos[k]["nombre"],len(datos[k]["papers"]),sum([1  for p in datos[k]["papers"] if p[0] == 0]), datos[k]["citas_primer"], datos[k]["citas"], k) for k in datos if "Argentina" in datos[k]["latinos"] ]
@@ -64,6 +59,15 @@ def papers_por_affil(nom):
 
 def paper_pon_titulo(t):
     return [(p,papers[p])  for p in papers if t in p[1]]
+
+def co_autores(xs):
+    return [p for p in papers if sum([a in papers[p]["autores"] for a in xs]) == len(xs)]
+
+
+for k in datos:
+    if "Argentina" in datos[k]["latinos"]:
+        datos[k]["citas_primer"] = citas_primer_autor(k)
+        datos[k]["citas"] = citas_de(k)
 
 osvaldo_martin = "30567452100"
 rodrigo_diaz = "24502677100"
@@ -100,10 +104,14 @@ ranking_autores_por_papers(top=20,order=2)[10:20]
 
 por_nombre("Martinez, J")
 
-datos["36651361400" ]
-papers_de("55262988600")
+datos["15843952300" ]
+papers_de("15843952300")
 
-papers_de("6701680418",True )
+papers_de("15843952300",True )
+
+
+autores = ["6701525125", "56178341700"]
+len(co_autores(autores))
 
 sorted(set(por_affil("Tierra del Fuego")), key=lambda x :x[-1])
 
