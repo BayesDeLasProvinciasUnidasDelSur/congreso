@@ -82,7 +82,7 @@ paises_latinoamerica <- c('Argentina',
                           'Honduras',
                           'Jamaica',
                           'Nicaragua')
-
+#pais <- 'Argentina'
 dir.create('redes_por_pais')
 for(pais in paises_latinoamerica){
   print(paste('Comenzando:',pais))
@@ -102,10 +102,13 @@ for(pais in paises_latinoamerica){
   print('Red preparada')
   # Generamos la red
   
-  visgP <- visIgraph(gP)
+  visgP <- visIgraph(gP) %>% 
+    visInteraction(navigationButtons = TRUE) %>%
+    visLegend(addNodes = data.frame(label=c('Author','Paper'),shape=c('dot','triangle'),color=c('blue','orange'),title = 'Nodes'))
   visgP$x$main <- list('text'=pais,style="font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;")
   visgP$sizingPolicy$browser$fill <- TRUE
   print('Visgraph preparado, guardando...')
+  print(visgP)
   
   saveWidget(widget = visgP,sub('XXX',pais,'redes_por_pais/redXXX.html'),selfcontained = FALSE)
   print('Guardado')
