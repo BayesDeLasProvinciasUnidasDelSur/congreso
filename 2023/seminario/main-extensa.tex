@@ -21,7 +21,7 @@
 %opening
 
 \title{\vspace{-2.4cm}
-\en{Intersubjective agreements in contexts of uncertainty\\ \Large A bet for survival}\es{Acuerdos intersubjetivos en contextos de incertidumbre \\ \Large Una apuesta por la supervivencia}}
+\en{Intersubjective agreements in contexts of uncertainty\\ \Large Bets for survival}\es{Acuerdos intersubjetivos en contextos de incertidumbre \\ \Large Apuestas por sobrevivir}}
 \author{\en{Plurinational Bayes}\es{Bayes Plurinacional}}
 %\date{\en{January 30, 2023}\es{30 de enero del 2023}}
 \date{}
@@ -156,12 +156,12 @@
 \end{equation*}
 % Parrafo
 \en{That's it, there's nothing else.}%
-\es{Eso es todo, no hay nada más.}
+\es{Eso es todo, no hay nada más.}%
 %
-\en{For example, suppose we are now allowed to choose one of the boxes and then someone gives us a hint, opening one of the boxes we did not choose in which the gift is not in (See Figure~\ref{fig:monty_hall}).}%
-\es{Por ejemplo, supongamos que ahora nos dejan elegir una de las cajas y luego alguien nos da una pista, abriendo una de las cajas que no elegimos en la que no está el regalo (Ver figura~\ref{fig:monty_hall}).}%
-\en{In this case, as in any other, we reach an intersubjective agreement by first maximizing uncertainty (through the alternative paths of the causal process), finally preserving the prior belief that remains compatible with the data.}%
-\es{En este caso, como en cualquier otro, llegamos a un acuerdo intersubjetivo maximizando primero la incertidumbre (por los caminos alternativos del proceso causal), preservando finalmente con la creencia previa que sigue siendo compatible con el dato.}%
+\en{For example, suppose we are now allowed to choose one of the boxes and then someone gives us a hint, opening a box other than the one we chose in which the gift is not in (See Figure~\ref{fig:monty_hall}).}%
+\es{Por ejemplo, supongamos que ahora nos dejan elegir una de las cajas y luego alguien nos da una pista, abriendo una caja distinta a la que elegimos en la que no está el regalo (Ver figura~\ref{fig:monty_hall}).}%
+\en{In this case, as in any other, we reach an intersubjective agreement by first maximizing uncertainty (dividing the belief equally among the alternative paths of the causal process), and finally preserving the prior belief that remains compatible with the data.}%
+\es{En este caso, como en cualquier otro, llegamos a un acuerdo intersubjetivo maximizando primero la incertidumbre (dividiendo la creencia en partes iguales por los caminos alternativos del proceso causal), preservando finalmente la creencia previa que sigue siendo compatible con el dato.}%
 %
 \begin{figure}[ht!]
  \centering
@@ -302,11 +302,20 @@
 \en{Why does that happen?}%
 \es{¿Por qué ocurre eso?}%
 %
-Sin pérdida de generalidad, supongamos que una casas de apuestas ofrece pagos $Q_c > 0$ y $Q_s > 0$ cuando una moneda sale Cara y Seca respectivamente.
+\en{Without loss of generality, suppose a bookmaker offers payouts $Q_c > 0$ and $Q_s > 0$ when a coin comes out Heads and Tails respectively.}%
+\es{Sin pérdida de generalidad, supongamos que una casas de apuestas ofrece pagos $Q_c > 0$ y $Q_s > 0$ cuando una moneda sale Cara y Seca respectivamente.}%
 %
-Y supongamos que los individuos se ven obligados a apostar, en cada paso temporal, todos sos recursos, asignando una proporción $b_c = b$ a Cara y $b_s = 1 - b$ a Seca (la solución al problema de apostar solo un parte de los recursos puede mostrarse que es equivalente).
+\en{And suppose that individuals are forced to gamble, at each time step, all their resources, assigning a proportion $b_c = b$ to Heads and $b_s = 1 - b$ to Tails (gambling only a part of the resources can be shown to have an equivalent solution).}%
+\es{Y supongamos que los individuos se ven obligados a apostar, en cada paso temporal, todos sos recursos, asignando una proporción $b_c = b$ a Cara y $b_s = 1 - b$ a Seca (apostar solo un parte de los recursos puede mostrarse que tiene una solución equivalente).}%
 %
-Si comparamos los recursos en un tiempo $T$, $\omega(T)$, de dos apuestas $b$ y $d$,
+\en{Let $\omega(0)$ be our initial resources.}%
+\es{Sea $\omega(0)$ nuestros recursos iniciales.}%
+%
+\en{The resources we obtain with a bet $b \in [0,1]$, after one Heads and one Tails, is updated as a product of our results (see equation 1).}%
+\es{Los recursos que obtenemos con una apuestas $b \in [0,1]$, después de una Cara y una Seca, se actualiza como un producto de nuestros resultados (ver ecución 1).}%
+%
+\en{And if we compare the resources of two different bets $b \neq d \in [0,1]$ after obtaining $n_c$ Heads and $n_s$ Tails, at time $T = n_c + n_s$,}%
+\es{Y si comparamos los recursos de dos apuestas diferentres $b \neq d \in [0,1]$ luego de obtener $n_c$ Caras y $n_s$ Secas, en el tiempo $T = n_c + n_s$,}%
 %
 \vspace{-0.4cm}
 \begin{figure}[ht!]
@@ -314,17 +323,17 @@ Si comparamos los recursos en un tiempo $T$, $\omega(T)$, de dos apuestas $b$ y 
  \begin{subfigure}[b]{0.44\textwidth}
  \begin{equation*}
 \begin{split}
-\omega(2) & = \underbrace{\omega(0) \, \overbrace{b \,  Q_c}^{\text{Cara}}}_{\omega(1)} \, \overbrace{(1-b) \, Q_s}^{\text{Seca}}
+\omega_b(2) & = \underbrace{\omega(0) \, \overbrace{b \,  Q_c}^{\text{Cara}}}_{\omega_b(1)} \, \overbrace{(1-b) \, Q_s}^{\text{Seca}}
 \end{split}
 \end{equation*}
  \end{subfigure}
  \
  \begin{subfigure}[b]{0.54\textwidth}
-  \begin{equation*}
+  \begin{equation}
 \begin{split}
 & \frac{\omega_b(T)}{\omega_d(T)} = \frac{\omega(0) \,  (b \,  \cancel{Q_c})^{n_c}  \,  ((1-b) \, \bcancel{Q_s})^{n_s}}{\omega(0) \,   (d \,  \cancel{Q_c})^{n_c}  \,  ((1-d) \, \bcancel{Q_s})^{n_s}}
 \end{split}
-\end{equation*}
+\end{equation}
  \end{subfigure}
 %  \
 %  \begin{subfigure}[b]{0.29\textwidth}
@@ -339,24 +348,80 @@ Si comparamos los recursos en un tiempo $T$, $\omega(T)$, de dos apuestas $b$ y 
 
 %
 
-\noindent encontramos que el valor relativo de una apuesta respecto de la otra es independiente de los pagos $Q_c$ y $Q_s$ que ofrece la casa de apuestas.
+\noindent
+\en{we find that the relative value of one bet with respect to the other is independent of the payouts $Q_c$ and $Q_s$ offered by the bookmaker.}%
+\es{encontramos que el valor relativo de una apuesta respecto de la otra es independiente de los pagos $Q_c$ y $Q_s$ que ofrece la casa de apuestas.}%
 %
-Podemos decidir la apuesta sin conocer los pagos!
+\en{We can decide the bet without knowing the payouts!}%
+\es{Podemos decidir la apuesta sin conocer los pagos!}%
 %
-Y en general, los recursos en el tiempo $T$ luego de que salieron $n_c$ Caras y $n_s$ Secas, $n_c + n_s = T$,
-%
-
-
-
+Queremos la apuesta que tenga mayor tasa de crecimiento $r$,
+\vspace{-0.4cm}
+\begin{figure}[ht!]
+ \centering
+ \begin{subfigure}[b]{0.54\textwidth}
+  \begin{equation*}
+\begin{split}
+  \omega(0) \, r_b^T &= \omega(0) \, (b \,  Q_c)^{n_c}  \,  ((1-b) \, Q_s)^{n_s}   \\
+  r_b &=(b \,  Q_c)^{n_c/T}  \,  ((1-b) \, Q_s)^{n_s/T}
+\end{split}
+\end{equation*}
+ \end{subfigure}
+ \
+ \begin{subfigure}[b]{0.29\textwidth}
+  \begin{equation*}
+\begin{split}
+\underset{b}{\text{arg max}} \ \  r_b = \underbrace{n_c/T}_{\hfrac{\text{\scriptsize Frecuencia}}{\text{\scriptsize observada}}}
+\end{split}
+\end{equation*}
+ \end{subfigure}
+\end{figure}
+\vspace{-0.1cm}
 
 % Parrafo
 
-\en{First, diversification makes it possible to individually reduce fluctuations in multiplicative processes.}%
-\es{Primero, la diversificación permite reducir individualmente las fluctuaciones en los procesos multiplicativos.}%
+\noindent
+\en{No matter what payouts the bookmaker offers, in the long run the optimal bet $b^{*}$ is obtained by diversifying resources in the same proportion as the typical frequency $p = b^{*}$, with $\lim_{T \rightarrow \infty} n_c/T = p$.}%
+\es{No importa el pago que ofrezca la casa de apuestas, a largo plazo la apuesta óptima $b^{*}$ se obtiene diversificando los recursos en la misma proporción que la frecuencia típica $p = b^{*}$, con $\lim_{T \rightarrow \infty} n_c/T = p$.}%
 %
 \en{This property allows probability theory to acquire knowledge about the world, because evaluating individual hypotheses on the basis of the product of surprises produces an advantage in favor of hypotheses that diversify resources (probabilities) in the same proportion as the observed frequency.}%
 \es{Esta propiedad le permite a la teoría de la probabilidad adquirir conocimiento sobre el mundo, pues evaluar las hipótesis individuales en base al producto de las sorpresas produce una ventaja a favor de las hipótesis que diversifican los recursos (probabilidades) en la misma proporción que la frecuencia observada.}%
 %
+\en{Similarly, the evolutionary selection process by sequences of growth and reproduction rates produces the emergence of life forms that reduce fluctuations through individual diversification.}%
+\es{Del mismo modo, el proceso de selección evolutiva por secuencias de tasas de crecimiento y reproducción, produce la emergencia de formas de vida que reducen las fluctuaciones a través de la diversificación individual.}%
+
+% Parrafo
+
+Por ejemplo, supongamos que la casa de apuestas ofrece $Q_c = 3$ por Caras y $Q_s = 1.2$ por Secas.
+%
+No importa el pago de la casa de apuestas, lo mejor que podemos hacer a largo plazo es dividir los recursos en partes iguales, si sabemos que la moneda es no sesgada.
+%
+Pero a pesar de que el promedio sea positivo, $( Q_c \, b \, p + Q_s \, (1-b) \, (1-p)) = 1.05$, con $b = p = 0.5$, todos las trayectorias individuales caen a una tasa de $5\%$, pues la tasa de crecimiento es $r_b = 0.95$
+
+
+\begin{figure}[ht!]
+\vspace{-0.3cm}
+ \centering
+ \begin{subfigure}[b]{0.54\textwidth}
+  \begin{equation*}
+\begin{split}
+  A
+\end{split}
+\end{equation*}
+ \end{subfigure}
+ \
+ \begin{subfigure}[b]{0.29\textwidth}
+  \begin{equation*}
+\begin{split}
+B
+\end{split}
+\end{equation*}
+ \end{subfigure}
+ \vspace{-0.3cm}
+\end{figure}
+
+% Parrafo
+
 \en{Moreover, through cooperation fluctuations are further reduced, allowing higher level hypotheses (causal models, paradigms) to ``emerge'' from the data because, by making predictions with the contribution of all its component hypotheses, it produces better results than any of them alone.}%
 \es{Pero además, a través de la cooperación se reducen aún más las fluctuaciones, permitiendo que hipótesis de nivel superior (modelos causales, paradigmas) "emergan" de los datos porque, al realizar las predicciones con el aporte de todas las hipótesis que la componen, produce mejores resultados que cualquiera de ellas solas.}%
 % \en{defectors is detrimental in the long run because it leads to an increase in the group's fluctuations and therefore also in their own.}%
