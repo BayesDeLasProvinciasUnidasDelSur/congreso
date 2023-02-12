@@ -359,7 +359,7 @@ Queremos la apuesta que tenga mayor tasa de crecimiento $r$,
 \vspace{-0.4cm}
 \begin{figure}[ht!]
  \centering
- \begin{subfigure}[b]{0.54\textwidth}
+ \begin{subfigure}[b]{0.50\textwidth}
   \begin{equation*}
 \begin{split}
   \omega(0) \, r_b^T &= \omega(0) \, (b \,  Q_c)^{n_c}  \,  ((1-b) \, Q_s)^{n_s}   \\
@@ -367,13 +367,12 @@ Queremos la apuesta que tenga mayor tasa de crecimiento $r$,
 \end{split}
 \end{equation*}
  \end{subfigure}
- \
- \begin{subfigure}[b]{0.29\textwidth}
-  \begin{equation*}
+ \begin{subfigure}[b]{0.49\textwidth}
+  \begin{equation}
 \begin{split}
-\underset{b}{\text{arg max}} \ \  r_b = \underbrace{n_c/T}_{\hfrac{\text{\scriptsize Frecuencia}}{\text{\scriptsize observada}}}
+\overbrace{\underset{b}{\text{arg max}} \phantom{T} r_b}^{\hfrac{\text{\scriptsize \En{Optimal}\Es{Apuesta}}}{\text{\scriptsize \En{bet}\Es{óptima}}}} \ = \overbrace{n_c/T}^{\hfrac{\text{\scriptsize \En{Observed}\Es{Frecuencia}}}{\text{\scriptsize \En{frequency}\Es{observada}}}}
 \end{split}
-\end{equation*}
+\end{equation}
  \end{subfigure}
 \end{figure}
 \vspace{-0.1cm}
@@ -392,41 +391,112 @@ Queremos la apuesta que tenga mayor tasa de crecimiento $r$,
 
 % Parrafo
 
-Por ejemplo, supongamos que la casa de apuestas ofrece $Q_c = 3$ por Caras y $Q_s = 1.2$ por Secas.
+\en{For example, suppose the bookmaker offers $Q_c = 3$ for Heads and $Q_s = 1.2$ for Tails.}%
+\es{Por ejemplo, supongamos que la casa de apuestas ofrece $Q_c = 3$ por Caras y $Q_s = 1.2$ por Secas.}%
 %
-No importa el pago de la casa de apuestas, lo mejor que podemos hacer a largo plazo es dividir los recursos en partes iguales, si sabemos que la moneda es no sesgada.
+\en{No matter the payout offered, if we know that the coin is unbiased the best we can do is to divide the resources equally, $b = p = $0.5.}%
+\es{No importa cuál es el pago que ofrece la casa de apuestas, si sabemos que la moneda es no sesgada lo mejor que podemos hacer es dividir los recursos en partes iguales, $b = p = 0.5$.}%
+% bien con estos parámetros el valor esperado es positivo, $( Q_c \, b \, p + Q_s \, (1-b) \, (1-p)) = 1.05$,
+\en{However, we cannot win this game individually because the impacts of losses are still stronger than those of gains.}%
+\es{Sin embargo, no podemos ganar este juego individualmente porque los impactos de las pérdidas siguen siendo más fuertes que los de las ganancias.}%
 %
-Pero a pesar de que el promedio sea positivo, $( Q_c \, b \, p + Q_s \, (1-b) \, (1-p)) = 1.05$, con $b = p = 0.5$, todos las trayectorias individuales caen a una tasa de $5\%$, pues la tasa de crecimiento es $r_b = 0.95$
-
-
+\en{Growing 50\% with Heads, $1.5 = Q_c \, b$, is not enough to compensate for the 40\% decline we suffered with Tails, $0.6 = Q_s \, (1-b)$.}%
+\es{Crecer 50\% con Caras, $1.5 = Q_c \, b$, no alcanza para compensar las caídas 40\% que sufrimos con Secas, $0.6 = Q_s \, (1-b)$.}%
+%
+\en{The individual trajectories fall at a rate close to $5\%$, since $r_b \approx 0.95$ (See Figure~\ref{fig:coop}).}%
+\es{Las trayectorias individuales caen a una tasa cercana a $5\%$, pues $r_b \approx 0.95$ (Ver figura~\ref{fig:coop}).}%
+%
+\en{Although individual diversification is not enough to win this game, life found strategies to flourish in cases like these, further reducing individual fluctuations through cooperation.}%
+\es{A pesar de que la diversificación individual no es suficiente para ganar este juego, la vida encontró estrategias para florecer en casos como estos, reduciendo aun más las fluctuaciones individuales mediante cooperación.}%
+%
+\en{In our example, if at each time step individuals redistribute resources equally, the growth rate of all individuals becomes positive.}%
+\es{En nuestro ejemplo, si en cada paso temporal los individuos redistribuyen los recursos en partes iguales, la tasa de crecimiento de todos los individuos se vuelve positiva.}%
+% \es{A través de la cooperación podemos reducir aun más las fluctuaciones, aumentando así la tasa de crecimiento de todos sus miembros.}%
+%
 \begin{figure}[ht!]
-\vspace{-0.3cm}
+\vspace{-0.1cm}
+\centering
+ \begin{subfigure}[c]{0.50\textwidth}
  \centering
- \begin{subfigure}[b]{0.54\textwidth}
-  \begin{equation*}
-\begin{split}
-  A
-\end{split}
-\end{equation*}
+  \begin{tabular}{|l|c|c|c|c|c|}
+     \hline
+         & {\small $\omega(0)$} & {\small \  $\Delta$}  & {\small \, $\omega(1)$ } & {\small \  $\Delta$}  & {\small \,  $\omega(2)$ }  \\ \hline \hline
+        A no-coop& $1$ & $1.5$ &  $1.5$ & $0.6$ & $\bm{0.9}$ \\ \hline
+        B no-coop & $1$ & $0.6$ & $0.6$ & $1.5$ & $\bm{0.9}$ \\ \hline\hline
+        A coop & $1$ & $1.5$ & $1.05$ & $0.6$ & $\bm{1.1}$ \\ \hline
+        B coop & $1$ & $0.6$ & $1.05$ & $1.5$ & $\bm{1.1}$\\ \hline
+\end{tabular}
  \end{subfigure}
- \
- \begin{subfigure}[b]{0.29\textwidth}
-  \begin{equation*}
-\begin{split}
-B
-\end{split}
-\end{equation*}
+ \begin{subfigure}[c]{0.45\textwidth}
+\begin{flushright}
+ \includegraphics[width=0.9\linewidth]{figures/pdf/ergodicity_individual_trayectories.pdf}
+ \end{flushright}
  \end{subfigure}
- \vspace{-0.3cm}
-\end{figure}
+ \caption{
+ \en{Reducing fluctuations through cooperation allows individuals to reach growth rates they would never achieve alone.}%
+ \es{Reducir fluctuaciones por cooperación le permite a los individuos alcanzar tasas de crecimiento que jamás obtendrían solos.}%
+ %
+ \en{In the table (left) $\Delta$ represents the change in resources experienced by individuals at random.}%
+ \es{En la tabla (izquierda) $\Delta$ representa el cambio en los recursos que sufren los individuos de forma aleatoria.}%
+ %
+ \en{In the figure (right), the colored curves are the trajectories of individuals playing alone, and the black line is the trajectory of individuals playing in cooperative groups.}%
+ \es{En la figura (derecha), las curvas de colores son las trayectorias de los individuos jugando solos, y la recta negra es la trayectoria de los individuos jugando en grupos cooperativos.}%
+ }
+ \label{fig:coop}
+ \vspace{-0.1cm}
+ \end{figure}
 
 % Parrafo
 
-\en{Moreover, through cooperation fluctuations are further reduced, allowing higher level hypotheses (causal models, paradigms) to ``emerge'' from the data because, by making predictions with the contribution of all its component hypotheses, it produces better results than any of them alone.}%
-\es{Pero además, a través de la cooperación se reducen aún más las fluctuaciones, permitiendo que hipótesis de nivel superior (modelos causales, paradigmas) "emergan" de los datos porque, al realizar las predicciones con el aporte de todas las hipótesis que la componen, produce mejores resultados que cualquiera de ellas solas.}%
+\en{Although the bookmaker pays, as in the previous example, more for one option than for the other, the need to reduce fluctuations individually forces us to ignore the payouts, dividing the resources in the same proportion as the typical frequency $b=p$.}%
+\es{A pesar de la casa de apuestas pague, como en el ejemplo anterior, más por una opción que por la otra, la necesidad de reducir fluctuaciones individualmente nos obliga a ignorar los pagos, dividiendo los recursos en la misma proporción que la frecuencia típica $b=p$.}%
+%
+\en{But because once cooperation emerges it is no longer necessary to reduce fluctuations by individual diversification, an advantage appears in favor of cooperative specialization, which makes it possible to benefit from the best available option, further increasing the growth rate of all individuals in the cooperative group.}%
+\es{Pero debido a que una vez que emerge la cooperación deja de ser necesario reducir las fluctuaciones por diversificación individual, aparece una ventaja a favor de la especialización cooperativa, que permite sacar provecho de la mejor opción disponible, aumentando aún más la tasa de crecimiento de todos los individuos del grupo cooperativo.}%
+%
+\en{In a cooperative group of size $N$ the growth rate of individuals is the average of the resources that the group obtains at time step $T$, with $m_c$ and $m_s$ the number of individuals that obtained Cara and Seca at time step $T$, with $m_c + m_s = N$, and assuming that the previous resources $\omega(T-1)$ are equal for all members.}%
+\es{En un grupo cooperativo de tamaño $N$ la tasa de crecimiento de los individuos es el promedio de la recursos que el grupo obtiene en el paso temporal $T$, con $m_c$ y $m_s$ la cantidad de individuos que obtuvieron Cara y Seca en el paso temporal $T$, con $m_c + m_s = N$, y suponiendo que los recursos previos $\omega(T-1)$ son iguales para todas los miembros.}%
+
+\begin{figure}[ht!]
+\vspace{-0.1cm}
+\centering
+ \begin{subfigure}[c]{0.50\textwidth}
+  \begin{equation*}
+\begin{split}
+\omega(T) & = \frac{1}{N} \bigg( m_c \, \omega(T-1) \, Q_c  \, b + m_s \, \omega(T-1) \, Q_s  \, (1-b)  \bigg) \\
+& =\omega(T-1) \, \underbrace{\left( \frac{m_c}{N}   Q_c  \, b + \frac{m_s}{N} \, Q_s  \, (1-b)  \right)}_{\hfrac{\hfrac{\text{\scriptsize \En{with}\Es{con} $m_s$ \En{Heads}\Es{Caras} y $m_s$ \En{Tails}\Es{Secas}}}{\phantom{T}}}{\text{\footnotesize $\lim_{N \rightarrow \infty}p \,  Q_c  \, b + (1-p) \, Q_s  \, (1-b)$} } } \\[0.3cm]
+\end{split}
+\end{equation*}
+  \end{subfigure}
+ \begin{subfigure}[c]{0.45\textwidth}
+\begin{flushright}
+ \includegraphics[width=0.9\linewidth]{figures/pdf/tasa-temporal-2.pdf}
+ \end{flushright}
+ \end{subfigure}
+ \caption{
+ \en{Reducing fluctuations through cooperation allows individuals to reach growth rates they would never achieve alone.}%
+ \es{Reducir fluctuaciones por cooperación le permite a los individuos alcanzar tasas de crecimiento que jamás obtendrían solos.}%
+ %
+ \en{In the table (left) $\Delta$ represents the change in resources experienced by individuals at random.}%
+ \es{En la tabla (izquierda) $\Delta$ representa el cambio en los recursos que sufren los individuos de forma aleatoria.}%
+ %
+ \en{In the figure (right), the colored curves are the trajectories of individuals playing alone, and the black line is the trajectory of individuals playing in cooperative groups.}%
+ \es{En la figura (derecha), las curvas de colores son las trayectorias de los individuos jugando solos, y la recta negra es la trayectoria de los individuos jugando en grupos cooperativos.}%
+ }
+ \label{fig:coop}
+ \vspace{-0.1cm}
+ \end{figure}
+
+
+\en{allowing higher level hypotheses (causal models, paradigms) to ``emerge'' from the data because, by making predictions with the contribution of all its component hypotheses, it produces better results than any of them alone.}
+\es{permitiendo que hipótesis de nivel superior (modelos causales, paradigmas) "emergan" de los datos porque, al realizar las predicciones con el aporte de todas las hipótesis que la componen, produce mejores resultados que cualquiera de ellas solas.}%
 % \en{defectors is detrimental in the long run because it leads to an increase in the group's fluctuations and therefore also in their own.}%
 % \es{los desertores se ve perjudicado a largo plazo debido a que produce un aumento en las fluctuaciones del grupo y por lo tanto también en las suyas.}%
 % %
+
+% Parrafo
+
+
 \en{And finally, since with cooperation it is no longer necessary to reduce fluctuations by individual diversification, an advantage in favor of specialization arises producing the emergence of worldviews, such as science and culture, where highly specialized domain-specific paradigms coexist.}%
 \es{Y finalmente, debido a que con la cooperación deja de ser necesario reducir fluctuaciones por diversificación individual, surge una ventaja a favor de la especialización produciendo la emergencia de cosmovisiones, como la ciencia y la cultura, donde coexisten paradigmas altamente especializados a dominios particulares.}%
 % el conocimiento empírico también depende de que varios niveles de cooperación: las hipótesis cooperando para formar variables, las variables cooperendo para formar modelos causales, y conjuntos de modelos cooperendo para formar teorías (o culturas).
