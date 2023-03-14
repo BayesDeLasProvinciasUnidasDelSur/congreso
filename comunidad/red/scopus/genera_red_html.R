@@ -24,7 +24,7 @@ Per <- read.csv('datos/personas.csv') %>%
     sep='<br>'
     )) %>%
   mutate(shape = 'dot', # Parámetros gráficos
-         color = 'blue')
+         color = rgb(0.2,0.4,0.8) )
 
 
 
@@ -40,8 +40,8 @@ Pap <- read.csv('datos/papers.csv') %>%
     paste('<b>',paper_name,'</b>',sep=''),
     abstract,
     sep='<br><br>')) %>%# titulo es lo que aparece al hacer hover sobre el nodo. Es titulo + abstract
-  mutate(shape = 'triangle', # Parámetros gráficos
-         color = 'orange')
+  mutate(shape = 'dot', # Parámetros gráficos
+         color = rgb(0.8,0.4,0.2))
 
 
 
@@ -104,7 +104,7 @@ for(pais in paises_latinoamerica){
   
   visgP <- visIgraph(gP,idToLabel = FALSE) %>% 
     # visInteraction(navigationButtons = TRUE) %>%
-    visLegend(addNodes = data.frame(label=c('Author','Paper'),shape=c('dot','triangle'),color=c('blue','orange'),title = 'Nodes'))
+    visLegend(addNodes = data.frame(label=c('Author','Paper'),shape=c('dot','dot'),color=c(rgb(0.2,0.4,0.8),rgb(0.8,0.4,0.2)),title = 'Nodes'))
   visgP$x$main <- list('text'=pais,style="font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;")
   visgP$sizingPolicy$browser$fill <- TRUE
   print('Visgraph preparado, guardando...')

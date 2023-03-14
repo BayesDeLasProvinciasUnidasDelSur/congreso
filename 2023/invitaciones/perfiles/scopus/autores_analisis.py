@@ -64,10 +64,11 @@ def co_autores(xs):
     return [p for p in papers if sum([a in papers[p]["autores"] for a in xs]) == len(xs)]
 
 
-for k in datos:
-    if "Argentina" in datos[k]["latinos"]:
-        datos[k]["citas_primer"] = citas_primer_autor(k)
-        datos[k]["citas"] = citas_de(k)
+if False:
+    for k in datos:
+        if "Argentina" in datos[k]["latinos"]:
+            datos[k]["citas_primer"] = citas_primer_autor(k)
+            datos[k]["citas"] = citas_de(k)
 
 osvaldo_martin = "30567452100"
 rodrigo_diaz = "24502677100"
@@ -102,12 +103,14 @@ holik_federico = "16646023300"
 
 ranking_autores_por_papers(top=20,order=2)[10:20]
 
-por_nombre("Martinez, J")
+por_nombre("Schapiro")
+
+Andrea Rojas-Hosse
 
 datos["15843952300" ]
 papers_de("15843952300")
 
-papers_de("15843952300",True )
+papers_de("16646023300",True )
 
 
 autores = ["6701525125", "56178341700"]
