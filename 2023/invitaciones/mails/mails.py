@@ -48,18 +48,24 @@ def papers_de(k, full=False):
 def por_nombre(nom):
     return [(datos[k]["nombre"],k, len(papers_de(k)) ) for k in datos if nom in datos[k]["nombre"]]
 
+def por_nombres(noms):
+    res = []
+    for k in datos:
+        checks = [n in datos[k]["nombre"] for n in noms]
+        if sum(checks) == len(noms):
+            res.append((datos[k]["nombre"],k, len(papers_de(k))))
+    return res
 
-#por_nombre("Cordes")
-#papers_de("26530507100")
-#datos["37119917600"]["mails"]
-
-
+#por_nombres(["Rios", "Gonzalo"])
+#por_nombre("Goijman")
+#papers_de("57193602956")
+#datos["57195679171"]["mails"]
 
 len(datos)
 len(papers)
 
 
-# Set up the Firefox profile with the desired proxy settings
+##Set up the Firefox profile with the desired proxy settings
 #profile = webdriver.FirefoxProfile()
 #profile.set_preference("network.proxy.type", 1)
 #profile.set_preference("network.proxy.socks", "localhost")
@@ -162,6 +168,7 @@ no_enviar.add("37119917600")
 no_enviar.add("57205011847")
 no_enviar.add("57200892844")
 no_enviar.add("56287123600")
+no_enviar.add("57204490428")
 
 def personas():
     return sorted([(k,datos[k]) for k in datos if (len(datos[k]['mails'])>0) and (len(datos[k]['latinos'])>0) and not ("Brazil" in datos[k]['latinos']) ],key=lambda x: x[0])
