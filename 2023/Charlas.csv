@@ -1,27 +1,21 @@
 Nombre,Apellido,Correo,Ciudad,Titulo,NOTAS
-Alejandro, Cassini,alejandrocassini@gmail.com,Ciudad Autónoma de Buenos Aires,Bayesianismo y probabilidades subjetivas,
-Fernando,Salvador Buezas,fbuezas@uns.edu.ar,Bahia Blanca,?,
-Andrea Paula,Goijman,goijman.andrea@inta.gob.ar,"La Consulta, Mendoza",Modelos de ocupación multi-especie con enfoque bayesiano: una herramienta valiosa para estudios de biodiversidad en ecología.,
+Alejandro,Cassini,alejandrocassini@gmail.com,Ciudad Autónoma de Buenos Aires,Bayesianismo y probabilidades subjetivas,
+Fernando,Salvador Buezas,fbuezas@uns.edu.ar,Bahia Blanca,Bayesian inference of constitutive parameters from video data of the impact dynamics of a ball,
+Andrea Paula,Goijman,goijman.andrea@inta.gob.ar,"La Consulta, Mendoza",Modelos de ocupación multi-especie con enfoque bayesiano: una herramienta valiosa para estudios de biodiversidad en ecología,
 Héctor,Nájera,hector.najera@comunidad.unam.mx,Ciudad de México ,Modelación jerárquica bayesiana para la estimación de indicadores a nivel de áreas pequeñas (EAP) en México,Hace dos propuestas.  Quedó seleccionada sólo ésta propuesta.
-Nicolás Alejandro,Comay,nicocomay@gmail.com,Córdoba,Abordaje Bayesiano a la toma de decisiones perceptuales y su confianza asociada.,"[26/04]: Resumen las dos charlas en una. [16/04]: Dos propuestas del mismo grupo con Martin Lilo. Ambas interesantes. En el e-mail de notificación indicar que elijan una de las dos propuestas como charla, y la otra (o ambas) como póster."
-Francisco,Grings,francisco.m.grings@gmail.com,Buenos Aires,"Bayesian retrieval scheme and its application to Cassini Mission SAR observations in an area of Titan, Saturn's largest moon. ",
+Nicolás Alejandro,Comay,nicocomay@gmail.com,Córdoba,Abordaje Bayesiano a la toma de decisiones perceptuales y su confianza asociada,"[26/04]: Resumen las dos charlas en una. [16/04]: Dos propuestas del mismo grupo con Martin Lilo. Ambas interesantes. En el e-mail de notificación indicar que elijan una de las dos propuestas como charla, y la otra (o ambas) como póster."
+Francisco,Grings,francisco.m.grings@gmail.com,Buenos Aires,"Bayesian retrieval scheme and its application to Cassini Mission SAR observations in an area of Titan, Saturn's largest moon",
 Luciano,Moffatt,lmoffatt@qi.fcen.uba.ar,CABA,Modelado Bayesiano Computacional de Sistemas Biológicos,Ofrece también la posibilidad de habilitar un taller computacional para calculos con Metropolis Markov Chain y calculo de evidencia Bayesiana mediante la intergación termondinamica. 
 Gabriel A.,Alzamendi,gabriel.alzamendi@uner.edu.ar,Paraná,Métodos basados en inferencia Bayesiana para la evaluación de los mecanísmos vocales de la fonación humana,
-Martin,Lillo,martinsebastianlillo@gmail.com,San Juan,"El sentido de la evidencia en la epistemología bayesiana.
-","Dos propuestas del mismo grupo con  Nicolas Comay. Ambas interesantes. En el e-mail de notificación indicar que elijan una de las dos propuestas como charla, y la otra (o ambas) como póster."
-Nicolás Alejandro ,Comay,nicocomay@gmail.com,Cordoba,Abordaje Bayesiano a la toma de decisiones perceptuales y su confianza asociada.,
+Martin,Lillo,martinsebastianlillo@gmail.com,San Juan,El sentido de la evidencia en la epistemología bayesiana,"Dos propuestas del mismo grupo con  Nicolas Comay. Ambas interesantes. En el e-mail de notificación indicar que elijan una de las dos propuestas como charla, y la otra (o ambas) como póster."
+Nicolás Alejandro ,Comay,nicocomay@gmail.com,Cordoba,Abordaje Bayesiano a la toma de decisiones perceptuales y su confianza asociada,
 Tomás,Capretto,tomicapretto@gmail.com,Rosario,Qué aprendimos enseñando estadística bayesiana,Propuesta 2
-Tomás A.,Olego,olegotomas@gmail.com,Buenos Aires,"Métodos robustos Bayesianos Generalizados para los modelos de regresión logística.
-
-",
-Hossein,Dinani,htdinani@gmail.com,Santiago de Chile,"Bayesian estimation for quantum sensing.
-",
-Sergio Michael,Davis Irarrázabal,sergio.davis@cchen.cl,"Santiago, Chile",Probabilidad bayesiana a partir de la estimación plausible de cantidades.,
-Diego Javier Ramón,Sevilla,dsevilla@fceia.unr.edu.ar,"Rosario, Santa Fe, Argentina","Regresión bayesiana para el análisis de series temporales con apilamiento en Astronomía de rayos X
-",
+Tomás A.,Olego,olegotomas@gmail.com,Buenos Aires,Métodos robustos Bayesianos Generalizados para los modelos de regresión logística,
+Hossein,Dinani,htdinani@gmail.com,Santiago de Chile,Bayesian estimation for quantum sensing,
+Sergio Michael,Davis Irarrázabal,sergio.davis@cchen.cl,"Santiago, Chile",Probabilidad bayesiana a partir de la estimación plausible de cantidades,
+Diego Javier Ramón,Sevilla,dsevilla@fceia.unr.edu.ar,"Rosario, Santa Fe, Argentina",Regresión bayesiana para el análisis de series temporales con apilamiento en Astronomía de rayos X,
 María,da Fonseca,mariadafon@gmail.com,,Why humans fail in solving probabilistic problems?,
-Rodolfo Guillermo,Pregliasco,willy.pregliasco@gmail.com,Bariloche,"Estimación de distancia de disparo de postas 12/70 a partir de la distribución de heridas
-","Dos propuestas del mismo grupo con Martín Alejandro Onetto. Ambas interesantes. En el e-mail de notificación indicar que elijan una de las dos propuestas como charla, y la otra (o ambas) póster."
-Yasmín Elena,Navarrete Díaz,yasmin.navarrete@gmail.com,"Santiago, Chile",Sistemas frágiles: una formulación bayesiana de la teoría cuántica.,
-Martín Alejandro,Onetto,martin.onetto@ib.edu.ar,San Carlos de Bariloche,Probabilidad de falsos negativos en la detección de residuos de disparo.,"Dos propuestas del mismo grupo con Rodolfo Guillermo Pregliasco. Ambas interesantes. En el e-mail de notificación indicar que elijan una de las dos propuestas como charla, y la otra (o ambas) póster."
+Rodolfo Guillermo,Pregliasco,willy.pregliasco@gmail.com,Bariloche,Estimación de distancia de disparo de postas 12/70 a partir de la distribución de heridas,"Dos propuestas del mismo grupo con Martín Alejandro Onetto. Ambas interesantes. En el e-mail de notificación indicar que elijan una de las dos propuestas como charla, y la otra (o ambas) póster."
+Yasmín Elena,Navarrete Díaz,yasmin.navarrete@gmail.com,"Santiago, Chile",Sistemas frágiles: una formulación bayesiana de la teoría cuántica,
+Martín Alejandro,Onetto,martin.onetto@ib.edu.ar,San Carlos de Bariloche,Probabilidad de falsos negativos en la detección de residuos de disparo,"Dos propuestas del mismo grupo con Rodolfo Guillermo Pregliasco. Ambas interesantes. En el e-mail de notificación indicar que elijan una de las dos propuestas como charla, y la otra (o ambas) póster."
 Gonzalo,Ríos,grios@noisegrasp.com,Santiago de Chile,Bayesian Machine Learning Applied to Marketing,
