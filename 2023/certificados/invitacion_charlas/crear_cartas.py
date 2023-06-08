@@ -18,7 +18,7 @@ for index, persona in data.iterrows():
     titulo = persona["Titulo"]
     os.system("cp certificado_invitacion_modelo.tex certificado_invitacion_tmp.tex ")
     os.system("sed -i 's/APELLIDO, NOMBRE/{}, {}/g' certificado_invitacion_tmp.tex".format(apellido, nombre))
-    #os.system("sed -i 's/TITULO/{}/g' certificado_invitacion_tmp.tex".format(titulo))
+    os.system("sed -i 's/TITULO/{}/g' certificado_invitacion_tmp.tex".format(titulo))
     os.system("pdflatex certificado_invitacion_tmp.tex")
     os.system("mv certificado_invitacion_tmp.pdf pdf/{}{}.pdf".format(nombre_file,apellido_file))
 

@@ -1,0 +1,20 @@
+"""Buenas {} {},
+
+La invitación para presentar un póster en el Congreso Bayesiano Plurinacional se encuentra disponible en nuestra página web oficial. Puede descargarla a través del siguiente link: http://bayesdelsur.com.ar/invitaciones/posters2023/{}{}.pdf. En la viñeta http://bayesdelsur.com.ar/poster.html encontrará algunas recomendaciones para su elaboración.
+
+Le pedimos que responda este correo confirmando si participará de forma presencial en el congreso. Por cuestiones de organización, le pedimos además que nos envíe un número de teléfono donde podamos ponernos en contacto con usted.
+
+Con el fin de organizar su viaje le recomendamos participar del grupo "Congreso" de la comunidad de whatsapp Bayes Plurinacional https://chat.whatsapp.com/B4wjB4W68wBBcKx3Q16Oxc. Además, le recomendamos participar del grupo de correos electrónicos https://groups.google.com/g/bayes-plurinacional/.
+
+El objetivo durante el Congreso es crear un entorno de confianza favorable para el intercambio y el bienestar. Luego del Congreso, el objetivo es darle estructura a la Comunidad, asignando roles y mecanismos de cambio, para que pueda desarrollarse y funcionar de manera autónoma y descentralizada. Los seminarios virtuales se realizarán de forma permanente con el objetivo de crear puentes al interior de la Comunidad, transmitiendo a un público lo más amplio posible la flexibilidad y la potencia del enfoque bayesiano.
+
+Atentamente,
+Comisión organizadora del Congreso Bayesiano Plurinacional 2023.
+
+Redes sociales.
+- Página web oficial: https://bayesdelsur.com.ar
+- Linkedin: https://www.linkedin.com/company/bayes-plurinacional/
+- Twitter: https://twitter.com/BayesDelSur
+- Mastodon: https://bayes.club/@BayesDelSur
+- Youtube: https://www.youtube.com/@bayesdelsur
+"""

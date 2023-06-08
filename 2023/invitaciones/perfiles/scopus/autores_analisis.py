@@ -103,14 +103,16 @@ holik_federico = "16646023300"
 
 ranking_autores_por_papers(top=20,order=2)[10:20]
 
-por_nombre("Barros, José")
+
+
+por_nombre("Díaz-Cruz")
 
 Andrea Rojas-Hosse
 
 datos["15843952300" ]
 papers_de("15843952300")
 
-papers_de("56114741800",True )
+papers_de("57093424400",True )
 
 
 autores = ["6701525125", "56178341700"]

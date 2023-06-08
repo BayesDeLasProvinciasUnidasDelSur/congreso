@@ -46,28 +46,9 @@ chrome.get("https://www.google.com/gmail/about/")
 ######################################
 ######################################
 
-
-mensaje = """Buenas {} {},
-
-La invitación para presentar un póster en el Congreso Bayesiano Plurinacional se encuentra disponible en nuestra página web oficial. Puede descargarla a través del siguiente link: http://bayesdelsur.com.ar/invitaciones/posters2023/{}{}.pdf. En la viñeta http://bayesdelsur.com.ar/poster.html encontrará algunas recomendaciones para su elaboración.
-
-Le pedimos que responda este correo confirmando si participará de forma presencial en el congreso. Por cuestiones de organización, le pedimos además que nos envíe un número de teléfono donde podamos ponernos en contacto con usted.
-
-Con el fin de organizar su viaje le recomendamos participar del grupo "Congreso" de la comunidad de whatsapp Bayes Plurinacional https://chat.whatsapp.com/B4wjB4W68wBBcKx3Q16Oxc. Además, le recomendamos participar del grupo de correos electrónicos https://groups.google.com/g/bayes-plurinacional/.
-
-El objetivo durante el Congreso es crear un entorno de confianza favorable para el intercambio y el bienestar. Luego del Congreso, el objetivo es darle estructura a la Comunidad, asignando roles y mecanismos de cambio, para que pueda desarrollarse y funcionar de manera autónoma y descentralizada. Los seminarios virtuales se realizarán de forma permanente con el objetivo de crear puentes al interior de la Comunidad, transmitiendo a un público lo más amplio posible la flexibilidad y la potencia del enfoque bayesiano.
-
-Atentamente,
-Comisión organizadora del Congreso Bayesiano Plurinacional 2023.
-
-Redes sociales.
-- Página web oficial: https://bayesdelsur.com.ar
-- Linkedin: https://www.linkedin.com/company/bayes-plurinacional/
-- Twitter: https://twitter.com/BayesDelSur
-- Mastodon: https://bayes.club/@BayesDelSur
-- Youtube: https://www.youtube.com/@bayesdelsur
-"""
-
+with open('mails/formulario_de_viaje.txt', 'r') as file:
+    # Read the entire contents of the file
+    mensaje = file.read()
 
 redactar = chrome.find_elements(By.CLASS_NAME, "z0")[0]
 redactar = redactar.find_elements(By.XPATH, ".//div")[0]
@@ -75,25 +56,25 @@ redactar = redactar.find_elements(By.XPATH, ".//div")[0]
 #tree = html.fromstring(chrome.page_source)
 #e = tree.xpath('//input[@id=":tv"]')[0]
 #input_mail_xpath = e.getroottree().getpath(e)
-input_mail_xpath = '/html/body/div[24]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
+input_mail_xpath = '/html/body/div[25]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
 #tree = html.fromstring(chrome.page_source)
 #e = tree.xpath('//div[@id=":r7"]')[0]
 #input_texto_xpath = e.getroottree().getpath(e)
-input_texto_xpath = '/html/body/div[24]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[1]/td/div/div[1]/div[2]/div[3]/div/table/tbody/tr/td[2]/div[2]/div'
+input_texto_xpath = '/html/body/div[25]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[1]/td/div/div[1]/div[2]/div[3]/div/table/tbody/tr/td[2]/div[2]/div'
 #tree = html.fromstring(chrome.page_source)
 #e = tree.xpath('//img[@id=":mz"]')[0]
 #close_input_xpath = e.getroottree().getpath(e)
-close_input_xpath = '/html/body/div[24]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[2]/div/div[2]/div/div/div/div/table/tbody/tr/td[2]/img[3]'
+close_input_xpath = '/html/body/div[25]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[2]/div/div[2]/div/div/div/div/table/tbody/tr/td[2]/img[3]'
 #tree = html.fromstring(chrome.page_source)
 #e = tree.xpath('//div[@id=":po"]')[0]
 #enviar_xpath = e.getroottree().getpath(e)
-enviar_xpath = '/html/body/div[24]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/div/div[4]/table/tbody/tr/td[1]/div/div[2]/div[1]'
+enviar_xpath = '/html/body/div[25]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/div/div[4]/table/tbody/tr/td[1]/div/div[2]/div[1]'
 
 
 data = pd.read_csv("Posters.csv", sep=",")
 
 
-for i in range(1,data.shape[0]):
+for i in range(3,data.shape[0]):#i=3
     persona = data.iloc[i,]
     ActionChains(chrome).move_to_element(redactar).click(redactar).perform()
     time.sleep(1)
