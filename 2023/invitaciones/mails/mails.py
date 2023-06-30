@@ -83,82 +83,54 @@ chrome.get("https://www.google.com/gmail/about/")
 
 mensaje = """Buen día {} {}
 
-Le escribimos personalmente porque vimos que tiene algunos trabajos con el enfoque bayesiano de la probabilidad. Nos ponemos en contacto para invitarle a participar del primer Congreso Bayesiano Plurinacional, que tendrá lugar los días 4 y 5 de agosto en Santiago del Estero, Argentina. El objetivo es fortalecer las comunidades bayesianas en América Latina y promover el potencial de los métodos bayesianos en la academia, la industria, el Estado y la sociedad.
+Tenemos el agrado de escribirle en el contexto de creación y plena actividad de la Comunidad Bayesiana Plurinacional.
 
-El Congreso es una oportunidad para debatir una amplia gama de temas, y contará con la participación de diversas disciplinas, desde física a arqueología. El evento contará con charlas de 10 a 15 minutos, con sesiones de pósters, y con talleres sobre programación probabilística ofrecidos por miembros de PyMC/ArviZ. Hasta el 31 de marzo están abiertas las inscripciones, enviando un resumen breve de no más de 300 palabras a [1].
+Con el objetivo de impulsar el enfoque bayesiano en nuestra región, un grupo de especialistas latinoamericanos nos encontraremos del 4 al 6 de agosto en el Congreso Bayesiano que se realizará en Santiago del Estero, Argentina. Además, hemos comenzado a organizar un Seminario virtual permanente y un Hackatón virtual. Las actividades son por naturaleza interdisciplinarias y están enfocadas en la epistemología y metodología común a todas las ciencias con datos: el enfoque bayesiano (o aplicación estricta de las reglas de la probabilidad).
 
-Debido a que un encuentro presencial de dos días no nos va a alcanzar, hemos decido organizar un seminario virtual a lo largo del año. Las inscripciones permanecerán abiertas de forma permanente hasta el 1 de agosto. Se puede anunciar la intención de participar enviando un breve resumen [2], que puede ser el mismo que el de la charla presencial. Las grabaciones quedarán disponibles en el canal de Youtube.
+Hace más de un año, junto con especialistas de diversas actividades productivas que trabajan con el enfoque bayesiano, decidimos desarrollar lo que hoy llamamos Bayes Plurinacional. Analizando los artículos científicos con afiliación en latinoamérica encontramos que la comunidad bayesiana es más grande de lo que parece. Sin embargo, a través del contacto directo pudimos verificar que la comunidad está muy desconectada, sus protagonistas no se conocen todavía. En cualquier caso, la transición bayesiana es un proceso global que se está acelerando.
 
-Además, en los próximos días lanzaremos un Hackatón por nuestras redes sociales. (Para más detalles vea la página bayesdelsur.com.ar)
+En este contexto, queremos invitarle a que participe de forma activa y creativa de la orientación y las acciones de Bayes Plurinacional. El objetivo es crear una organización al servicio de la comunidad bayesiana latinoamericana, caribeña y del sur global. El principal objetivo para el año 2023-2024 es dotar de estructura a la comunidad, asignando roles y formas de cambio, para que la comunidad Bayes Plurinacional tome vida propia y se desarrolle de manera autónoma y descentralizada.
 
-Esperamos vivamente su respuesta. Si quiere participar de la organización, no dude en contactarnos.
+Esperamos que este contacto virtual se transforme en un vínculo personal a largo plazo con algunas de las comunidades bayesianas que ya existen a lo largo y ancho de nuestro continente.
 
-En nombre del equipo de organización (correo en copia), le saluda muy atentamente Gustavo Landfried.
+En nombre de la comunidad Bayes Plurinacional, le saluda muy atentamente los equipos organizadores del Congreso: Bayes del Sur [1] y Laboratorios de Métodos Bayesianos (en copia).
 
-[1] https://bit.ly/FormularioCongresoBayesiano2023
-[2] https://bit.ly/SeminarioComunidadBayesiana
-
-Redes sociales
-- Página web oficial: https://bayesdelsur.com.ar
-- Linkedin: https://www.linkedin.com/company/bayes-plurinacional/
-- Twitter: https://twitter.com/BayesDelSur
-- Mastodon: https://bayes.club/@BayesDelSur
-- Youtube: https://www.youtube.com/@bayesdelsur
-"""
-
-
-remensaje = """Buen día {} {},
-
-Nos ponemos en contacto nuevamente desde la organización del Congreso Bayesiano Plurinacional para recordarle que el 31 de marzo es la fecha límite para inscribirse a las charlas y las sesiones de póster enviando un resumen breve de no más de 300 palabras a [1]. El evento contará además con talleres sobre programación probabilística ofrecidos por miembros de PyMC/ArviZ.
-
-Debido a que un encuentro presencial de dos días no nos va a alcanzar, hemos decido organizar un seminario virtual a lo largo del año. Las inscripciones permanecerán abiertas de forma permanente hasta el 1 de agosto. Se puede anunciar la intención de participar enviando un breve resumen a [2], que puede ser el mismo que el de la charla presencial. Las grabaciones quedarán disponibles en el canal de Youtube.
-
-Además, en los próximos días lanzaremos un Hackatón por nuestras redes sociales. (Para más detalles vea la página bayesdelsur.com.ar)
-
-Esperamos vivamente su respuesta.
-
-En nombre del equipo de organización, le saluda muy atentamente Gustavo Landfried (correo en copia).
-
-[1] https://bit.ly/FormularioCongresoBayesiano2023
-[2] https://bit.ly/SeminarioComunidadBayesiana
+[1] https://bayesdelsur.com.ar
 
 Redes sociales
-- Página web oficial: https://bayesdelsur.com.ar
 - Linkedin: https://www.linkedin.com/company/bayes-plurinacional/
 - Twitter: https://twitter.com/BayesDelSur
-- Mastodon: https://bayes.club/@BayesDelSur
 - Youtube: https://www.youtube.com/@bayesdelsur
 """
-
 
 
 redactar = chrome.find_elements(By.CLASS_NAME, "z0")[0]
 redactar = redactar.find_elements(By.XPATH, ".//div")[0]
 
 #tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//input[@id=":1rs"]')[0]
+#e = tree.xpath('//input[@id=":uf"]')[0]
 #input_mail_xpath = e.getroottree().getpath(e)
-input_mail_xpath = '/html/body/div[20]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[2]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
+input_mail_xpath = '/html/body/div[24]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
 #tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//div[@id=":190"]')[0]
+#e = tree.xpath('//div[@id=":rr"]')[0]
 #input_texto_xpath = e.getroottree().getpath(e)
-input_texto_xpath = '/html/body/div[20]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[1]/td/div/div[1]/div[2]/div[3]/div/table/tbody/tr/td[2]/div[2]/div'
+input_texto_xpath = 'html/body/div[24]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[1]/td/div/div[1]/div[2]/div[3]/div/table/tbody/tr/td[2]/div[2]/div'
 #tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//img[@id=":lk"]')[0]
+#e = tree.xpath('//img[@id=":mv"]')[0]
 #close_input_xpath = e.getroottree().getpath(e)
-close_input_xpath = '/html/body/div[20]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[2]/div/div[2]/div/div/div/div/table/tbody/tr/td[2]/img[3]'
+close_input_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[2]/div/div[2]/div/div/div/div/table/tbody/tr/td[2]/img[3]'
 #tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//div[@id=":169"]')[0]
+#e = tree.xpath('//div[@id=":q8"]')[0]
 #enviar_xpath = e.getroottree().getpath(e)
-enviar_xpath = '/html/body/div[20]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/div/div[4]/table/tbody/tr/td[1]/div/div[2]/div[1]'
+enviar_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/div/div[4]/table/tbody/tr/td[1]/div/div[2]/div[1]'
 #tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//span[@id=":2ap"]')[0]
+#e = tree.xpath('//span[@id=":s3"]')[0]
 #boton_cc_xpath = e.getroottree().getpath(e)
-boton_cc_xpath = '/html/body/div[20]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[2]/td[2]/div/div/div[2]/span/span/span[1]'
+boton_cc_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/div[2]/span/span/span[1]'
 #tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//input[@id=":49y"]')[0]
+#e = tree.xpath('//input[@id=":18v"]')[0]
 #cc_xpath = e.getroottree().getpath(e)
-cc_xpath = '/html/body/div[20]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[3]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
+cc_xpath = '/html/body/div[28]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[3]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
 
 contactos = pd.read_csv("contactos.csv")
 
@@ -176,8 +148,8 @@ def personas():
 castellano = personas()
 
 #set([q for k in datos for q in datos[k]])
-i = 3024
-while i < len(castellano):
+i = 3387
+while i < 3425:#len(castellano):
     k, persona = castellano[i]
     #url="https://www.scopus.com/authid/detail.uri?authorId={}".format(k)
     #firefox.get(url)
@@ -194,7 +166,7 @@ while i < len(castellano):
     #print(i, ",", k, ",", apellido, ",", nombre, ",", cantidad_papers, ",", persona["nombre"])
     print(i, ",", k, ",", cantidad_papers, ",", persona["nombre"])
     mails = list(persona["mails"])
-    mails.append("bayesdelsur@gmail.com")
+    mails.append("metodosbayesianos@gmail.com")
     input_mail = chrome.find_element(By.XPATH, input_mail_xpath )
     #input_mail.get_attribute("id")
     ActionChains(chrome).move_to_element(input_mail).click(input_mail).perform()
@@ -206,7 +178,7 @@ while i < len(castellano):
     #input_cc.send_keys("bayesdelsur@gmail.com")
     input_subject = chrome.find_elements(By.XPATH, "//input[@name='subjectbox']")[0]
     input_subject.clear()
-    input_subject.send_keys('Comunidad bayesiana')
+    input_subject.send_keys('Bayes Plurinacional')
     input_texto = chrome.find_element(By.XPATH, input_texto_xpath)
     input_texto.clear()
     input_texto.send_keys(mensaje.format(nombre, apellido))
