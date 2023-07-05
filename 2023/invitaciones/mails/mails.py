@@ -91,13 +91,15 @@ Hace más de un año, junto con especialistas de diversas actividades productiva
 
 En este contexto, queremos invitarle a que participe de forma activa y creativa de la orientación y las acciones de Bayes Plurinacional. El objetivo es crear una organización al servicio de la comunidad bayesiana latinoamericana, caribeña y del sur global. El principal objetivo para el año 2023-2024 es dotar de estructura a la comunidad, asignando roles y formas de cambio, para que la comunidad Bayes Plurinacional tome vida propia y se desarrolle de manera autónoma y descentralizada.
 
-Esperamos que este contacto virtual se transforme en un vínculo personal a largo plazo con algunas de las comunidades bayesianas que ya existen a lo largo y ancho de nuestro continente.
+Esperamos que este contacto virtual se transforme en un vínculo personal a largo plazo con algunas de las comunidades bayesianas que ya existen a lo largo y ancho de nuestro continente. Para mantenerse en contacto, además de las redes sociales, tenemos una grupo de mails [1] y una comunidad de whatsapp [2] para cuestiones más operativas.
 
-En nombre de la comunidad Bayes Plurinacional, le saluda muy atentamente los equipos organizadores del Congreso: Bayes del Sur [1] y Laboratorios de Métodos Bayesianos (en copia).
+En nombre de la comunidad Bayes Plurinacional, le saluda muy atentamente los equipos organizadores del Congreso: Bayes del Sur y Laboratorios de Métodos Bayesianos (en copia).
 
-[1] https://bayesdelsur.com.ar
+[1] Grupo de mails: https://groups.google.com/u/1/g/bayes-plurinacional
+[2] Comunidad WhatsApp: https://chat.whatsapp.com/B4wjB4W68wBBcKx3Q16Oxc
 
 Redes sociales
+- Web: https://bayesdelsur.com.ar
 - Linkedin: https://www.linkedin.com/company/bayes-plurinacional/
 - Twitter: https://twitter.com/BayesDelSur
 - Youtube: https://www.youtube.com/@bayesdelsur
@@ -107,30 +109,31 @@ Redes sociales
 redactar = chrome.find_elements(By.CLASS_NAME, "z0")[0]
 redactar = redactar.find_elements(By.XPATH, ".//div")[0]
 
+
 #tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//input[@id=":uf"]')[0]
+#e = tree.xpath('//input[@id=":tv"]')[0]
 #input_mail_xpath = e.getroottree().getpath(e)
 input_mail_xpath = '/html/body/div[24]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
 #tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//div[@id=":rr"]')[0]
+#e = tree.xpath('//div[@id=":r7"]')[0]
 #input_texto_xpath = e.getroottree().getpath(e)
 input_texto_xpath = 'html/body/div[24]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[1]/td/div/div[1]/div[2]/div[3]/div/table/tbody/tr/td[2]/div[2]/div'
 #tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//img[@id=":mv"]')[0]
+#e = tree.xpath('//img[@id=":mz"]')[0]
 #close_input_xpath = e.getroottree().getpath(e)
 close_input_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[2]/div/div[2]/div/div/div/div/table/tbody/tr/td[2]/img[3]'
 #tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//div[@id=":q8"]')[0]
+#e = tree.xpath('//div[@id=":po"]')[0]
 #enviar_xpath = e.getroottree().getpath(e)
 enviar_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/div/div[4]/table/tbody/tr/td[1]/div/div[2]/div[1]'
-#tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//span[@id=":s3"]')[0]
-#boton_cc_xpath = e.getroottree().getpath(e)
-boton_cc_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/div[2]/span/span/span[1]'
-#tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//input[@id=":18v"]')[0]
-#cc_xpath = e.getroottree().getpath(e)
-cc_xpath = '/html/body/div[28]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[3]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
+##tree = html.fromstring(chrome.page_source)
+##e = tree.xpath('//span[@id=":s3"]')[0]
+##boton_cc_xpath = e.getroottree().getpath(e)
+#boton_cc_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/div[2]/span/span/span[1]'
+##tree = html.fromstring(chrome.page_source)
+##e = tree.xpath('//input[@id=":18v"]')[0]
+##cc_xpath = e.getroottree().getpath(e)
+#cc_xpath = '/html/body/div[28]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[3]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
 
 contactos = pd.read_csv("contactos.csv")
 
@@ -148,8 +151,8 @@ def personas():
 castellano = personas()
 
 #set([q for k in datos for q in datos[k]])
-i = 3387
-while i < 3425:#len(castellano):
+i = 3725
+while i < 3725:#len(castellano):
     k, persona = castellano[i]
     #url="https://www.scopus.com/authid/detail.uri?authorId={}".format(k)
     #firefox.get(url)
