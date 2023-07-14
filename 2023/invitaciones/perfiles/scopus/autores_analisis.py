@@ -103,16 +103,14 @@ holik_federico = "16646023300"
 
 ranking_autores_por_papers(top=20,order=2)[10:20]
 
+Mayra Clementina Zamora-Elizalde
 
-
-por_nombre("Ezcurra")
-
-Andrea Rojas-Hosse
+por_nombre("Badillo")
 
 datos["15821667000" ]
-papers_de("15843952300")
+papers_de("7005637867")
 
-papers_de("15821667000",True )
+papers_de("6603451091",True )
 
 
 autores = ["6701525125", "56178341700"]

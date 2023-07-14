@@ -111,17 +111,17 @@ redactar = redactar.find_elements(By.XPATH, ".//div")[0]
 
 
 #tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//input[@id=":tv"]')[0]
+#e = tree.xpath('//input[@id=":tr"]')[0]
 #input_mail_xpath = e.getroottree().getpath(e)
 input_mail_xpath = '/html/body/div[24]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
 #tree = html.fromstring(chrome.page_source)
 #e = tree.xpath('//div[@id=":r7"]')[0]
 #input_texto_xpath = e.getroottree().getpath(e)
 input_texto_xpath = 'html/body/div[24]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[1]/td/div/div[1]/div[2]/div[3]/div/table/tbody/tr/td[2]/div[2]/div'
-#tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//img[@id=":mz"]')[0]
-#close_input_xpath = e.getroottree().getpath(e)
-close_input_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[2]/div/div[2]/div/div/div/div/table/tbody/tr/td[2]/img[3]'
+##tree = html.fromstring(chrome.page_source)
+##e = tree.xpath('//img[@id=":mz"]')[0]
+##close_input_xpath = e.getroottree().getpath(e)
+#close_input_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[2]/div/div[2]/div/div/div/div/table/tbody/tr/td[2]/img[3]'
 #tree = html.fromstring(chrome.page_source)
 #e = tree.xpath('//div[@id=":po"]')[0]
 #enviar_xpath = e.getroottree().getpath(e)
@@ -151,8 +151,8 @@ def personas():
 castellano = personas()
 
 #set([q for k in datos for q in datos[k]])
-i = 3725
-while i < 3725:#len(castellano):
+i = 3784
+while i < 3925:#len(castellano):
     k, persona = castellano[i]
     #url="https://www.scopus.com/authid/detail.uri?authorId={}".format(k)
     #firefox.get(url)
@@ -193,6 +193,7 @@ while i < 3725:#len(castellano):
         close_mail = chrome.find_element(By.XPATH, close_input_xpath )
         ActionChains(chrome).move_to_element(close_mail).click(close_mail).perform()
     i = i + 1
+
 
 
 sound.play()
