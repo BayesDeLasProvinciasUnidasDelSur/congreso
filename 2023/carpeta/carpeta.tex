@@ -1,0 +1,399 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage[cm]{fullpage}
+\usepackage{cite}
+\usepackage{multirow}
+%%%%
+% transparent
+\usepackage{graphicx}
+\usepackage{transparent}
+% end transparent
+%%%%
+
+\usepackage{colortbl} % para que funcione color en las tablas
+\usepackage{tikz}     % para que funcione color en las tablas
+\usepackage{array}    % para que tabular funcione centrado
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
+\usepackage[left=1.5cm,right=1.5cm, top=1cm, bottom=1cm]{geometry}
+
+\usepackage{subcaption}
+
+%\input{../../aux/tex/encabezado.tex}
+
+
+\newcommand{\C}[0]{\cellcolor{blue!30}} % definicion del color para tabla
+
+%opening
+\title{Cronograma}
+\author{\vspace{-0.8cm}\\ Bayes Plurinacional}
+\date{}
+
+
+\usepackage{ragged2e} %\justifying
+
+\newcommand\Wider[2][3em]{%
+\makebox[\linewidth][c]{%
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+  \raggedright#2
+  \end{minipage}%
+  }%
+}
+\usepackage[absolute,overlay]{textpos} %no funciona
+\setlength{\TPHorizModule}{1mm} %128mm  mitad: 64
+\setlength{\TPVertModule}{1mm}	%96mm  mitad 48
+
+
+\begin{document}
+\pagenumbering{gobble}
+
+
+\phantom{.}
+\vspace{-1.3cm}
+
+\scalebox{3.5}{\huge \textbf{Bayes}}
+
+\scalebox{3.5}{\huge \textbf{Plurinacional}}
+
+\centering
+
+
+%
+%     \vspace{1.5cm}
+%
+%     \vfill
+%
+%     \begin{figure}[h]
+%     \hspace{2.5cm}\begin{subfigure}[b]{0.35\textwidth}
+%     \centering
+%     \includegraphics[width=\linewidth]{../../aux/logos/NODOSdE}
+%     \end{subfigure}
+%     \hspace{2cm}
+%     \begin{subfigure}[b]{0.24\textwidth}
+%     \centering
+%     \includegraphics[width=\linewidth]{../../aux/logos/secretariaSE.png}
+%     \end{subfigure}
+%     \end{figure}
+%
+%     \vspace{1cm}
+%
+%     \includegraphics[width=0.8\linewidth]{../../aux/logos/beca.png}
+
+
+
+%
+% \includegraphics[width=0.6\textwidth]{../../aux/logos/BayesPlurinacional.png}
+%
+
+
+\centering
+\begin{textblock}{180}(30,107) \centering
+\LARGE  \textcolor{black!95}{\rotatebox[origin=tr]{0}{\scalebox{30}{\scalebox{1}[-1]{$p$}}}}
+\end{textblock}
+\begin{textblock}{180}(30,80) \centering
+\LARGE \textcolor{black!95}{\scalebox{30}{$p$}}
+\end{textblock}
+\begin{textblock}{210}(-70,109) \centering
+\LARGE \textcolor{black!95}{\scalebox{14.5}{$($}}
+\end{textblock}
+
+
+\begin{textblock}{190}(10,260) \centering
+\begin{figure}[H]
+    \centering
+    \hspace{0.5cm}\begin{subfigure}[c]{0.2\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{../../aux/logos/NODOSdE}
+    \end{subfigure}
+    \hspace{0.1cm}
+    \begin{subfigure}[c]{0.17\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{../../aux/logos/secretariaSE.png}
+    \end{subfigure}
+    \hspace{0.1cm}
+    \begin{subfigure}[c]{0.24\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{../../aux/logos/sadosky.jpg}
+    \end{subfigure}
+    \hspace{0.1cm}
+    \begin{subfigure}[c]{0.22\textwidth}
+    \centering \phantom{.} \vspace{0.6cm}
+
+    \includegraphics[width=\linewidth]{../../aux/logos/LMB.png}
+    \end{subfigure}
+\end{figure}
+\end{textblock}
+
+\newpage
+
+
+
+
+
+
+\centering
+
+\scalebox{2.5}{\Large Cronograma}
+
+
+\begin{textblock}{200}(5,45) \centering
+
+
+\scalebox{1.4}{\large Viernes 4 de Agosto}
+
+\fontfamily{ptm}\selectfont
+
+\large
+\begin{tabular}{ccc}
+\hline
+\rowcolor{gray!20} \textbf{Horario} &  \hspace{2.8cm} \textbf{Actividad} \hspace{2.8cm}  &  \phantom{.}\hspace{2.9cm} \textbf{Lugar} \hspace{2.9cm} \\
+\hline \hline
+ 8:20 - 9:30 & Acreditación y desayuno & De Entrada a Sala Capacitaciones \\
+\hline
+\rowcolor{gray!10}
+9:30 - 10:10 & Bienvenida y ``Fuente de ideas'' & Sala Capacitaciones a Salas Grupos \\
+\hline
+10:15 - 11:00 & Taller 1. Intro y evaluación de modelo & Sala Capacitaciones \\
+\hline
+\rowcolor{gray!10}
+11:05 - 12:25 & Charla Bloque 1 (ver detalle) & Sala Capacitaciones \\
+\hline
+\hline
+ 12:30 - 13:10 & Almuerzo & Sala Emprendedores \\
+ 13:15 - 13:45 & Ideas ``Principios, medios y fines'' & Verde Entrada \\
+\hline
+\hline
+\rowcolor{gray!10}
+13:50 - 14:40 & Taller 2. Inferencia causal. & Sala Capacitaciones \\
+\hline
+14:45 - 15:05 & Posters & Pasillo \\
+\hline
+\rowcolor{gray!10}
+15:10 - 16:30 & Charla Bloque 2 (ver detalle) & Sala Capacitaciones \\
+\hline
+
+\end{tabular}
+
+\end{textblock}
+
+
+
+\begin{textblock}{200}(5,135) \centering
+
+
+\scalebox{1.4}{\large Sábado 5 de Agosto}
+
+\fontfamily{ptm}\selectfont
+
+\large
+\begin{tabular}{ccc}
+\hline
+\rowcolor{gray!20} \textbf{Horario} &  \hspace{2.8cm} \textbf{Actividad} \hspace{2.8cm}  &  \phantom{.}\hspace{2.9cm} \textbf{Lugar} \hspace{2.9cm} \\
+\hline \hline
+9:30 - 10:20 & Taller 3. Información y dato. & Sala Capacitaciones \\
+\hline
+\rowcolor{gray!10}
+10:25 - 10:45 & Ideas ``Objetivos, medios y estrategias'' & Sala Capacitaciones \\
+\hline
+10:50 - 12:10 & Charla Bloque 3 (ver detalle) & Sala Capacitaciones \\
+\hline
+\hline
+\rowcolor{gray!10}
+ 12:20 - 13:00 & Almuerzo & Sala Emprendedores \\
+\rowcolor{gray!10}
+ 13:05 - 13:35 & Ideas ``Comunidad y colaboración'' & Verde Entrada \\
+\hline
+\hline
+13:40 - 14:30 & Taller 4. Series de tiempo. & Sala Capacitaciones \\
+\hline
+\rowcolor{gray!10}
+14:35 - 14:55 & Posters & Pasillo \\
+\hline
+15:00 - 16:20 & Charla Bloque 4 (ver detalle) & Sala Capacitaciones \\
+\hline
+\rowcolor{gray!10}
+16:25 - 17:15 & Taller 5. Toma de decisiones y hackatón & Sala Capacitaciones \\
+\hline
+17:20 - 18:00 & Conclusiones ``Acciones a futuro'' & Sala Capacitaciones \\
+\hline
+\end{tabular}
+
+\end{textblock}
+
+
+
+\begin{textblock}{200}(5,235) \centering
+
+
+\scalebox{1.4}{\large Domingo 6 de Agosto}
+
+\fontfamily{ptm}\selectfont
+
+\large
+\begin{tabular}{ccc}
+\hline
+\rowcolor{gray!20} \textbf{Horario} &  \hspace{2.8cm} \textbf{Actividad} \hspace{2.8cm}  &  \phantom{.}\hspace{2.9cm} \textbf{Lugar} \hspace{2.9cm} \\
+\hline \hline
+& & \\
+12:30 -  & Almuerzo y música en vivo & El patio del indio Froilán \\
+  &  &  \\
+\hline
+\end{tabular}
+
+\end{textblock}
+
+
+\newpage
+
+\scalebox{1.7}{\Large Charlas}
+
+\justify \vspace{0.6cm}
+
+\Wider[-2cm]{
+\justify
+\scalebox{1.2}{\Large Bloque 1}
+
+\vspace{0.2cm}
+
+\hspace{0.6cm} 1.  \textbf{Gabriel Alzamendi}: Métodos basados en inferencia Bayesiana para la evaluación de los mecanísmos vocales de la fonación humana.
+
+\hspace{0.6cm} 2. \textbf{Nicolás Alejandro Comay}: Abordaje Bayesiano a la toma de decisiones perceptuales y su confianza 	asociada.
+
+\hspace{0.6cm} 3. \textbf{Javier Arellana}: Bayesian retrieval scheme and its application to Cassini Mission SAR observations in an area of Titan, Saturn's largest moon.
+
+
+\vspace{0.6cm}
+
+\scalebox{1.2}{\Large Bloque 2}
+
+\vspace{0.2cm}
+
+
+
+\hspace{0.6cm} 1. \textbf{Yasmín Elena Navarrete Díaz}: Sistemas frágiles: una formulación bayesiana de la teoría cuántica.
+
+
+\hspace{0.6cm} 2. \textbf{Diego Javier Ramón Sevilla}: Regresión bayesiana para el análisis de series temporales con apilamiento en Astronomía de rayos X.
+
+\hspace{0.6cm} 3. \textbf{Andrea Paula Goijman}: Modelos de ocupación multiespecie con enfoque bayesiano: una herramienta valiosa para estudios de biodiversidad en ecología
+
+\justify \vspace{0.6cm}
+
+\scalebox{1.2}{\Large Bloque 3}
+
+\vspace{0.2cm}
+
+
+\hspace{0.6cm} 1. \textbf{Hossein Dinani}: Bayesian estimation for quantum sensing.
+
+
+\hspace{0.6cm} 2. \textbf{Albert Ortiz}: Aplicación de métodos bayesianos en ingeniería estructural.
+
+\hspace{0.6cm} 3. \textbf{Gonzalo Ríos}: Bayesian Machine Learning Applied to Marketing.
+
+
+\justify \vspace{0.6cm}
+
+\scalebox{1.2}{\Large Bloque 4}
+
+\vspace{0.2cm}
+
+\hspace{0.6cm} 1. \textbf{Sergio Michael Davis Irarrázabal}: Probabilidad bayesiana a partir de la estimación plausible de cantidades.
+
+\hspace{0.6cm} 2. \textbf{Tomás Olego}: Métodos robustos Bayesianos Generalizados para los modelos de regresión logística.
+
+\hspace{0.6cm} 3. \textbf{Luciano Moffatt}. Modelado Bayesiano  Computacional de Sistemas Biológicos.
+}
+
+\vspace{1cm}
+
+\centering
+\scalebox{1.7}{\Large Taller}
+
+\texttt{https://github.com/BayesPlurinacional/tallerBP-2023}
+
+\vspace{0.4cm}
+
+\justify
+
+ \small
+\hspace{0.6cm} 1. \textbf{Intro y evaluación de modelo}: Acuerdos intersubjetivos bajo incertidumbre. Especificación gráfica y evaluación de modelos causales. El sobreajuste y el balance natural de las reglas de la probabilidad.
+
+\hspace{0.6cm} 2. \textbf{Inferencia causal}: Inferencia asociacional, intervencional, contrafactual. Identificación de modelo causal. Flujos de inferencia en modelos causales. Conclusiones causales a partir de datos observables.
+
+\hspace{0.6cm} 3. \textbf{Información y datos}: El problema de la comunicación con la realidad. La estructura invariante del dato empírico. Tasa de información. Construcción de sistemas de información (o datos).
+
+\hspace{0.6cm} 4. \textbf{Series de tiempo}: Redes bayesianas de historia completa. Algoritmo de inferencia por pasaje de mensajes. Loopy belief propagation. Inferencia causal en series temporales.
+
+\hspace{0.6cm} 5. \textbf{Toma de decisiones}: La función de costo epistémico-evolutiva. Apuestas óptimas en el tiempo. Ventaja a favor de la diversificación, cooperación, especialización y heterogeneidad. Hackatón.
+
+\newpage
+
+% \scalebox{2.5}{\Large Taller}
+%
+% \begin{textblock}{220}(-5,10) \centering
+% \includegraphics[width=\linewidth]{img/curso-1.png}
+% \end{textblock}
+%
+%
+% \begin{textblock}{210}(0,130) \centering
+% \includegraphics[width=\linewidth]{img/curso-2.png}
+% \end{textblock}
+%
+%
+% \newpage
+
+
+
+\phantom{.}
+\begin{textblock}{60}(5,3) \centering
+\transparent{0.1}{\includegraphics[width=\linewidth]{../../aux/logos/BP.png}}
+\end{textblock}
+\begin{textblock}{40}(165,270) \centering
+\transparent{0.1}{\includegraphics[width=\linewidth]{../../aux/logos/NODOSdE.png}}
+\end{textblock}
+
+
+
+
+\newpage
+
+
+\phantom{.}
+\begin{textblock}{60}(5,3) \centering
+\transparent{0.1}{\includegraphics[width=\linewidth]{../../aux/logos/BP.png}}
+\end{textblock}
+\begin{textblock}{35}(170,263) \centering
+\transparent{0.1}{\includegraphics[width=\linewidth]{../../aux/logos/secretariaSE.png}}
+\end{textblock}
+
+\newpage
+
+\phantom{.}
+\begin{textblock}{60}(5,3) \centering
+\transparent{0.1}{\includegraphics[width=\linewidth]{../../aux/logos/BP.png}}
+\end{textblock}
+\begin{textblock}{45}(165,275) \centering
+\transparent{0.1}{\includegraphics[width=\linewidth]{../../aux/logos/sadosky.jpg}}
+\end{textblock}
+
+\newpage
+
+
+\phantom{.}
+\begin{textblock}{60}(5,3) \centering
+\transparent{0.1}{\includegraphics[width=\linewidth]{../../aux/logos/BP.png}}
+\end{textblock}
+\begin{textblock}{40}(165,266) \centering
+\transparent{0.2}{\includegraphics[width=\linewidth]{../../aux/logos/LMB.png}}
+\end{textblock}
+
+
+
+
+\end{document}
