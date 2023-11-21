@@ -64,6 +64,16 @@ def co_autores(xs):
     return [p for p in papers if sum([a in papers[p]["autores"] for a in xs]) == len(xs)]
 
 
+papers
+datos["7103335024"]
+
+# An empirical Bayes approach to outliers 1980
+# '56000843700', '6701599002'
+
+# "Shrinkage Estimation in Nonparametric Bayesian Survival Analysis: A Simulation Study" 1980
+# 7101764446
+
+
 if False:
     for k in datos:
         if "Argentina" in datos[k]["latinos"]:
