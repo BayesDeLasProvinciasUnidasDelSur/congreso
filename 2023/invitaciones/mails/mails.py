@@ -76,6 +76,7 @@ len(papers)
 chrome = uc.Chrome()
 chrome.get("https://www.google.com/gmail/about/")
 
+
 ######################################
 ######################################
 ######################################
@@ -83,20 +84,20 @@ chrome.get("https://www.google.com/gmail/about/")
 
 mensaje = """Buen día {} {},
 
-Le contactamos personalmente porque hemos visto que participa de un artículo donde se consideran aspectos de los métodos bayesianos. El equipo organizador de Bayes Plurinacional tiene el agrado de invitarle a la Escuela-Congreso Bayes Plurinacional 2024 a realizarse del 6 al 8 de agosto del 2024 en la Universidad Nacional de Salta (UNSa), con apoyo de la con el apoyo de la Organización de Inteligencia Artificial de Latinoamérica, Khipu.
+Le contactamos personalmente porque hemos visto que participa de un artículo donde se consideran aspectos de los métodos bayesianos. El equipo organizador de Bayes Plurinacional desea invitarle a la Escuela-Congreso Bayes Plurinacional 2024 a realizarse del 6 al 8 de agosto del 2024 en la Universidad Nacional de Salta (UNSa), con el apoyo de la Organización de Inteligencia Artificial de Latinoamérica (Khipu).
 
 El año pasado la comunidad Bayes Plurinacional realizó con éxito el primer Congreso Bayesiano Plurinacional 2023. La diversidad disciplinar (desde física cuántica a antropología) y de regiones (8 países latinoamericanos) fue extraordinaria. Durante el congreso hubo un acuerdo respecto de la necesidad de contar con mayor cantidad de instancias de formación en métodos bayesianos en toda nuestra región. Por ello este año se decidió organizar la Escuela-Congreso Bayes Plurinacional 2024.
 
-La **Escuela-Congreso Bayes Plurinacional 2024**, cuenta con el apoyo de Khipu (la Organización Latinoamericana de Inteligencia Artificial), será de carácter presencial y sin costo. Contará con talleres prácticos de todos los niveles (inicial, intermedio y avanzado), aplicaciones, exposiciones, mesas de debates y sesión de póster. La variedad de talleres, diseñados para inspirar, educar y conectar a los participantes, ofrecerá sin lugar a dudas contenido relevante y valioso para el desarrollo personal y profesional en todos los niveles de formación, desde estudiantes universitarios hasta personal calificado de empresas de primer nivel o investigadores formados. Les invitamos a proponer un taller, una charla, una mesa debate o un póster (o anunciar su participación) a través del formulario: https://bayesplurinacional.org/link/InscripcionSalta2024.html. Se reciben propuestas hasta el 30 de abril del 2024. Puede descargar la imagen para compartir en https://bayesplurinacional.org/link/VolanteSalta2024.html
+La **Escuela-Congreso Bayes Plurinacional 2024** será de carácter presencial y sin costo. Contará con talleres prácticos de todos los niveles (inicial, intermedio y avanzado), aplicaciones, exposiciones, mesas de debates y sesión de póster. La variedad de talleres, diseñados para inspirar, educar y conectar a los participantes, ofrecerá contenido relevante para el desarrollo profesional en todos los niveles de formación, desde estudiantes universitarios hasta personal calificado de empresas de primer nivel o investigadores formados. Le invitamos a proponer un taller, una charla, una mesa debate o un póster (o anunciar su participación) a través del formulario: https://bayesplurinacional.org/link/InscripcionSalta2024.html. Se reciben propuestas hasta el 30 de abril del 2024. Puede descargar la imagen para compartir en https://bayesplurinacional.org/link/VolanteSalta2024.html
 
-De forma paralela e independiente se realizarán eventos virtuales permanentes, que incluye un Hackatón basado en inferencia, apuestas e intercambio de recursos. Las actividades son por naturaleza interdisciplinarias y están enfocadas en el aprendizaje práctico y conceptual de los métodos bayesianos (o aplicación estricta de las reglas de la probabilidad). Les invitamos a proponer un evento virtual utilizando el siguiente formulario https://bayesplurinacional.org/link/InscripcionEventosVirtuales.html
+De forma paralela e independiente se realizarán eventos virtuales permanentes, que incluye un Hackatón basado en inferencia, apuestas e intercambio de recursos. Las actividades son por naturaleza interdisciplinarias y están enfocadas en el aprendizaje práctico y conceptual de los métodos bayesianos (o aplicación estricta de las reglas de la probabilidad). Le invitamos a proponer un evento virtual utilizando el siguiente formulario https://bayesplurinacional.org/link/InscripcionEventosVirtuales.html
 
 
 ** ¿Dónde inscribirse? **
 Su participación es posible en ambas modalidades.
 - Regístre una propuesta para al evento presencial hasta el 30 de abril (o anuncie su participación antes del evento) en: https://bayesplurinacional.org/link/InscripcionSalta2024.html
 - Regístre una propuesta para los eventos virtuales de forma permanente a través de: https://bayesplurinacional.org/link/InscripcionEventosVirtuales.html
-
+- Si desea participar de la organización de Bayes Plurinacional, póngase en contacto respondiendo este correo.
 
 ** Auspiciantes Fundadores de Bayes Plurinacional **
 Bayes Plurinacional ha abierto la convocatoria 2024 para establecer asociaciones con empresas e instituciones tecnológicas líderes en el mercado. El enfoque bayesiano (o aplicación estricta de las reglas de probabilidad) constituye la base de la inteligencia artificial (IA) y de todas las ciencias de datos debido a que garantiza la adopción de comportamientos óptimos en contextos de incertidumbre. Si bien hasta ahora no se ha propuesto nada mejor en términos prácticos, la aplicación del enfoque bayesiano se ha visto limitada históricamente debido al costo computacional asociado a la evaluación de todo el espacio de hipótesis. Sólo recientemente, en las vísperas del siglo 21, estos obstáculos han comenzado a ser superados en parte gracias a avances computacionales y algorítmicos modernos. Sin embargo, la inercia histórica hace que su desarrollo siga siendo incipiente, incluso en las Universidades más importantes de nuestro continente y por lo tanto en las empresas locales de más alto nivel de desarrollo tecnológico. En este contexto, nuestro objetivo es impulsar la Inteligencia Bayesiana en la América Plurinacional y los pueblos del Sur Global. Con el apoyo de la organización de Inteligencia Artificial de Latinoamérica Khipu, estamos profundizando todas las actividades necesarias para promover el inicio de la transición bayesiana en nuestro continente, creando las condiciones para la emergencia de la primera generación bayesiana. Los recursos humanos formados íntegramente en métodos bayesianos tienen capacidades que son todavía escasas a nivel mundial, que les permiten encontrar soluciones innovadoras a problemas complejos de cualquier clase. Asociarse como Auspiciante Fundador de Bayes Plurinacional le otorgará beneficios únicos a su empresa. Si desea explorar esta u otras opciones de patrocinio disponibles, póngase en contacto con Bayes Plurinacional a través de nuestro correo bayesplurinacional@gmail.com
@@ -117,38 +118,22 @@ Nuestras redes:
 redactar = chrome.find_elements(By.CLASS_NAME, "z0")[0]
 redactar = redactar.find_elements(By.XPATH, ".//div")[0]
 
-
-#tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//input[@id=":vc"]')[0]
-#input_mail_xpath = e.getroottree().getpath(e)
-input_mail_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
-#tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//div[@id=":n5"]')[0]
-#input_texto_xpath = e.getroottree().getpath(e)
-input_texto_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[1]/td/div/div[1]/div[2]/div[3]/div/table/tbody/tr/td[2]/div[2]/div'
-##tree = html.fromstring(chrome.page_source)
-##e = tree.xpath('//img[@id=":mz"]')[0]
-##close_input_xpath = e.getroottree().getpath(e)
-#close_input_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[2]/div/div[2]/div/div/div/div/table/tbody/tr/td[2]/img[3]'
-#tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//div[@id=":op"]')[0]
-#enviar_xpath = e.getroottree().getpath(e)
-enviar_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/div/div[4]/table/tbody/tr/td[1]/div/div[2]/div[1]'
-#tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//span[@id=":14n"]')[0]
-#boton_cc_xpath = e.getroottree().getpath(e)
-boton_cc_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/div[2]/span/span/span[1]'
-#tree = html.fromstring(chrome.page_source)
-#e = tree.xpath('//input[@id=":16d"]')[0]
-#cc_xpath = e.getroottree().getpath(e)
-cc_xpath = '/html/body/div[28]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[2]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input'
+tree = html.fromstring(chrome.page_source)
+e = tree.xpath('//input[@aria-label="Destinatarios en Para"]')[0]
+input_mail_xpath = e.getroottree().getpath(e)
+e = tree.xpath('//div[@aria-label="Cuerpo del mensaje"]')[0]
+input_texto_xpath = e.getroottree().getpath(e)
+e = tree.xpath('//div[@aria-label="Enviar ‪(Ctrl-Enter)‬"]')[0]
+enviar_xpath = e.getroottree().getpath(e)
+e = tree.xpath('//span[@aria-label="Agregar destinatarios a Cc ‪(Ctrl-Mayús-C)‬"]')[0]
+boton_cc_xpath = e.getroottree().getpath(e)
+tree = html.fromstring(chrome.page_source)
+e = tree.xpath('//input[@aria-label="Destinatarios en Cc"]')[0]
+cc_xpath = e.getroottree().getpath(e)
 ##tree = html.fromstring(chrome.page_source)
 ##e = tree.xpath('//div[@id=":12q"]')[0]
 ##attach_xpath = e.getroottree().getpath(e)
 #attach_xpath = '/html/body/div[27]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/div/div[4]/table/tbody/tr/td[4]/div/div[1]/div/div/div'
-
-
-
 
 
 contactos = pd.read_csv("contactos.csv")
@@ -167,16 +152,16 @@ def personas():
 castellano = personas()
 
 #len(castellano)
-#np.where(['Zenteno, Juan Carlos' == persona[1]["nombre"] for persona in castellano ])
+#np.where(['Machain-Williams, Carlos' == persona[1]["nombre"] for persona in castellano ])
 
 #set([q for k in datos for q in datos[k]])
-i = 4088
+i = 4323
 while i < len(castellano):#len(castellano):
     k, persona = castellano[i]
     #url="https://www.scopus.com/authid/detail.uri?authorId={}".format(k)
     #firefox.get(url)
     ActionChains(chrome).move_to_element(redactar).click(redactar).perform()
-    time.sleep(1)
+    time.sleep(0.1)
     #try:i
     #apellido, nombre = firefox.find_element(By.XPATH,"//h1[@data-testid='author-profile-name']").text.split(", ")
     #except:
@@ -186,7 +171,6 @@ while i < len(castellano):#len(castellano):
     apellido, nombre = apellidoNombre if len(apellidoNombre)==2 else (persona["nombre"], "")
     cantidad_papers = len(persona["papers"])
     #print(i, ",", k, ",", apellido, ",", nombre, ",", cantidad_papers, ",", persona["nombre"])
-    print(i, ",", k, ",", cantidad_papers, ",", persona["nombre"])
     mails = list(persona["mails"])
     #mails.append("metodosbayesianos@gmail.com")
     input_mail = chrome.find_element(By.XPATH, input_mail_xpath )
@@ -212,6 +196,8 @@ while i < len(castellano):#len(castellano):
         close_mail = chrome.find_element(By.XPATH, close_input_xpath )
         ActionChains(chrome).move_to_element(close_mail).click(close_mail).perform()
     i = i + 1
+    print(i, ",", k, ",", cantidad_papers, ",", persona["nombre"])
+
 
 
 
