@@ -56,11 +56,6 @@ def por_nombres(noms):
             res.append((datos[k]["nombre"],k, len(papers_de(k))))
     return res
 
-#por_nombres(["Zenteno"])
-#por_nombre("Goijman")
-#papers_de("57193602956")
-#datos["57195679171"]["mails"]
-
 len(datos)
 len(papers)
 
@@ -86,7 +81,7 @@ mensaje = """Buen día {} {},
 
 Le contactamos personalmente porque hemos visto que participa de un artículo donde se consideran aspectos de los métodos bayesianos. El equipo organizador de Bayes Plurinacional desea invitarle a la Escuela-Congreso Bayes Plurinacional 2024 a realizarse del 6 al 8 de agosto del 2024 en la Universidad Nacional de Salta (UNSa), con el apoyo de la Organización de Inteligencia Artificial de Latinoamérica (Khipu).
 
-El año pasado la comunidad Bayes Plurinacional realizó con éxito el primer Congreso Bayesiano Plurinacional 2023. La diversidad disciplinar (desde física cuántica a antropología) y de regiones (8 países latinoamericanos) fue extraordinaria. Durante el congreso hubo un acuerdo respecto de la necesidad de contar con mayor cantidad de instancias de formación en métodos bayesianos en toda nuestra región. Por ello este año se decidió organizar la Escuela-Congreso Bayes Plurinacional 2024.
+El año pasado la comunidad Bayes Plurinacional realizó con éxito el primer Congreso Bayesiano Plurinacional 2023. La diversidad disciplinar (desde física cuántica y astrofísica a ecología y antropología) y la diversidad de regiones (8 países latinoamericanos) fue extraordinaria. Durante el congreso alcanzamos un diagnóstico común respecto de la necesidad de contar con mayor cantidad de instancias de formación en métodos bayesianos en toda nuestra región. Por ello este año se decidió organizar la Escuela-Congreso Bayes Plurinacional 2024.
 
 La **Escuela-Congreso Bayes Plurinacional 2024** será de carácter presencial y sin costo. Contará con talleres prácticos de todos los niveles (inicial, intermedio y avanzado), aplicaciones, exposiciones, mesas de debates y sesión de póster. La variedad de talleres, diseñados para inspirar, educar y conectar a los participantes, ofrecerá contenido relevante para el desarrollo profesional en todos los niveles de formación, desde estudiantes universitarios hasta personal calificado de empresas de primer nivel o investigadores formados. Le invitamos a proponer un taller, una charla, una mesa debate o un póster (o anunciar su participación) a través del formulario: https://bayesplurinacional.org/link/InscripcionSalta2024.html. Se reciben propuestas hasta el 30 de abril del 2024. Puede descargar la imagen para compartir en https://bayesplurinacional.org/link/VolanteSalta2024.html
 
@@ -98,6 +93,7 @@ Su participación es posible en ambas modalidades.
 - Regístre una propuesta para al evento presencial hasta el 30 de abril (o anuncie su participación antes del evento) en: https://bayesplurinacional.org/link/InscripcionSalta2024.html
 - Regístre una propuesta para los eventos virtuales de forma permanente a través de: https://bayesplurinacional.org/link/InscripcionEventosVirtuales.html
 - Si desea participar de la organización de Bayes Plurinacional, póngase en contacto respondiendo este correo.
+
 
 ** Auspiciantes Fundadores de Bayes Plurinacional **
 Bayes Plurinacional ha abierto la convocatoria 2024 para establecer asociaciones con empresas e instituciones tecnológicas líderes en el mercado. El enfoque bayesiano (o aplicación estricta de las reglas de probabilidad) constituye la base de la inteligencia artificial (IA) y de todas las ciencias de datos debido a que garantiza la adopción de comportamientos óptimos en contextos de incertidumbre. Si bien hasta ahora no se ha propuesto nada mejor en términos prácticos, la aplicación del enfoque bayesiano se ha visto limitada históricamente debido al costo computacional asociado a la evaluación de todo el espacio de hipótesis. Sólo recientemente, en las vísperas del siglo 21, estos obstáculos han comenzado a ser superados en parte gracias a avances computacionales y algorítmicos modernos. Sin embargo, la inercia histórica hace que su desarrollo siga siendo incipiente, incluso en las Universidades más importantes de nuestro continente y por lo tanto en las empresas locales de más alto nivel de desarrollo tecnológico. En este contexto, nuestro objetivo es impulsar la Inteligencia Bayesiana en la América Plurinacional y los pueblos del Sur Global. Con el apoyo de la organización de Inteligencia Artificial de Latinoamérica Khipu, estamos profundizando todas las actividades necesarias para promover el inicio de la transición bayesiana en nuestro continente, creando las condiciones para la emergencia de la primera generación bayesiana. Los recursos humanos formados íntegramente en métodos bayesianos tienen capacidades que son todavía escasas a nivel mundial, que les permiten encontrar soluciones innovadoras a problemas complejos de cualquier clase. Asociarse como Auspiciante Fundador de Bayes Plurinacional le otorgará beneficios únicos a su empresa. Si desea explorar esta u otras opciones de patrocinio disponibles, póngase en contacto con Bayes Plurinacional a través de nuestro correo bayesplurinacional@gmail.com
@@ -130,13 +126,15 @@ boton_cc_xpath = e.getroottree().getpath(e)
 tree = html.fromstring(chrome.page_source)
 e = tree.xpath('//input[@aria-label="Destinatarios en Cc"]')[0]
 cc_xpath = e.getroottree().getpath(e)
-##tree = html.fromstring(chrome.page_source)
-##e = tree.xpath('//div[@id=":12q"]')[0]
-##attach_xpath = e.getroottree().getpath(e)
-#attach_xpath = '/html/body/div[27]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/div/div[4]/table/tbody/tr/td[4]/div/div[1]/div/div/div'
+e = tree.xpath('//img[@aria-label="Guardar y cerrar"]')[0]
+close_input_xpath = e.getroottree().getpath(e)
 
 
 contactos = pd.read_csv("contactos.csv")
+
+#por_nombres(["Prates"])
+#papers_de("25935867100", full=False)
+#datos["26659202900"]
 
 no_enviar = set(contactos.iloc[:,0])
 no_enviar.add("6507335048")
@@ -145,6 +143,14 @@ no_enviar.add("57205011847")
 no_enviar.add("57200892844")
 no_enviar.add("56287123600")
 no_enviar.add("57204490428")
+no_enviar.add("7401545071")
+no_enviar.add("57195288338")
+no_enviar.add("36933923200")
+no_enviar.add("7006111690")
+no_enviar.add("23049951900")
+no_enviar.add("23390888100")
+no_enviar.add("22233766300")
+no_enviar.add("15762187000")
 
 def personas():
     return sorted([(k,datos[k]) for k in datos if (len(datos[k]['mails'])>0) and (len(datos[k]['latinos'])>0) and not ("Brazil" in datos[k]['latinos']) ],key=lambda x: x[0])
@@ -152,11 +158,11 @@ def personas():
 castellano = personas()
 
 #len(castellano)
-#np.where(['Machain-Williams, Carlos' == persona[1]["nombre"] for persona in castellano ])
+#np.where(['Rodriguez, Ricardo Oscar' == persona[1]["nombre"] for persona in castellano ])
 
 #set([q for k in datos for q in datos[k]])
-i = 4323
-while i < len(castellano):#len(castellano):
+i = 39
+while i < 200:#len(castellano):
     k, persona = castellano[i]
     #url="https://www.scopus.com/authid/detail.uri?authorId={}".format(k)
     #firefox.get(url)
@@ -181,10 +187,10 @@ while i < len(castellano):#len(castellano):
     boton_cc = chrome.find_element(By.XPATH, boton_cc_xpath )
     ActionChains(chrome).move_to_element(boton_cc).click(boton_cc).perform()
     input_cc = chrome.find_element(By.XPATH, cc_xpath)
-    input_cc.send_keys("metodosbayesianos@gmail.com")
+    input_cc.send_keys("gustavolandfried@gmail.com, metodosbayesianos@gmail.com")
     input_subject = chrome.find_elements(By.XPATH, "//input[@name='subjectbox']")[0]
     input_subject.clear()
-    input_subject.send_keys('Bayes Plurinacional')
+    input_subject.send_keys('Escuela-Congreso Bayes Plurinacional 2024')
     input_texto = chrome.find_element(By.XPATH, input_texto_xpath)
     input_texto.clear()
     input_texto.send_keys(mensaje.format(nombre, apellido))
@@ -195,9 +201,8 @@ while i < len(castellano):#len(castellano):
     else:
         close_mail = chrome.find_element(By.XPATH, close_input_xpath )
         ActionChains(chrome).move_to_element(close_mail).click(close_mail).perform()
-    i = i + 1
     print(i, ",", k, ",", cantidad_papers, ",", persona["nombre"])
-
+    i = i + 1
 
 
 
