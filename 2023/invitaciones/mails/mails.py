@@ -59,6 +59,11 @@ def por_nombres(noms):
 len(datos)
 len(papers)
 
+# por_nombres(["Louise", "Zanella"])
+# papers_de('55485219000', full=True)
+
+
+
 
 ##Set up the Firefox profile with the desired proxy settings
 #profile = webdriver.FirefoxProfile()
@@ -79,24 +84,14 @@ chrome.get("https://www.google.com/gmail/about/")
 
 mensaje = """Buen día {} {},
 
-Le contactamos personalmente porque hemos visto que participa de un artículo donde se consideran aspectos de los métodos bayesianos. El equipo organizador de Bayes Plurinacional desea invitarle a la Escuela-Congreso Bayes Plurinacional 2024 a realizarse del 6 al 8 de agosto del 2024 en la Universidad Nacional de Salta (UNSa), con el apoyo de la Organización de Inteligencia Artificial de Latinoamérica (Khipu).
+Le contactamos personalmente porque hemos visto que participa de un artículo donde se consideran aspectos de los métodos bayesianos. El enfoque bayesiano (o aplicación estricta de las reglas de probabilidad) constituye la base de la inteligencia artificial (IA) y de todas las ciencias empíricas (o ciencias con datos). Si bien hasta ahora no se ha propuesto nada mejor en términos prácticos, su aplicación se ha visto limitada históricamente debido al costo computacional asociado a la evaluación de todo el espacio de hipótesis.
 
-El año pasado la comunidad Bayes Plurinacional realizó con éxito el primer Congreso Bayesiano Plurinacional 2023. La diversidad disciplinar (desde física cuántica y astrofísica a ecología y antropología) y la diversidad de regiones (8 países latinoamericanos) fue extraordinaria. Durante el congreso alcanzamos un diagnóstico común respecto de la necesidad de contar con mayor cantidad de instancias de formación en métodos bayesianos en toda nuestra región. Por ello este año se decidió organizar la Escuela-Congreso Bayes Plurinacional 2024.
+Para promover la Inteligencia Bayesiana en nuestra región, el equipo organizador de Bayes Plurinacional desea invitarle a la Escuela-Congreso Bayes Plurinacional 2024 (presencial y sin costo) a realizarse del 6 al 8 de agosto del 2024 en la Universidad Nacional de Salta (UNSa), con el apoyo de la Organización de Inteligencia Artificial de Latinoamérica (Khipu). Le invitamos a que proponga un taller, una charla, una mesa debate, un póster o un hackatón (o anuncie su participación) antes del 30 de abril ingresando a https://bayesplurinacional.org/link/InscripcionSalta2024.html. La variedad de actividades ofrecerá contenido relevante para el desarrollo profesional en todos los niveles de formación, desde estudiantes universitarios hasta personal calificado de empresas de primer nivel o investigadores formados. Puede descargar la invitación en https://bayesplurinacional.org/link/VolanteSalta2024.html
 
-La **Escuela-Congreso Bayes Plurinacional 2024** será de carácter presencial y sin costo. Contará con talleres prácticos de todos los niveles (inicial, intermedio y avanzado), aplicaciones, exposiciones, mesas de debates y sesión de póster. La variedad de talleres, diseñados para inspirar, educar y conectar a los participantes, ofrecerá contenido relevante para el desarrollo profesional en todos los niveles de formación, desde estudiantes universitarios hasta personal calificado de empresas de primer nivel o investigadores formados. Le invitamos a proponer un taller, una charla, una mesa debate o un póster (o anunciar su participación) a través del formulario: https://bayesplurinacional.org/link/InscripcionSalta2024.html. Se reciben propuestas hasta el 30 de abril del 2024. Puede descargar la imagen para compartir en https://bayesplurinacional.org/link/VolanteSalta2024.html
-
-De forma paralela e independiente se realizarán eventos virtuales permanentes, que incluye un Hackatón basado en inferencia, apuestas e intercambio de recursos. Las actividades son por naturaleza interdisciplinarias y están enfocadas en el aprendizaje práctico y conceptual de los métodos bayesianos (o aplicación estricta de las reglas de la probabilidad). Le invitamos a proponer un evento virtual utilizando el siguiente formulario https://bayesplurinacional.org/link/InscripcionEventosVirtuales.html
-
-
-** ¿Dónde inscribirse? **
-Su participación es posible en ambas modalidades.
-- Regístre una propuesta para al evento presencial hasta el 30 de abril (o anuncie su participación antes del evento) en: https://bayesplurinacional.org/link/InscripcionSalta2024.html
-- Regístre una propuesta para los eventos virtuales de forma permanente a través de: https://bayesplurinacional.org/link/InscripcionEventosVirtuales.html
-- Si desea participar de la organización de Bayes Plurinacional, póngase en contacto respondiendo este correo.
-
+Eventos virtuales permanentes se realizarán de forma paralela e independiente. Las actividades son por naturaleza interdisciplinarias y están enfocadas en el aprendizaje práctico y conceptual de los métodos bayesianos. Le invitamos a proponer un taller, charla, u otro tipo de evento virtual a través del siguiente formulario https://bayesplurinacional.org/link/InscripcionEventosVirtuales.html
 
 ** Auspiciantes Fundadores de Bayes Plurinacional **
-Bayes Plurinacional ha abierto la convocatoria 2024 para establecer asociaciones con empresas e instituciones tecnológicas líderes en el mercado. El enfoque bayesiano (o aplicación estricta de las reglas de probabilidad) constituye la base de la inteligencia artificial (IA) y de todas las ciencias de datos debido a que garantiza la adopción de comportamientos óptimos en contextos de incertidumbre. Si bien hasta ahora no se ha propuesto nada mejor en términos prácticos, la aplicación del enfoque bayesiano se ha visto limitada históricamente debido al costo computacional asociado a la evaluación de todo el espacio de hipótesis. Sólo recientemente, en las vísperas del siglo 21, estos obstáculos han comenzado a ser superados en parte gracias a avances computacionales y algorítmicos modernos. Sin embargo, la inercia histórica hace que su desarrollo siga siendo incipiente, incluso en las Universidades más importantes de nuestro continente y por lo tanto en las empresas locales de más alto nivel de desarrollo tecnológico. En este contexto, nuestro objetivo es impulsar la Inteligencia Bayesiana en la América Plurinacional y los pueblos del Sur Global. Con el apoyo de la organización de Inteligencia Artificial de Latinoamérica Khipu, estamos profundizando todas las actividades necesarias para promover el inicio de la transición bayesiana en nuestro continente, creando las condiciones para la emergencia de la primera generación bayesiana. Los recursos humanos formados íntegramente en métodos bayesianos tienen capacidades que son todavía escasas a nivel mundial, que les permiten encontrar soluciones innovadoras a problemas complejos de cualquier clase. Asociarse como Auspiciante Fundador de Bayes Plurinacional le otorgará beneficios únicos a su empresa. Si desea explorar esta u otras opciones de patrocinio disponibles, póngase en contacto con Bayes Plurinacional a través de nuestro correo bayesplurinacional@gmail.com
+Bayes Plurinacional ha abierto la convocatoria 2024 para establecer asociaciones con empresas e instituciones tecnológicas líderes en el mercado. Con el apoyo de la organización de Inteligencia Artificial de Latinoamérica Khipu, estamos profundizando todas las actividades necesarias para promover el inicio de la transición bayesiana en nuestro continente, creando las condiciones para la emergencia de la primera generación bayesiana. Los recursos humanos formados íntegramente en métodos bayesianos tienen capacidades que son todavía escasas a nivel mundial. Si desea asociarse como Auspiciante Fundador de Bayes Plurinacional o conocer otras opciones de patrocinio disponibles, contáctenos a través de nuestro correo bayesplurinacional@gmail.com
 
 ** Promoviendo la Inteligencia Bayesiana en la América Plurinacional y los pueblos del Sur Global **
 
@@ -132,7 +127,7 @@ close_input_xpath = e.getroottree().getpath(e)
 
 contactos = pd.read_csv("contactos.csv")
 
-#por_nombres(["Prates"])
+#por_nombres(["Castañeda-Gaytán"])
 #papers_de("25935867100", full=False)
 #datos["26659202900"]
 
@@ -158,11 +153,11 @@ def personas():
 castellano = personas()
 
 #len(castellano)
-#np.where(['Rodriguez, Ricardo Oscar' == persona[1]["nombre"] for persona in castellano ])
+#np.where(['Ferreira-Santiago, Ángel' == persona[1]["nombre"] for persona in castellano ])
 
 #set([q for k in datos for q in datos[k]])
-i = 39
-while i < 200:#len(castellano):
+i = 1500
+while i < 1500:#len(castellano):
     k, persona = castellano[i]
     #url="https://www.scopus.com/authid/detail.uri?authorId={}".format(k)
     #firefox.get(url)
