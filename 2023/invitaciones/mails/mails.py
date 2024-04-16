@@ -59,9 +59,8 @@ def por_nombres(noms):
 len(datos)
 len(papers)
 
-# por_nombres(["Louise", "Zanella"])
-# papers_de('55485219000', full=True)
-
+# por_nombres(["Roberto","Contreras"])
+# papers_de('56215239700', full=False)
 
 
 
@@ -86,9 +85,9 @@ mensaje = """Buen día {} {},
 
 Le contactamos personalmente porque hemos visto que participa de un artículo donde se consideran aspectos de los métodos bayesianos. El enfoque bayesiano (o aplicación estricta de las reglas de probabilidad) constituye la base de la inteligencia artificial (IA) y de todas las ciencias empíricas (o ciencias con datos). Si bien hasta ahora no se ha propuesto nada mejor en términos prácticos, su aplicación se ha visto limitada históricamente debido al costo computacional asociado a la evaluación de todo el espacio de hipótesis.
 
-Para promover la Inteligencia Bayesiana en nuestra región, el equipo organizador de Bayes Plurinacional desea invitarle a la Escuela-Congreso Bayes Plurinacional 2024 (presencial y sin costo) a realizarse del 6 al 8 de agosto del 2024 en la Universidad Nacional de Salta (UNSa), con el apoyo de la Organización de Inteligencia Artificial de Latinoamérica (Khipu). Le invitamos a que proponga un taller, una charla, una mesa debate, un póster o un hackatón (o anuncie su participación) antes del 30 de abril ingresando a https://bayesplurinacional.org/link/InscripcionSalta2024.html. La variedad de actividades ofrecerá contenido relevante para el desarrollo profesional en todos los niveles de formación, desde estudiantes universitarios hasta personal calificado de empresas de primer nivel o investigadores formados. Puede descargar la invitación en https://bayesplurinacional.org/link/VolanteSalta2024.html
+Para promover la Inteligencia Bayesiana en nuestra región, el equipo organizador de Bayes Plurinacional desea invitarle a la Escuela-Congreso Bayes Plurinacional 2024 (presencial y sin costo) a realizarse del 6 al 8 de agosto del 2024 en la Universidad Nacional de Salta (UNSa), con el apoyo de la Organización de Inteligencia Artificial de Latinoamérica (Khipu). Le invitamos a que proponga un taller, una charla, una mesa debate, un póster o un hackatón (o anuncie su participación) antes del 30 de abril ingresando a https://bayesplurinacional.org/link/InscripcionSalta2024.html. Solo es necesario subir un breve resumen de la propuesta.
 
-Eventos virtuales permanentes se realizarán de forma paralela e independiente. Las actividades son por naturaleza interdisciplinarias y están enfocadas en el aprendizaje práctico y conceptual de los métodos bayesianos. Le invitamos a proponer un taller, charla, u otro tipo de evento virtual a través del siguiente formulario https://bayesplurinacional.org/link/InscripcionEventosVirtuales.html
+Si no puede participar presencialmente, también organizaremos eventos virtuales que se realizarán de forma paralela e independiente. Le invitamos a proponer un taller, charla, u otro tipo de evento virtual a través del siguiente formulario https://bayesplurinacional.org/link/InscripcionEventosVirtuales.html
 
 ** Auspiciantes Fundadores de Bayes Plurinacional **
 Bayes Plurinacional ha abierto la convocatoria 2024 para establecer asociaciones con empresas e instituciones tecnológicas líderes en el mercado. Con el apoyo de la organización de Inteligencia Artificial de Latinoamérica Khipu, estamos profundizando todas las actividades necesarias para promover el inicio de la transición bayesiana en nuestro continente, creando las condiciones para la emergencia de la primera generación bayesiana. Los recursos humanos formados íntegramente en métodos bayesianos tienen capacidades que son todavía escasas a nivel mundial. Si desea asociarse como Auspiciante Fundador de Bayes Plurinacional o conocer otras opciones de patrocinio disponibles, contáctenos a través de nuestro correo bayesplurinacional@gmail.com
@@ -127,7 +126,7 @@ close_input_xpath = e.getroottree().getpath(e)
 
 contactos = pd.read_csv("contactos.csv")
 
-#por_nombres(["Castañeda-Gaytán"])
+#por_nombres(["Canavire-Bacarreza"])
 #papers_de("25935867100", full=False)
 #datos["26659202900"]
 
@@ -146,6 +145,17 @@ no_enviar.add("23049951900")
 no_enviar.add("23390888100")
 no_enviar.add("22233766300")
 no_enviar.add("15762187000")
+no_enviar.add("55315383600")
+no_enviar.add("57730251900")
+no_enviar.add("57729955000")
+no_enviar.add("55995941700")
+no_enviar.add("56013571600")#PRoblemas con el correo
+no_enviar.add("56236697700")#PRoblemas con el correo
+no_enviar.add("56728594200")#Problemas con el correo
+no_enviar.add("56989944200")#Problemas con el correo
+no_enviar.add("57014110400")#Problemas con el correo
+no_enviar.add("57188557062")#Problemas con el correo
+
 
 def personas():
     return sorted([(k,datos[k]) for k in datos if (len(datos[k]['mails'])>0) and (len(datos[k]['latinos'])>0) and not ("Brazil" in datos[k]['latinos']) ],key=lambda x: x[0])
@@ -156,8 +166,8 @@ castellano = personas()
 #np.where(['Ferreira-Santiago, Ángel' == persona[1]["nombre"] for persona in castellano ])
 
 #set([q for k in datos for q in datos[k]])
-i = 1500
-while i < 1500:#len(castellano):
+i = 2450
+while i < 2450:#len(castellano):
     k, persona = castellano[i]
     #url="https://www.scopus.com/authid/detail.uri?authorId={}".format(k)
     #firefox.get(url)
