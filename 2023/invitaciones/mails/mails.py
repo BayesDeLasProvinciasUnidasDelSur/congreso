@@ -163,11 +163,11 @@ def personas():
 castellano = personas()
 
 #len(castellano)
-#np.where(['Ferreira-Santiago, Ángel' == persona[1]["nombre"] for persona in castellano ])
+#np.where(['Currie, Cameron R.' == persona[1]["nombre"] for persona in castellano ])
 
 #set([q for k in datos for q in datos[k]])
-i = 2450
-while i < 2450:#len(castellano):
+i = 2950
+while i < 2950:#3900len(castellano):
     k, persona = castellano[i]
     #url="https://www.scopus.com/authid/detail.uri?authorId={}".format(k)
     #firefox.get(url)
