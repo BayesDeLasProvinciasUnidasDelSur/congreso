@@ -58,11 +58,8 @@ def por_nombres(noms):
 
 len(datos)
 len(papers)
-
-# por_nombres(["Roberto","Contreras"])
-# papers_de('56215239700', full=False)
-
-
+# por_nombres(["Juliana Sterli"])
+# papers_de('6507675654', full=False)
 
 ##Set up the Firefox profile with the desired proxy settings
 #profile = webdriver.FirefoxProfile()
@@ -83,14 +80,14 @@ chrome.get("https://www.google.com/gmail/about/")
 
 mensaje = """Buen día {} {},
 
-Le contactamos personalmente porque hemos visto que participa de un artículo donde se consideran aspectos de los métodos bayesianos. El enfoque bayesiano (o aplicación estricta de las reglas de probabilidad) constituye la base de la inteligencia artificial (IA) y de todas las ciencias empíricas (o ciencias con datos). Si bien hasta ahora no se ha propuesto nada mejor en términos prácticos, su aplicación se ha visto limitada históricamente debido al costo computacional asociado a la evaluación de todo el espacio de hipótesis.
+Le contactamos personalmente porque hemos visto que participa de un artículo donde se consideran aspectos de los métodos bayesianos. El enfoque bayesiano (o aplicación estricta de las reglas de probabilidad) constituye la base de todas las ciencias empíricas (o ciencias con datos), incluyendo la Inteligencia Artificial. Si bien hasta ahora no se ha propuesto nada mejor en términos prácticos, su aplicación se ha visto limitada históricamente debido al costo computacional asociado a la evaluación de todo el espacio de hipótesis.
 
-Para promover la Inteligencia Bayesiana en nuestra región, el equipo organizador de Bayes Plurinacional desea invitarle a la Escuela-Congreso Bayes Plurinacional 2024 (presencial y sin costo) a realizarse del 6 al 8 de agosto del 2024 en la Universidad Nacional de Salta (UNSa), con el apoyo de la Organización de Inteligencia Artificial de Latinoamérica (Khipu). Le invitamos a que proponga un taller, una charla, una mesa debate, un póster o un hackatón (o anuncie su participación) antes del 30 de abril ingresando a https://bayesplurinacional.org/link/InscripcionSalta2024.html. Solo es necesario subir un breve resumen de la propuesta.
+Para promover la Inteligencia Bayesiana en la América Plurinacional, el equipo organizador de Bayes Plurinacional desea invitarle a la Escuela-Congreso (presencial y sin costo) a realizarse del 6 al 8 de agosto del 2024 en la Universidad Nacional de Salta (Argentina), con el apoyo de la Organización de Inteligencia Artificial de América Latina (Khipu). Le invitamos a que proponga un taller, una charla, una mesa debate o un póster (o anuncie su participación) antes del 3 de mayo ingresando a https://bayesplurinacional.org/link/InscripcionSalta2024.html o a nuestra página web bayesplurinacional.org. Solo se requiere subir un breve resumen de la propuesta.
 
 Si no puede participar presencialmente, también organizaremos eventos virtuales que se realizarán de forma paralela e independiente. Le invitamos a proponer un taller, charla, u otro tipo de evento virtual a través del siguiente formulario https://bayesplurinacional.org/link/InscripcionEventosVirtuales.html
 
 ** Auspiciantes Fundadores de Bayes Plurinacional **
-Bayes Plurinacional ha abierto la convocatoria 2024 para establecer asociaciones con empresas e instituciones tecnológicas líderes en el mercado. Con el apoyo de la organización de Inteligencia Artificial de Latinoamérica Khipu, estamos profundizando todas las actividades necesarias para promover el inicio de la transición bayesiana en nuestro continente, creando las condiciones para la emergencia de la primera generación bayesiana. Los recursos humanos formados íntegramente en métodos bayesianos tienen capacidades que son todavía escasas a nivel mundial. Si desea asociarse como Auspiciante Fundador de Bayes Plurinacional o conocer otras opciones de patrocinio disponibles, contáctenos a través de nuestro correo bayesplurinacional@gmail.com
+Bayes Plurinacional ha abierto la convocatoria 2024 para establecer asociaciones con empresas e instituciones tecnológicas líderes en el mercado. Con el apoyo de la organización de Inteligencia Artificial de Latinoamérica Khipu, estamos promoviendo la formación y aplicación de los métodos bayesianos en nuestro continente. Los recursos humanos formados íntegramente en métodos bayesianos tienen capacidades que son todavía escasas a nivel mundial. Si desea asociarse como Auspiciante Fundador de Bayes Plurinacional o conocer otras opciones de patrocinio disponibles, contáctenos a través de nuestro correo bayesplurinacional@gmail.com
 
 ** Promoviendo la Inteligencia Bayesiana en la América Plurinacional y los pueblos del Sur Global **
 
@@ -126,10 +123,6 @@ close_input_xpath = e.getroottree().getpath(e)
 
 contactos = pd.read_csv("contactos.csv")
 
-#por_nombres(["Canavire-Bacarreza"])
-#papers_de("25935867100", full=False)
-#datos["26659202900"]
-
 no_enviar = set(contactos.iloc[:,0])
 no_enviar.add("6507335048")
 no_enviar.add("37119917600")
@@ -155,6 +148,14 @@ no_enviar.add("56728594200")#Problemas con el correo
 no_enviar.add("56989944200")#Problemas con el correo
 no_enviar.add("57014110400")#Problemas con el correo
 no_enviar.add("57188557062")#Problemas con el correo
+no_enviar.add("57768813900")
+no_enviar.add("49561184500")#repetido
+no_enviar.add("23097366400")
+no_enviar.add("23092376000")
+no_enviar.add("6603356992")#Jubilado
+
+# por_nombres(["Cantet"])
+# papers_de('6507675654', full=False)
 
 
 def personas():
@@ -163,11 +164,11 @@ def personas():
 castellano = personas()
 
 #len(castellano)
-#np.where(['Currie, Cameron R.' == persona[1]["nombre"] for persona in castellano ])
+#np.where(['Cristina, Juan' == persona[1]["nombre"] for persona in castellano ])
 
 #set([q for k in datos for q in datos[k]])
-i = 2950
-while i < 2950:#3900len(castellano):
+i = 3783
+while i < 3900:#3900len(castellano):
     k, persona = castellano[i]
     #url="https://www.scopus.com/authid/detail.uri?authorId={}".format(k)
     #firefox.get(url)
@@ -195,7 +196,7 @@ while i < 2950:#3900len(castellano):
     input_cc.send_keys("gustavolandfried@gmail.com, metodosbayesianos@gmail.com")
     input_subject = chrome.find_elements(By.XPATH, "//input[@name='subjectbox']")[0]
     input_subject.clear()
-    input_subject.send_keys('Escuela-Congreso Bayes Plurinacional 2024')
+    input_subject.send_keys('Escuela-Congreso Bayes Plurinacional 2024. Últimos días para presentar propuestas.')
     input_texto = chrome.find_element(By.XPATH, input_texto_xpath)
     input_texto.clear()
     input_texto.send_keys(mensaje.format(nombre, apellido))
