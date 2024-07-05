@@ -48,3 +48,7 @@ VictoriaNogues = 0110127630012711857265
 # Sobran
 saldo = presupuesto_neto - efectivo - transferencia - gastos_previos
 
+Dolar_al_9_agosto_2023 = 710
+Reserva_casa_Salta_25_junio_2024 = 130000
+
+A_favor_gustavo = Reserva_casa_Salta_25_junio_2024 - (saldo * (1300/Dolar_al_9_agosto_2023 ))
