@@ -78,33 +78,33 @@ chrome.get("https://www.google.com/gmail/about/")
 ######################################
 
 
-mensaje = """Buen día {} {},
+mensaje = """Hi {} {},
 
-Le contactamos personalmente porque hemos visto que participa de un artículo donde se consideran aspectos de los métodos bayesianos. El enfoque bayesiano (o aplicación estricta de las reglas de probabilidad) constituye la base de todas las ciencias empíricas (o ciencias con datos), incluyendo la Inteligencia Artificial. Si bien hasta ahora no se ha propuesto nada mejor en términos prácticos, su aplicación se ha visto limitada históricamente debido al costo computacional asociado a la evaluación de todo el espacio de hipótesis.
+The Plurinational Bayes community, with the support of the Department of Mathematics at Universidad Externado de Colombia, invites you to the event Plurinational Bayes BOGOTÁ 2025 "Plural Intelligence," taking place from October 15 to 17. The event is dedicated to optimal decision-making under uncertainty using the Bayesian approach to artificial intelligence and machine learning (an approximation to the strict application of the rules of probability).
 
-Para promover la Inteligencia Bayesiana en la América Plurinacional, el equipo organizador de Bayes Plurinacional desea invitarle a la Escuela-Congreso (presencial y sin costo) a realizarse del 6 al 8 de agosto del 2024 en la Universidad Nacional de Salta (Argentina), con el apoyo de la Organización de Inteligencia Artificial de América Latina (Khipu). Le invitamos a que proponga un taller, una charla, una mesa debate o un póster (o anuncie su participación) antes del 3 de mayo ingresando a https://bayesplurinacional.org/link/InscripcionSalta2024.html o a nuestra página web bayesplurinacional.org. Solo se requiere subir un breve resumen de la propuesta.
+The event will feature keynote lectures and hands-on workshops delivered by leading experts [1] in Bayesian inference, artificial intelligence, and machine learning, including Mariano Gabitto (winner of the 2021 International Society of Bayesian Analysis award), Catherine O’Neil (author of Weapons of Math Destruction), Gavino Puggioni, and six outstanding young Latin American researchers trained under Kevin Murphy, Michael Elad, Aapo Hyvärinen, Felipe Tobar, among others.
 
-Si no puede participar presencialmente, también organizaremos eventos virtuales que se realizarán de forma paralela e independiente. Le invitamos a proponer un taller, charla, u otro tipo de evento virtual a través del siguiente formulario https://bayesplurinacional.org/link/InscripcionEventosVirtuales.html
+The call for poster sessions and academic presentations is open until May 31. To apply, please complete the form
 
-** Auspiciantes Fundadores de Bayes Plurinacional **
-Bayes Plurinacional ha abierto la convocatoria 2024 para establecer asociaciones con empresas e instituciones tecnológicas líderes en el mercado. Con el apoyo de la organización de Inteligencia Artificial de Latinoamérica Khipu, estamos promoviendo la formación y aplicación de los métodos bayesianos en nuestro continente. Los recursos humanos formados íntegramente en métodos bayesianos tienen capacidades que son todavía escasas a nivel mundial. Si desea asociarse como Auspiciante Fundador de Bayes Plurinacional o conocer otras opciones de patrocinio disponibles, contáctenos a través de nuestro correo bayesplurinacional@gmail.com
+- English version: https://forms.gle/XmHc3DHT3KzeHmEh8
+- Spanish version: https://forms.gle/dfKb9fJ8HQ5xkg7k7
 
-** Promoviendo la Inteligencia Bayesiana en la América Plurinacional y los pueblos del Sur Global **
+with the title and a brief abstract of your work. If your proposal is accepted, you will later be asked to submit either an extended abstract (maximum 2 pages) or the poster (vertical A0 sheet) in a file named name-surname.pdf to admin@bayesplural.org with a copy to investigacioncienciadedatos@uexternado.edu.co.
 
-Le saluda muy atentamente el equipo organizador de Bayes Plurinacional.
+Those who wish to attend the event to participate in the lectures, workshops, presentations, and other activities must register [2]. Anyone who has participated in any Plurinational Bayes activity or is part of the mailing group [3] (access requests accepted until June 10) will not have to pay the registration fee. Scholarships will be available for approved speakers and poster presenters who require financial assistance.
 
-Nuestras redes:
-- Web: https://bayesplurinacional.org
-- Grupo de mails: https://groups.google.com/u/1/g/bayes-plurinacional
-- Linkedin: https://www.linkedin.com/company/bayes-plurinacional/
-- Twitter (X): https://twitter.com/BayesPlural
-- Instagram: https://www.instagram.com/bayesplurinacional
+For more information, please visit https://bayesplurinacional.org .
+
+[1] https://bayesplurinacional.org/_pages/es/2025/disertantes.html
+[2] https://landing.uexternado.edu.co/mat-meetup-bayes-y-ml
+[3] https://groups.google.com/g/bayes-plurinacional
 """
 
 
 redactar = chrome.find_elements(By.CLASS_NAME, "z0")[0]
 redactar = redactar.find_elements(By.XPATH, ".//div")[0]
 
+# Abrir redactar
 tree = html.fromstring(chrome.page_source)
 e = tree.xpath('//input[@aria-label="Destinatarios en Para"]')[0]
 input_mail_xpath = e.getroottree().getpath(e)
@@ -114,6 +114,8 @@ e = tree.xpath('//div[@aria-label="Enviar ‪(Ctrl-Enter)‬"]')[0]
 enviar_xpath = e.getroottree().getpath(e)
 e = tree.xpath('//span[@aria-label="Agregar destinatarios a Cc ‪(Ctrl-Mayús-C)‬"]')[0]
 boton_cc_xpath = e.getroottree().getpath(e)
+
+# Abrir CC
 tree = html.fromstring(chrome.page_source)
 e = tree.xpath('//input[@aria-label="Destinatarios en Cc"]')[0]
 cc_xpath = e.getroottree().getpath(e)
@@ -159,57 +161,69 @@ no_enviar.add("6603356992")#Jubilado
 
 
 def personas():
-    return sorted([(k,datos[k]) for k in datos if (len(datos[k]['mails'])>0) and (len(datos[k]['latinos'])>0) and not ("Brazil" in datos[k]['latinos']) ],key=lambda x: x[0])
+    return sorted([(k,datos[k]) for k in datos if (len(datos[k]['mails'])>0) and (len(datos[k]['latinos'])>0) and ("Brazil" in datos[k]['latinos']) ],key=lambda x: x[0])
 
 castellano = personas()
 
 #len(castellano)
 #np.where(['Cristina, Juan' == persona[1]["nombre"] for persona in castellano ])
 
+
 #set([q for k in datos for q in datos[k]])
-i = 3783
-while i < 3900:#3900len(castellano):
-    k, persona = castellano[i]
-    #url="https://www.scopus.com/authid/detail.uri?authorId={}".format(k)
-    #firefox.get(url)
-    ActionChains(chrome).move_to_element(redactar).click(redactar).perform()
-    time.sleep(0.1)
-    #try:i
-    #apellido, nombre = firefox.find_element(By.XPATH,"//h1[@data-testid='author-profile-name']").text.split(", ")
-    #except:
-    #nombre = persona["nombre"]
-    #apellido = ""
-    apellidoNombre = persona["nombre"].split(", ")
-    apellido, nombre = apellidoNombre if len(apellidoNombre)==2 else (persona["nombre"], "")
-    cantidad_papers = len(persona["papers"])
-    #print(i, ",", k, ",", apellido, ",", nombre, ",", cantidad_papers, ",", persona["nombre"])
-    mails = list(persona["mails"])
-    #mails.append("metodosbayesianos@gmail.com")
-    input_mail = chrome.find_element(By.XPATH, input_mail_xpath )
-    #input_mail.get_attribute("id")
-    ActionChains(chrome).move_to_element(input_mail).click(input_mail).perform()
-    input_mail.clear()
-    input_mail.send_keys(",".join(mails))
-    boton_cc = chrome.find_element(By.XPATH, boton_cc_xpath )
-    ActionChains(chrome).move_to_element(boton_cc).click(boton_cc).perform()
-    input_cc = chrome.find_element(By.XPATH, cc_xpath)
-    input_cc.send_keys("gustavolandfried@gmail.com, metodosbayesianos@gmail.com")
-    input_subject = chrome.find_elements(By.XPATH, "//input[@name='subjectbox']")[0]
-    input_subject.clear()
-    input_subject.send_keys('Escuela-Congreso Bayes Plurinacional 2024. Últimos días para presentar propuestas.')
-    input_texto = chrome.find_element(By.XPATH, input_texto_xpath)
-    input_texto.clear()
-    input_texto.send_keys(mensaje.format(nombre, apellido))
-    enviar = chrome.find_element(By.XPATH, enviar_xpath)
-    if not (k in no_enviar):
-        ActionChains(chrome).move_to_element(enviar).click(enviar).perform()
-        time.sleep(0.2)
-    else:
+i = 2029;
+no_enviados = []
+j = 0
+maximo = 1530 + 500
+while i < 5000 and j < 4 and i < maximo:#3900len(castellano):
+    try:
+        k, persona = castellano[i]
+        #url="https://www.scopus.com/authid/detail.uri?authorId={}".format(k)
+        #firefox.get(url)
+        ActionChains(chrome).move_to_element(redactar).click(redactar).perform()
+        time.sleep(0.1)
+        #try:i
+        #apellido, nombre = firefox.find_element(By.XPATH,"//h1[@data-testid='author-profile-name']").text.split(", ")
+        #except:
+        #nombre = persona["nombre"]
+        #apellido = ""
+        apellidoNombre = persona["nombre"].split(", ")
+        apellido, nombre = apellidoNombre if len(apellidoNombre)==2 else (persona["nombre"], "")
+        cantidad_papers = len(persona["papers"])
+        #print(i, ",", k, ",", apellido, ",", nombre, ",", cantidad_papers, ",", persona["nombre"])
+        mails = list(persona["mails"])
+        #mails.append("metodosbayesianos@gmail.com")
+        input_mail = chrome.find_element(By.XPATH, input_mail_xpath )
+        #input_mail.get_attribute("id")
+        ActionChains(chrome).move_to_element(input_mail).click(input_mail).perform()
+        input_mail.clear()
+        input_mail.send_keys(",".join(mails))
+        boton_cc = chrome.find_element(By.XPATH, boton_cc_xpath )
+        ActionChains(chrome).move_to_element(boton_cc).click(boton_cc).perform()
+        input_cc = chrome.find_element(By.XPATH, cc_xpath)
+        input_cc.send_keys("gustavolandfried@gmail.com, bayesplurinacional@gmail.com")
+        input_subject = chrome.find_elements(By.XPATH, "//input[@name='subjectbox']")[0]
+        input_subject.clear()
+        input_subject.send_keys('Plurinational Bayes BOGOTÁ 2025')
+        input_texto = chrome.find_element(By.XPATH, input_texto_xpath)
+        input_texto.clear()
+        input_texto.send_keys(mensaje.format(nombre, apellido))
+        enviar = chrome.find_element(By.XPATH, enviar_xpath)
+        if not (k in no_enviar):
+            ActionChains(chrome).move_to_element(enviar).click(enviar).perform()
+            time.sleep(0.2)
+        else:
+            close_mail = chrome.find_element(By.XPATH, close_input_xpath )
+            ActionChains(chrome).move_to_element(close_mail).click(close_mail).perform()
+        j = 0
+        print(i, ",", k, ",", cantidad_papers, ",", persona["nombre"])
+    except:
         close_mail = chrome.find_element(By.XPATH, close_input_xpath )
         ActionChains(chrome).move_to_element(close_mail).click(close_mail).perform()
-    print(i, ",", k, ",", cantidad_papers, ",", persona["nombre"])
+        j = j + 1
+        no_enviados.append(i)
+        print(i, ",", k, ",", cantidad_papers, ",", persona["nombre"], "NO ENVIADO")
+    #
     i = i + 1
-
 
 
 sound.play()
