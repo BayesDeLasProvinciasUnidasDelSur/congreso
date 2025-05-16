@@ -228,11 +228,11 @@ def personas():
 castellano = personas()
 
 #len(castellano)
-#np.where(['Tufik, Sergio' == persona[1]["nombre"] for persona in castellano ])
+#np.where(['Neme, Gustavo' == persona[1]["nombre"] for persona in castellano ])
 
 
 #set([q for k in datos for q in datos[k]])
-i = 0;
+i =  882;
 no_enviados = []
 maximo = i + 500
 repeticiones = 0
