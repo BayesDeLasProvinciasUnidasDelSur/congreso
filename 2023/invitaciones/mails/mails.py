@@ -152,9 +152,7 @@ Quienes solo deseen asistir a las actividades del evento (conferencias, talleres
 
 Quienes hayan participado en alguna actividad previa de Bayes Plurinacional no deberán pagar la cuota de inscripción. Habrá becas disponibles para ponentes y presentadores de pósteres aceptados que requieran apoyo económico.
 
-Atentamente,
-Bayes Plurinacional
-
+Bayes Plurinacional.
 Distribución de creencias óptimas dada la información disponible.
 Acuerdos intersubjetivos en contextos de incertidumbre.
 """
@@ -228,11 +226,11 @@ def personas():
 castellano = personas()
 
 #len(castellano)
-#np.where(['Neme, Gustavo' == persona[1]["nombre"] for persona in castellano ])
+#np.where(['Olivera-Méndez, Alejandra' == persona[1]["nombre"] for persona in castellano ])
 
 
 #set([q for k in datos for q in datos[k]])
-i =  882;
+i = 3357;
 no_enviados = []
 maximo = i + 500
 repeticiones = 0
@@ -290,7 +288,7 @@ while repeticiones <=2:
         #
         i = i + 1
     repeticiones += 1
-    time.sleep(360)
+    time.sleep(60)
 
 sound.play()
 
