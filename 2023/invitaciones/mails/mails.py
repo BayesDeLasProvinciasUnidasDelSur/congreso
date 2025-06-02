@@ -71,6 +71,8 @@ len(papers)
 
 chrome = uc.Chrome()
 chrome.get("https://www.google.com/gmail/about/")
+##sudo apt-get update
+##sudo apt-get --only-upgrade install google-chrome-stable
 
 
 ######################################
@@ -134,6 +136,7 @@ Distribuição de crenças ótimas dadas as informações disponíveis. Acordo i
 
 espanol = """Buen día {} {},
 
+
 La comunidad Bayes Plurinacional, con el apoyo de la Universidad Externado de Colombia, invita al evento presencial Bayes Plurinacional BOGOTÁ 2025 "Inteligencia Plural", que se llevará a cabo del 15 al 17 de octubre de 2025. Este evento está dedicado a la toma óptima de decisiones bajo incertidumbre, basada en el enfoque bayesiano de la inteligencia artificial y el aprendizaje automático (aproximación a la aplicación estricta de las reglas de la probabilidad).
 
 - Página web del evento: https://bayesplurinacional.org
@@ -150,7 +153,7 @@ Quienes solo deseen asistir a las actividades del evento (conferencias, talleres
 
 - Inscripción para participar del evento: https://landing.uexternado.edu.co/mat-meetup-bayes-y-ml
 
-Quienes hayan participado en alguna actividad previa de Bayes Plurinacional no deberán pagar la cuota de inscripción. Habrá becas disponibles para ponentes y presentadores de pósteres aceptados que requieran apoyo económico.
+Quienes hayan participado en alguna actividad previa de Bayes Plurinacional no deberán pagar la cuota de inscripción. Habrá becas de inscripción disponibles para quienes presenten charla o póster que requieran apoyo económico.
 
 Bayes Plurinacional.
 Distribución de creencias óptimas dada la información disponible.
@@ -226,11 +229,11 @@ def personas():
 castellano = personas()
 
 #len(castellano)
-#np.where(['Olivera-Méndez, Alejandra' == persona[1]["nombre"] for persona in castellano ])
+#np.where(['Eaton-Gonzalez, Ricardo' == persona[1]["nombre"] for persona in castellano ])
 
 
 #set([q for k in datos for q in datos[k]])
-i = 3357;
+i = 4362;
 no_enviados = []
 maximo = i + 500
 repeticiones = 0
